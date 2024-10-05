@@ -1,0 +1,10 @@
+/*index.html에 선언된 스타일시트*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Pretendard", sans-serif;
+}
