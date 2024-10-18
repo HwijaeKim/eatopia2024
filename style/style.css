@@ -1,4 +1,5 @@
 /*index.html에 선언된 스타일시트*/
+@charset "UTF-8";
 
 :root {
     --ti-cursor-font-weight: 100;
@@ -20,6 +21,7 @@ body {
     background: #FAF4E5;
     font-family: "Spoqa Han Sans Neo", sans-serif;
     overflow-x: hidden;  /*X축으로 오버돼서 표시되는 것을 방지*/
+    word-break: keep-all;
 
     -webkit-user-select:none;
     -moz-user-select:none;
@@ -114,8 +116,267 @@ nav {
 .nav_menu button:active {
     opacity: .5;
 }
-.typewriter p {
+.sectorTitle p {
     font-weight: 600;
-    color: #6E97CF;
+    color: rgba(0, 0, 0, .4);
+    font-size: 1.25em;
 
+}
+/*UNION*/
+.sectorTitle {
+    margin-bottom: 2em;
+}
+
+
+
+/*INTRO*/
+section#intro {
+    /*border: solid 1px red;*/
+    /*position: fixed;*/
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    letter-spacing: -3px;
+    z-index: -9;
+    opacity: 1;
+    background-image: url("../sources/temp/dev_intro.png");
+    background-position: center;
+    background-size: contain;
+
+}
+article#intro_bg {
+}
+article#intro_container {
+    /*border: solid 1px red;*/
+    /*display: flex;*/
+    align-items: center;
+    width: 90%;
+    height: 100vh;
+    margin: 0 auto;
+    /*padding-top: 28vh;*/
+}
+
+
+/*SECTOR 1*/
+#sec1_bg {
+    /*border: solid 1px blue;*/
+    width: 100%;
+    height: 100%;
+    padding-bottom: 20rem;
+}
+section#sector1 {
+    /*border: solid 1px red;*/
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 15rem;
+}
+
+
+.sectorTitle.active p {
+    animation: proj_bg .75s ease 0s 1 normal none;
+}
+.sectorTitle.active .subtitle {
+    animation: subtitle_bg 2.5s ease 0s 1 normal none;
+}
+
+.source {
+    font-weight: 200;
+    font-size: 12px;
+    color: darkgray;
+}#sector1 img {
+     margin: 60px 0 0 150px;
+     height: 17vw;
+ }
+
+
+ section#sector1 #flexbox {
+     /*border: solid 1px blue;*/
+     display: flex
+ }
+ .flex1 {
+     display: flex;
+     /*border: solid 1px green;*/
+     font-weight: 600;
+     font-size: 2.8vmin;
+     width: 50%;
+     line-height: 4vmin;
+
+ }
+ .flex1.active {
+     animation: proj_bg .75s ease 0s 1 normal none;
+ }
+
+ .flex2 {
+     /*display: flex;*/
+     width: 50%;
+     /*border: solid 1px purple;*/
+
+ }
+.title.active p{
+    animation: subtitle_bg .75s ease 0s 1 normal none;
+}
+ .subtitle.active p{
+     animation: subtitle_bg .75s ease 0s 1 normal none;
+ }
+.flex2 .title {
+    font-weight: 600;
+    font-size: 2.8vmin;
+    line-height: 4vmin;
+    margin-bottom: 1em;
+}
+
+ .purple {
+     color: #D788C1;
+ }
+.flex2 .subtitle {
+    display: block;
+    /*position: absolute;*/
+    /*border: solid 1px red;*/
+}
+
+
+
+
+/*FOOTER*/
+footer {
+    /*border: solid 1px red;*/
+    /*top: 50%;*/
+    position: absolute;
+    /*display: block;*/
+    width: 100%;
+    height: 30em;
+    background: #1f1f1f;
+    color: #fff;
+    font-weight: 300;
+    /*z-index: -1;*/
+
+
+}
+footer #footer_container {
+    position: relative;
+
+    /*border: solid 1px red;*/
+    width: 90%;
+    height: 23.5em;
+    margin: 0 auto;
+    padding: 2em 0;
+}
+footer #logo {
+    /*position: fixed;*/
+    /*display: block;*/
+
+    width: 100%;
+    height: 2.5em;
+}
+footer #logo img {
+    height: 100%;
+    object-fit: cover;
+}
+footer #logo p {
+    display: inline-block;
+    color: white;
+    margin-left: 1em;
+    height: 100%;
+    vertical-align: middle;
+}
+
+
+
+
+footer #team {
+    /*border: solid 1px red;*/
+    margin-top: 7vh;
+    width: 100%;
+}
+footer #team .title {
+    color: #fff;
+    font-weight: 800;
+    font-size: 1.25em;
+}
+
+footer #info {
+    /*border: solid 1px red;*/
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+footer #info p {
+    color: #fff;
+    font-weight: 100;
+    font-size: .8em;
+}
+
+#person_box {
+    display: flex;
+    margin-top: 1.5vh;
+}
+#person_box .teamperson {
+    /*border: solid 1px blue;*/
+    width: 12em;
+    height: 7em;
+    margin-right: 2em;
+    border-right: solid .5px rgba(255, 255, 255, .5);
+}
+.part {
+    color: #fff;
+    font-size: 1.25em;
+    font-weight: 600;
+}
+.name {
+    color: #fff;
+    font-size: 1em;
+    font-weight: 300;
+    margin-top: .3em;
+}
+.mail a {
+    display: block;
+    color: #aaa;
+    text-decoration: none;
+    font-weight: 100;
+    font-size: .75em;
+    padding-top: 2em;
+}
+
+footer #download {
+    position: absolute;
+    left: 0;
+    /*top: 9vmin;*/
+    /*bottom: 9vmin;*/
+}
+footer #download button {
+    border: none;
+    background: #fff;
+    padding: .75vmin 1.5vmin;
+    margin-top: 2vmin;
+    /*border-radius: 2px;*/
+}
+footer #download button a {
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 300;
+    font-size: 1.2vmin;
+    text-decoration: none;
+}
+footer #download button:hover {
+    opacity: .8;
+}
+footer #download button:active {
+    opacity: .5;
+}
+
+footer #badge {
+    position: absolute;
+    /*border: solid 1px red;*/
+    width: 100%;
+    height: 2.8em;
+    float: right;
+    right: 0;
+    bottom: 0;
+    /*vertical-align: bottom;*/
+}
+footer #badge img {
+    height: 100%;
+    object-fit: cover;
+    float: right;
+    margin-left: 15px;
 }

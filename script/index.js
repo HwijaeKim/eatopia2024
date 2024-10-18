@@ -2,48 +2,33 @@
 
 // let element = document.getElementById("element");
 
-new TypeIt("#element", {
+
+let observer = new IntersectionObserver((event) => {
+    event.forEach((ani) => {
+        if(ani.isIntersecting) {
+            ani.target.classList.add('active');
+        }
+        else {
+            ani.target.classList.remove('active');
+        }
+    })
+});
+
+let sectorTitle = document.querySelectorAll('.sectorTitle');
+let sec1Flexbox = document.querySelectorAll('.sec1_Observer');
+
+
+observer.observe(sectorTitle[0]);
+observer.observe(sec1Flexbox[0]);
+observer.observe(sec1Flexbox[1]);
+observer.observe(sec1Flexbox[2]);
+
+
+
+
+// SECTOR 01 Overview 타이핑 구현
+new TypeIt(".flex1", {
     lifeLike: false,
-    speed: 0,
-    loop: true
-})
-    .type("ㅇ")
-    .pause(80)
-    .delete(1)
-    .type("이")
-    .pause(97)
-    .delete(1)
-    .type("잇")
-    .pause(144)
-    .type("ㅌ")
-    .pause(53)
-    .delete(1)
-    .type("토")
-    .pause(75)
-    .delete(1)
-    .type("톺")
-    .pause(114)
-    .delete(1)
-    .type("토")
-    .pause(1)
-    .type("피")
-    .pause(46)
-    .delete(1)
-    .type("핑")
-    .pause(84)
-    .delete(1)
-    .type("피")
-    .pause(1)
-    .type("아")
-    .pause(1490)
-    .delete(1)
-    .type("ㅇ")
-    .pause(514)
-    .delete(1)
-    .pause(67)
-    .delete(1)
-    .pause(90)
-    .delete(1)
-    .pause(79)
-    .delete(1)
-    .go();
+    speed: 40,
+    strings: '일부 가정에게 치명적 스트레스가 되는 <br> 아이와의 식사전쟁,'
+}).go();
