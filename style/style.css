@@ -5,6 +5,20 @@
     --ti-cursor-font-weight: 100;
     --ti-cursor-transform: translateX(0);
     --ti-cursor-color: rgba(255, 255, 255, .4);
+
+    /*공통수치 통합관리*/
+    --union-line-height: 135%;
+
+    /*컬러 관리*/
+    --t-color: #151518;
+    --pinkL: #F4AFDD;
+    --pinkD: #CF8AB8;
+    --yellowL: #F7DC75;
+    --yellowD: #D3BA59;
+    --blueL: #BCD1EB;
+    --blueB: #98B1D1;
+    --greenL: #9EB366;
+    --greenD: #829945;
 }
 
 
@@ -12,7 +26,7 @@
 
 
 * {
-    color: #151518;
+    color: var(--t-color);
     margin: 0;
     padding: 0;
 }
@@ -101,7 +115,7 @@ nav {
 }
 .nav_menu button:hover {
     font-weight: 700;
-    color: #6E97CF;
+    color: var(--blueB);
 }
 .nav_menu button:hover::after {
     content: "";
@@ -110,7 +124,7 @@ nav {
     bottom: -5px;
     width: 100%;
     height: 2px; /* border-bottom의 두께 */
-    background-color: #6E97CF;
+    background-color: var(--blueB);
     animation: slideIn 0.5s ease; /* slideIn 애니메이션을 0.5초 동안 적용 */
 }
 .nav_menu button:active {
@@ -126,6 +140,10 @@ nav {
 .sectorTitle {
     margin-bottom: 2em;
 }
+
+
+
+
 
 
 
@@ -157,6 +175,13 @@ article#intro_container {
 }
 
 
+
+
+
+
+
+
+
 /*SECTOR 1*/
 #sec1_bg {
     /*border: solid 1px blue;*/
@@ -174,6 +199,8 @@ section#sector1 {
 
 
 .sectorTitle.active p {
+    font-weight: 400;
+
     animation: proj_bg .75s ease 0s 1 normal none;
 }
 .sectorTitle.active .subtitle {
@@ -194,15 +221,15 @@ section#sector1 {
      /*border: solid 1px blue;*/
      display: flex
  }
- .flex1 {
-     display: flex;
+.flex1 {
+    display: flex;
      /*border: solid 1px green;*/
-     font-weight: 600;
-     font-size: 2.8vmin;
-     width: 50%;
-     line-height: 4vmin;
-
- }
+    font-weight: 500;
+    font-size: 2vmax;
+    width: 50%;
+    margin-bottom: 25vh;
+    line-height: var(--union-line-height);
+}
  .flex1.active {
      animation: proj_bg .75s ease 0s 1 normal none;
  }
@@ -220,9 +247,9 @@ section#sector1 {
      animation: subtitle_bg .75s ease 0s 1 normal none;
  }
 .flex2 .title {
-    font-weight: 600;
-    font-size: 2.8vmin;
-    line-height: 4vmin;
+    font-weight: 500;
+    font-size: 2vmax;
+    line-height: var(--union-line-height);
     margin-bottom: 1em;
 }
 
@@ -231,8 +258,21 @@ section#sector1 {
  }
 .flex2 .subtitle {
     display: block;
-    /*position: absolute;*/
-    /*border: solid 1px red;*/
+    font-size: 1vmax;
+    font-weight: 300;
+}
+.bold {
+    font-weight: 500;
+}
+
+
+.sector1_background {
+    width: 50%;
+    margin-top: 7vh;
+    font-weight: 300;
+}
+.sector1_background p {
+    font-size: 1.6vmax;
 }
 
 

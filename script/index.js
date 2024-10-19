@@ -19,6 +19,8 @@ let sec1Flexbox = document.querySelectorAll('.sec1_Observer');
 
 
 observer.observe(sectorTitle[0]);
+observer.observe(sectorTitle[1]);
+
 observer.observe(sec1Flexbox[0]);
 observer.observe(sec1Flexbox[1]);
 observer.observe(sec1Flexbox[2]);
