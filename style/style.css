@@ -25,10 +25,14 @@
 /*    --text-medium: 1.8vmax;*/
 /*    --text-semi-medium: 1.6vmax;*/
 /*    --text-small: 1.1vmax;*/
-    --text-large: 2.5em;
-    --text-medium: 2.2em;
-    --text-semi-medium: 1.35em;
-    --text-small: 1em;
+/*    --text-large: 2.5em;*/
+/*    --text-medium: 2.2em;*/
+/*    --text-semi-medium: 1.35em;*/
+/*    --text-small: 1em;*/
+    --text-large: 4vmin;
+    --text-medium: 3.5vmin;
+    --text-semi-medium: 2.7vmin;
+    --text-small: 2vmin;
 }
 
 
