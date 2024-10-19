@@ -21,10 +21,14 @@
     --greenD: #829945;
 
 /*    글꼴크기 관리*/
-    --text-large: 2vmax;
-    --text-medium: 1.8vmax;
-    --text-semi-medium: 1.6vmax;
-    --text-small: 1.1vmax;
+/*    --text-large: 2.15vmax;*/
+/*    --text-medium: 1.8vmax;*/
+/*    --text-semi-medium: 1.6vmax;*/
+/*    --text-small: 1.1vmax;*/
+    --text-large: 2.5em;
+    --text-medium: 2.2em;
+    --text-semi-medium: 1.35em;
+    --text-small: 1em;
 }
 
 
@@ -42,6 +46,7 @@ body {
     font-family: "Spoqa Han Sans Neo", sans-serif;
     overflow-x: hidden;  /*X축으로 오버돼서 표시되는 것을 방지*/
     word-break: keep-all;
+    letter-spacing: -.125em;
 
     -webkit-user-select:none;
     -moz-user-select:none;
@@ -136,17 +141,17 @@ nav {
 .nav_menu button:active {
     opacity: .5;
 }
-.sectorTitle p {
-    font-weight: 600;
-    color: rgba(0, 0, 0, .4);
-    font-size: 1.25em;
 
-}
 /*UNION*/
 .sectorTitle {
     margin-bottom: 2em;
 }
+.sectorTitle p {
+    font-weight: 700;
+    color: rgba(0, 0, 0, .4);
+    font-size: var(--text-small);
 
+}
 
 
 
@@ -231,7 +236,7 @@ section#sector1 {
     display: flex;
      /*border: solid 1px green;*/
     font-weight: 600;
-    font-size: 2vmax;
+    font-size: var(--text-large);
     width: 50%;
     height: 40vh;
     line-height: var(--union-line-height);
@@ -254,7 +259,7 @@ section#sector1 {
  }
 .flex2 .title {
     font-weight: 600;
-    font-size: 2vmax;
+    font-size: var(--text-large);
     line-height: var(--union-line-height);
     margin-bottom: 1em;
 }
@@ -280,6 +285,8 @@ section#sector1 {
 .sector1_background p {
     font-size: var(--text-medium);
 }
+.sector1_background.active {
+    animation: slide_in_left 1s ease 0s 1 normal forwards;}
 
 section#sector1 #flexbox2 {
     /*border: solid 1px blue;*/
@@ -315,6 +322,19 @@ section#sector1 #flexbox2 {
     animation: bg_flex_ani .75s ease .3s 1 normal forwards;
 }
 
+
+.sector1_background2 {
+    /*border: solid 1px red;*/
+    width: 80%;
+    margin-top: 20vh;
+    font-weight: 400;
+    float: right;
+}
+.sector1_background2 p {
+    font-size: var(--text-medium);
+}
+.sector1_background2.active {
+    animation: slide_in_right 1s ease 0s 1 normal forwards;}
 
 
 
