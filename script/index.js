@@ -16,6 +16,7 @@ let observer = new IntersectionObserver((event) => {
 
 let sectorTitle = document.querySelectorAll('.sectorTitle');
 let sec1Flexbox = document.querySelectorAll('.sec1_Observer');
+let bgFlexbox = document.querySelectorAll('.bg_flex');
 
 
 observer.observe(sectorTitle[0]);
@@ -24,6 +25,10 @@ observer.observe(sectorTitle[1]);
 observer.observe(sec1Flexbox[0]);
 observer.observe(sec1Flexbox[1]);
 observer.observe(sec1Flexbox[2]);
+observer.observe(bgFlexbox[0]);
+observer.observe(bgFlexbox[1]);
+observer.observe(bgFlexbox[2]);
+
 
 
 

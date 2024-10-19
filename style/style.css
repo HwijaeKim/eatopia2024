@@ -19,6 +19,12 @@
     --blueB: #98B1D1;
     --greenL: #9EB366;
     --greenD: #829945;
+
+/*    글꼴크기 관리*/
+    --text-large: 2vmax;
+    --text-medium: 1.8vmax;
+    --text-semi-medium: 1.6vmax;
+    --text-small: 1.1vmax;
 }
 
 
@@ -224,10 +230,10 @@ section#sector1 {
 .flex1 {
     display: flex;
      /*border: solid 1px green;*/
-    font-weight: 500;
+    font-weight: 600;
     font-size: 2vmax;
     width: 50%;
-    margin-bottom: 25vh;
+    height: 40vh;
     line-height: var(--union-line-height);
 }
  .flex1.active {
@@ -247,7 +253,7 @@ section#sector1 {
      animation: subtitle_bg .75s ease 0s 1 normal none;
  }
 .flex2 .title {
-    font-weight: 500;
+    font-weight: 600;
     font-size: 2vmax;
     line-height: var(--union-line-height);
     margin-bottom: 1em;
@@ -258,22 +264,57 @@ section#sector1 {
  }
 .flex2 .subtitle {
     display: block;
-    font-size: 1vmax;
+    font-size: 1.1vmax;
     font-weight: 300;
 }
 .bold {
-    font-weight: 500;
+    font-weight: 600;
 }
 
 
 .sector1_background {
     width: 50%;
     margin-top: 7vh;
-    font-weight: 300;
+    font-weight: 400;
 }
 .sector1_background p {
-    font-size: 1.6vmax;
+    font-size: var(--text-medium);
 }
+
+section#sector1 #flexbox2 {
+    /*border: solid 1px blue;*/
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.bg_flex {
+    margin-top: 15vmin;
+    /*border: solid 1px red;*/
+    background-color: var(--t-color);
+    font-size: var(--text-semi-medium);
+    width: 32%;
+    /*height: 32%;*/
+    border-radius: 1em;
+    opacity: 0;
+}
+.bg_flex p {
+    color: #fff;
+    font-size: var(--text-semi-medium);
+    text-align: center;
+    padding: 4.4vmin 0;
+}
+
+.bg_flex.active.one {
+    animation: bg_flex_ani .75s ease 0s 1 normal forwards;
+}
+.bg_flex.active.two {
+    animation: bg_flex_ani .75s ease .15s 1 normal forwards;
+}
+.bg_flex.active.three {
+    animation: bg_flex_ani .75s ease .3s 1 normal forwards;
+}
+
 
 
 
@@ -320,8 +361,6 @@ footer #logo p {
     height: 100%;
     vertical-align: middle;
 }
-
-
 
 
 footer #team {
