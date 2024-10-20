@@ -370,27 +370,27 @@ section#sector2 #flexbox3 {
     width: 100%;
     /*height: 50vh;*/
 }
-.servey_flex {
+.survey_flex {
     /*border: solid 1px blue;*/
     width: calc(50% - 15px);
 }
-.servey_flex.title {
+.survey_flex.title {
     font-size: var(--text-large);
     font-weight: 300;
     margin-bottom: 10vmin;
 }
-.servey_flex.subtitle {
+.survey_flex.subtitle {
     margin-bottom: 10vmin;
     align-items: end;
     display: grid;
 }
-.servey_flex.subtitle p {
+.survey_flex.subtitle p {
     font-size: var(--text-small);
     color: rgba(0, 0, 0, .65);
     font-weight: 300;
 }
 
-.servey_flex.serv {
+.survey_flex.serv {
     background: #fff;
     height: 50vmin;
     border-radius: 1em;
