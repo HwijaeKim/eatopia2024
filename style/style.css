@@ -10,7 +10,7 @@
     --union-line-height: 135%;
 
     /*컬러 관리*/
-    --t-color: #151518;
+    --systemColor: #151518;
     --pinkL: #F4AFDD;
     --pinkD: #CF8AB8;
     --yellowL: #F7DC75;
@@ -40,7 +40,7 @@
 
 
 * {
-    color: var(--t-color);
+    color: var(--systemColor);
     margin: 0;
     padding: 0;
 }
@@ -50,7 +50,7 @@ body {
     font-family: "Spoqa Han Sans Neo", sans-serif;
     overflow-x: hidden;  /*X축으로 오버돼서 표시되는 것을 방지*/
     word-break: keep-all;
-    letter-spacing: -.125em;
+    letter-spacing: -.05em;
 
     -webkit-user-select:none;
     -moz-user-select:none;
@@ -197,7 +197,7 @@ article#intro_container {
 
 
 
-/*SECTOR 1*/
+/*SECTOR01*/
 #sec1_bg {
     /*border: solid 1px blue;*/
     width: 100%;
@@ -277,14 +277,14 @@ section#sector1 {
     font-weight: 300;
 }
 .bold {
-    font-weight: 600;
+    font-weight: 500;
 }
 
 
 .sector1_background {
     width: 50%;
     margin-top: 7vh;
-    font-weight: 400;
+    font-weight: 300;
 }
 .sector1_background p {
     font-size: var(--text-medium);
@@ -302,7 +302,7 @@ section#sector1 #flexbox2 {
 .bg_flex {
     margin-top: 15vmin;
     /*border: solid 1px red;*/
-    background-color: var(--t-color);
+    background-color: var(--systemColor);
     font-size: var(--text-semi-medium);
     width: 32%;
     /*height: 32%;*/
@@ -331,7 +331,7 @@ section#sector1 #flexbox2 {
     /*border: solid 1px red;*/
     width: 80%;
     margin-top: 20vh;
-    font-weight: 400;
+    font-weight: 300;
     float: right;
 }
 .sector1_background2 p {
@@ -339,6 +339,63 @@ section#sector1 #flexbox2 {
 }
 .sector1_background2.active {
     animation: slide_in_right 1s ease 0s 1 normal forwards;}
+
+
+
+
+
+
+
+/*SECTOR02*/
+#sec2_bg {
+    /*border: solid 1px blue;*/
+    width: 100%;
+    height: 100%;
+    padding-bottom: 20rem;
+}
+section#sector2 {
+    /*border: solid 1px red;*/
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 15rem;
+}
+
+section#sector2 #flexbox3 {
+    /*border: solid 1px red;*/
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    /*align-items: baseline;*/
+    width: 100%;
+    /*height: 50vh;*/
+}
+.servey_flex {
+    /*border: solid 1px blue;*/
+    width: calc(50% - 15px);
+}
+.servey_flex.title {
+    font-size: var(--text-large);
+    font-weight: 300;
+    margin-bottom: 10vmin;
+}
+.servey_flex.subtitle {
+    margin-bottom: 10vmin;
+    align-items: end;
+    display: grid;
+}
+.servey_flex.subtitle p {
+    font-size: var(--text-small);
+    color: rgba(0, 0, 0, .65);
+    font-weight: 300;
+}
+
+.servey_flex.serv {
+    background: #fff;
+    height: 50vmin;
+    border-radius: 1em;
+}
+
 
 
 
