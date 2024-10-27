@@ -16,7 +16,7 @@
     --yellowL: #F7DC75;
     --yellowD: #D3BA59;
     --blueL: #BCD1EB;
-    --blueB: #98B1D1;
+    --blueD: #98B1D1;
     --greenL: #9EB366;
     --greenD: #829945;
 
@@ -51,6 +51,7 @@ body {
     overflow-x: hidden;  /*X축으로 오버돼서 표시되는 것을 방지*/
     word-break: keep-all;
     letter-spacing: -.05em;
+    /*padding: 20px;*/
 
     -webkit-user-select:none;
     -moz-user-select:none;
@@ -65,11 +66,13 @@ body {
 
 /*header > nav*/
 header {
-    top: 0;
-    left: 0;
+    /*background: #fff;*/
+    top: 1.5%;
+    left: 1%;
     position: fixed;
-    /*border: solid 1px red;*/
-    width: 100%;
+    border: solid 1px red;
+    /*border-radius: 50px;*/
+    width: 98%;
     color: #1f1f1f;
     z-index: 1;
 
@@ -77,13 +80,13 @@ header {
 }
 header.active {
     background: rgb(255, 255, 255, .85);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(20px); /*Safari 전용 blur*/
 }
 nav {
-    /*border: solid 1px blue;*/
+    border: solid 1px blue;
     width: 90%;
-    height: 60px;
+    height: 100%;
     margin: 0 auto;
 }
 
@@ -126,10 +129,11 @@ nav {
     position: relative; /* absolute 위치 설정을 위한 상대적 위치 설정 */
     border: none;
     background: none;
+    text-align: center;
 }
 .nav_menu button:hover {
     font-weight: 700;
-    color: var(--blueB);
+    color: var(--blueD);
 }
 .nav_menu button:hover::after {
     content: "";
@@ -138,7 +142,7 @@ nav {
     bottom: -5px;
     width: 100%;
     height: 2px; /* border-bottom의 두께 */
-    background-color: var(--blueB);
+    background-color: var(--blueD);
     animation: slideIn 0.5s ease; /* slideIn 애니메이션을 0.5초 동안 적용 */
 }
 .nav_menu button:active {
@@ -235,10 +239,50 @@ section#sector1 {
      /*border: solid 1px blue;*/
      display: flex
  }
+
+ .overview_title {
+    border: solid 1px red;
+     width: 100%;
+     font-size: var(--text-large);
+     font-weight: 500;
+     margin-bottom: 10vh;
+ }
+ .overview_title.active p {
+     animation: proj_bg .75s ease 0s 1 normal none;
+ }
+
+ .graph {
+     border: solid 1px red;
+     width: 100%;
+
+ }
+ .graph img {
+     align-content: center;
+     align-items: center;
+     margin: 0 auto;
+     left: 0;
+ }
+ .graph.active{
+     animation: FadeInBottom .75s ease 0s 1 normal forwards;
+ }
+ .graph_subtitle {
+     font-size: var(--text-small);
+     font-weight: 400;
+     text-align: center;
+     margin-top: 3em;
+ }
+ .graph_subtitle.active p {
+     animation: FadeInBottom .75s ease 0s 1 normal forwards;
+ }
+
+
+
+
+
 .flex1 {
     display: flex;
      /*border: solid 1px green;*/
-    font-weight: 600;
+    font-weight: 500;
     font-size: var(--text-large);
     width: 50%;
     height: 40vh;
@@ -347,7 +391,7 @@ section#sector1 #flexbox2 {
 
 /*SECTOR02*/
 #sec2_bg {
-    /*border: solid 1px blue;*/
+    border: solid 1px blue;
     width: 100%;
     height: 100%;
     padding-bottom: 20rem;
@@ -361,18 +405,16 @@ section#sector2 {
 }
 
 section#sector2 #flexbox3 {
-    /*border: solid 1px red;*/
+    border: solid 1px red;
     display: flex;
-    flex-flow: row wrap;
+    /*flex-flow: row wrap;*/
     justify-content: space-between;
-    align-items: baseline;
-    /*align-items: baseline;*/
     width: 100%;
     /*height: 50vh;*/
 }
 .survey_flex {
-    /*border: solid 1px blue;*/
-    width: calc(50% - 15px);
+    border: solid 1px blue;
+    width: 100%;
 }
 .survey_flex.title {
     font-size: var(--text-large);
@@ -381,8 +423,7 @@ section#sector2 #flexbox3 {
 }
 .survey_flex.subtitle {
     margin-bottom: 10vmin;
-    align-items: end;
-    display: grid;
+
 }
 .survey_flex.subtitle p {
     font-size: var(--text-small);
@@ -393,7 +434,27 @@ section#sector2 #flexbox3 {
 .survey_flex.serv {
     background: #fff;
     height: 50vmin;
-    border-radius: 1em;
+    border-radius: 1.25em;
+    width: calc(50% - 10px);
+
+}
+.img_box {
+    border: solid 1px red;
+    width: 85%;
+    height: 85%;
+    margin: 2em auto;
+}
+.img_box.one {
+    background-image: url("../sources/graph1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+.img_box.two {
+    background-image: url("../sources/graph1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+
 }
 
 
@@ -539,4 +600,116 @@ footer #badge img {
     object-fit: cover;
     float: right;
     margin-left: 15px;
+}
+
+
+
+
+
+
+
+/*SECTOR03*/
+
+.bento-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.background-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.background-button {
+    background-color: #f7c2dd;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.background-text {
+    font-size: 1.2em;
+    color: #a99f96;
+}
+
+.parent-child-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* 부모와 아이 공통 박스 스타일 */
+.parent-box, .child-box {
+    background-color: #f7f7f7;
+    border-radius: 15px;
+    padding: 20px;
+    position: relative;
+}
+
+.section-title {
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    background-color: black;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 1.2em;
+}
+
+.stress-box {
+    background-color: #f7c2dd;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.arrow {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    font-size: 2.5rem;
+    transform: translateY(-50%);
+}
+
+.explanation {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 1.1em;
+    line-height: 1.5em;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 15px;
+}
+
+/* 부모 박스에 있는 이미지 스타일 */
+.parent-box .image {
+    object-fit: cover;
+    max-height: 200px;
+}
+
+/* 아이 박스에 있는 이미지 스타일 */
+.child-box .image {
+    object-fit: cover;
+    max-height: 200px;
 }
