@@ -12,7 +12,7 @@
     /*컬러 관리*/
     --bg: #FAF4E5;
     --systemColor: #232323;
-    --sectorTitleColor: rgba(0, 0, 0, .6);
+    --sectorTitleColor: rgba(0, 0, 0, .7);
     --pinkL: #F4AFDD;
     --pinkD: #CF8AB8;
     --yellowL: #F7DC75;
@@ -31,7 +31,7 @@
 /*    --text-medium: 2.2em;*/
 /*    --text-semi-medium: 1.35em;*/
 /*    --text-small: 1em;*/
-    --text-large: 4vmin;
+    --text-large: 4.5vmin;
     --text-medium: 3.5vmin;
     --text-semi-medium: 2.7vmin;
     --text-small: 2vmin;
@@ -58,7 +58,10 @@ body {
     -webkit-user-select:none;
     -moz-user-select:none;
     -ms-user-select:none;
-    user-select:none
+    user-select:none;
+
+
+    /*z-index: 10;*/
 }
 
 .clear {
@@ -279,7 +282,13 @@ article#intro_container {
     width: 100%;
     height: 100%;
     background: var(--bg);
-    padding-bottom: 20rem;
+    /*padding-bottom: 5rem;*/
+
+    /*position: absolute;*/
+    background-image: url("../sources/bgSymbols.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
 }
 section#sector1 {
     /*border: solid 1px red;*/
@@ -299,16 +308,6 @@ section#sector1 {
     animation: subtitle_bg 2.5s ease 0s 1 normal none;
 }
 
-.source {
-    font-weight: 200;
-    font-size: 12px;
-    color: darkgray;
-}#sector1 img {
-     margin: 60px 0 0 150px;
-     height: 17vw;
- }
-
-
  section#sector1 #flexbox {
      /*border: solid 1px blue;*/
      display: flex
@@ -325,41 +324,19 @@ section#sector1 {
      animation: proj_bg .75s ease 0s 1 normal none;
  }
 
- .graph {
-     border: solid 1px red;
-     width: 100%;
-
- }
- .graph img {
-     align-content: center;
-     align-items: center;
-     margin: 0 auto;
-     left: 0;
- }
- .graph.active{
-     animation: FadeInBottom .75s ease 0s 1 normal forwards;
- }
- .graph_subtitle {
-     font-size: var(--text-small);
-     font-weight: 400;
-     text-align: center;
-     margin-top: 3em;
- }
- .graph_subtitle.active p {
-     animation: FadeInBottom .75s ease 0s 1 normal forwards;
- }
-
-
-
 
 
 .flex1 {
     display: flex;
      /*border: solid 1px green;*/
-    font-weight: 500;
-    font-size: var(--text-large);
+
     width: 50%;
     height: 40vh;
+}
+.flex1 p {
+    font-weight: 600;
+    font-size: var(--text-large);
+    color: var(--sectorTitleColor);
     line-height: var(--union-line-height);
 }
  .flex1.active {
@@ -388,10 +365,11 @@ section#sector1 {
  .purple {
      color: #D788C1;
  }
-.flex2 .subtitle {
+.flex2 .subtitle p {
     display: block;
     font-size: 1.1vmax;
-    font-weight: 300;
+    font-weight: 400;
+    color: var(--sectorTitleColor);
 }
 .bold {
     font-weight: 500;
@@ -463,11 +441,14 @@ section#sector1 #flexbox2 {
 
 
 
+
+
 /*SECTOR02*/
 #sec2_bg {
-    border: solid 1px blue;
+    /*border: solid 1px blue;*/
     width: 100%;
     height: 100%;
+    background: var(--bg);
     padding-bottom: 20rem;
 }
 section#sector2 {
@@ -475,7 +456,7 @@ section#sector2 {
     display: block;
     width: 90%;
     margin: 0 auto;
-    padding-top: 15rem;
+    padding-top: 5rem;
 }
 
 section#sector2 #flexbox3 {
@@ -486,49 +467,84 @@ section#sector2 #flexbox3 {
     width: 100%;
     /*height: 50vh;*/
 }
-.survey_flex {
-    border: solid 1px blue;
-    width: 100%;
-}
-.survey_flex.title {
+
+.sec2_flex.title p {
     font-size: var(--text-large);
-    font-weight: 300;
+    font-weight: 500;
+    color: var(--sectorTitleColor);
     margin-bottom: 10vmin;
 }
-.survey_flex.subtitle {
-    margin-bottom: 10vmin;
-
+article#sec2_flexbox {
+    /*border: solid 1px red;*/
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 27vmax;
 }
-.survey_flex.subtitle p {
-    font-size: var(--text-small);
-    color: rgba(0, 0, 0, .65);
-    font-weight: 300;
+.sec2Flex {
+    /*border: solid 1px blue;*/
+    /*flex: 1;*/
+    width: 32%;
+    height: 100%;
+    text-align: center;
+}
+.sec2Flex.active {
+    animation: big-small .75s cubic-bezier(0.38, 0.08, 0.03, 0.88);
 }
 
-.survey_flex.serv {
-    background: #fff;
-    height: 50vmin;
-    border-radius: 1.25em;
-    width: calc(50% - 10px);
-
+.sec2Flex.one {
+    background: var(--blueL);
+    border-radius: 5rem;
 }
-.img_box {
-    border: solid 1px red;
-    width: 85%;
-    height: 85%;
-    margin: 2em auto;
+.sec2Flex.two {
+    background: var(--yellowL);
+    border-radius: 5rem;
 }
-.img_box.one {
-    background-image: url("../sources/graph1.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-
+.sec2Flex.three {
+    background: var(--pinkL);
+    border-radius: 5rem;
 }
-.img_box.two {
-    background-image: url("../sources/graph1.png");
-    background-size: contain;
-    background-repeat: no-repeat;
 
+.symbol_top {
+    /*border: solid 1px red;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:70%;
+    /*text-align: center;*/
+}
+.symbol_top svg {
+    width: 60%;
+    height: 60%;
+    opacity: 0;
+}
+.symbol_top svg.active {
+    animation: FadeInBottom .5s forwards .5s;
+}
+.leaf {
+    animation: leafMoving 1.5s infinite alternate;
+    transform-origin: 60px 40px;
+}
+@keyframes leafMoving {
+    0% {}
+    100% {transform: rotate(-20deg);}
+}
+
+
+.text_bottom {
+    /*border: solid 1px blue;*/
+    height: 30%;
+}
+.text_bottom p {
+    color: rgba(255, 255, 255, .95);
+    font-weight: 800;
+    font-size: 4vmin;
+    margin-bottom: 1vmax;
+}
+.text_bottom span {
+    color: rgba(255, 255, 255, .95);
+    font-weight: 600;
+    font-size: 3vmin;
 }
 
 

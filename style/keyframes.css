@@ -32,7 +32,7 @@
 @keyframes FadeInBottom {
     0% {
         opacity: 0;
-        transform: translateY(50px);
+        transform: translateY(70px);
     }
 
     100% {
@@ -43,10 +43,10 @@
 
 
 
-@keyframes bg_flex_ani {
+@keyframes big-small {
     0% {
         opacity: 0;
-        transform: scale(1.25);
+        transform: scale(.25);
     }
 
     100% {
