@@ -70,13 +70,13 @@ header {
     top: 1.5%;
     left: 1%;
     position: fixed;
-    border: solid 1px red;
-    /*border-radius: 50px;*/
+    /*border: solid 1px red;*/
+    border-radius: 20px;
     width: 98%;
     color: #1f1f1f;
     z-index: 1;
 
-    transition: ease .5s;
+    transition: ease .25s;
 }
 header.active {
     background: rgb(255, 255, 255, .85);
@@ -84,10 +84,11 @@ header.active {
     -webkit-backdrop-filter: blur(20px); /*Safari 전용 blur*/
 }
 nav {
-    border: solid 1px blue;
+    /*border: solid 1px blue;*/
     width: 90%;
     height: 100%;
     margin: 0 auto;
+    padding-top: 10px;
 }
 
 
@@ -104,6 +105,7 @@ nav {
     float: left;
     /*border: solid 1px green;*/
     height: 60px;
+    margin-top: 3px;
 }
 
 
@@ -134,6 +136,7 @@ nav {
 .nav_menu button:hover {
     font-weight: 700;
     color: var(--blueD);
+    background: var(--yellowD);
 }
 .nav_menu button:hover::after {
     content: "";
@@ -175,7 +178,7 @@ section#intro {
     letter-spacing: -3px;
     z-index: -9;
     opacity: 1;
-    background-image: url("../sources/temp/dev_intro.png");
+    background-image: url("../sources/temp/dev_intro2.png");
     background-position: center;
     background-size: contain;
 

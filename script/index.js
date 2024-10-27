@@ -45,7 +45,7 @@ observer.observe(sectorTitle[1]);
 // }).go();
 
 
-
+const navLogo = document.getElementById('nav_logo_white');
 
 window.addEventListener('scroll', () => {
     let scrollTop = window.scrollY;
@@ -54,9 +54,12 @@ window.addEventListener('scroll', () => {
 
     if(scrollTop > 10) {
         header.classList.add('active');
+        navLogo.innerHTML = '<a href="./index.html\"><img src="./sources/nav_logo.png" alt="nav_logo" height="35"></a>'
     }
     else if (scrollTop < 10) {
         header.classList.remove('active');
+        navLogo.innerHTML = '<a href="./index.html\"><img src="./sources/nav_logo_white.png" alt="nav_logo" height="35"></a>'
+
     };
 
 })
