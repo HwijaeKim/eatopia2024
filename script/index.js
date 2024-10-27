@@ -45,21 +45,27 @@ observer.observe(sectorTitle[1]);
 // }).go();
 
 
-const navLogo = document.getElementById('nav_logo_white');
 
 window.addEventListener('scroll', () => {
     let scrollTop = window.scrollY;
     const header = document.querySelector('header');
+    const navLogo = document.getElementById('nav_logo_white');
+    const navMenu = document.querySelectorAll('.nav_menu button');
     console.log(scrollTop); //Dev Only
 
     if(scrollTop > 10) {
         header.classList.add('active');
-        navLogo.innerHTML = '<a href="./index.html\"><img src="./sources/nav_logo.png" alt="nav_logo" height="35"></a>'
+        navLogo.innerHTML = '<a href="./index.html\"><img src="./sources/nav_logo.png" alt="nav_logo" height="35"></a>';
+        navMenu.forEach((item) => {
+            item.style.color = 'rgba(0, 0, 0, .7)';
+        })
     }
     else if (scrollTop < 10) {
         header.classList.remove('active');
-        navLogo.innerHTML = '<a href="./index.html\"><img src="./sources/nav_logo_white.png" alt="nav_logo" height="35"></a>'
-
+        navLogo.innerHTML = '<a href="./index.html\"><img src="./sources/nav_logo_white.png" alt="nav_logo" height="35"></a>';
+        navMenu.forEach((item) => {
+            item.style.color = 'rgba(255, 255, 255, .85)';
+        })
     };
 
 })

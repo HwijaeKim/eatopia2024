@@ -10,7 +10,8 @@
     --union-line-height: 135%;
 
     /*컬러 관리*/
-    --systemColor: #151518;
+    --systemColor: #232323;
+    --sectorTitleColor: rgba(0, 0, 0, .6);
     --pinkL: #F4AFDD;
     --pinkD: #CF8AB8;
     --yellowL: #F7DC75;
@@ -47,7 +48,7 @@
 
 body {
     background: #FAF4E5;
-    font-family: "Spoqa Han Sans Neo", sans-serif;
+    font-family: "Pretendard", sans-serif;
     overflow-x: hidden;  /*X축으로 오버돼서 표시되는 것을 방지*/
     word-break: keep-all;
     letter-spacing: -.05em;
@@ -71,7 +72,7 @@ header {
     left: 1%;
     position: fixed;
     /*border: solid 1px red;*/
-    border-radius: 20px;
+    border-radius: 50px;
     width: 98%;
     color: #1f1f1f;
     z-index: 1;
@@ -126,17 +127,19 @@ nav {
 .nav_menu button {
     width: 120%;
     height: 20px;
+    color: #fff;
     font-size: 1em;
-    font-weight: 200;
+    font-weight: 600;
     position: relative; /* absolute 위치 설정을 위한 상대적 위치 설정 */
     border: none;
     background: none;
-    text-align: center;
 }
 .nav_menu button:hover {
     font-weight: 700;
     color: var(--blueD);
-    background: var(--yellowD);
+    /*background: #2b2b2b;*/
+    /*padding: 5px 10px;*/
+    /*border-radius: 50px;*/
 }
 .nav_menu button:hover::after {
     content: "";
@@ -144,9 +147,10 @@ nav {
     left: 0;
     bottom: -5px;
     width: 100%;
-    height: 2px; /* border-bottom의 두께 */
-    background-color: var(--blueD);
-    animation: slideIn 0.5s ease; /* slideIn 애니메이션을 0.5초 동안 적용 */
+    height: 4px; /* border-bottom의 두께 */
+    border-radius: 15px;
+    background-color: var(--pinkL);
+    transition: .5s ease-in-out;
 }
 .nav_menu button:active {
     opacity: .5;
@@ -157,10 +161,13 @@ nav {
     margin-bottom: 2em;
 }
 .sectorTitle p {
+    display: inline-block;
     font-weight: 700;
-    color: rgba(0, 0, 0, .4);
+    color: var(--sectorTitleColor);
     font-size: var(--text-small);
-
+    background: var(--pinkL);
+    padding: 5px 20px;
+    border-radius: 50px;
 }
 
 
@@ -181,7 +188,7 @@ section#intro {
     background-image: url("../sources/temp/dev_intro2.png");
     background-position: center;
     background-size: contain;
-
+    filter: brightness(0.6); /* 0.5로 어둡게 조정 */
 }
 article#intro_bg {
 }
