@@ -10,6 +10,7 @@
     --union-line-height: 135%;
 
     /*컬러 관리*/
+    --bg: #FAF4E5;
     --systemColor: #232323;
     --sectorTitleColor: rgba(0, 0, 0, .6);
     --pinkL: #F4AFDD;
@@ -47,7 +48,7 @@
 }
 
 body {
-    background: #FAF4E5;
+    background: var(--bg);
     font-family: "Pretendard", sans-serif;
     overflow-x: hidden;  /*X축으로 오버돼서 표시되는 것을 방지*/
     word-break: keep-all;
@@ -83,6 +84,12 @@ header.active {
     background: rgb(255, 255, 255, .85);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(20px); /*Safari 전용 blur*/
+    border: solid .5px white;
+    box-shadow:
+            1.4px 1.5px 3.3px rgba(0, 0, 0, 0.055),
+            4.7px 5.1px 11.2px rgba(0, 0, 0, 0.064),
+            21px 23px 50px rgba(0, 0, 0, 0.07)
+;
 }
 nav {
     /*border: solid 1px blue;*/
@@ -170,7 +177,35 @@ nav {
     border-radius: 50px;
 }
 
+.main_img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
 
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    /*opacity: .8;*/
+}
+.main_img video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(3px) brightness(.85);
+
+}
 
 
 
@@ -185,12 +220,13 @@ section#intro {
     letter-spacing: -3px;
     z-index: -9;
     opacity: 1;
-    background-image: url("../sources/temp/dev_intro2.png");
+    /*background-image: url("../sources/temp/dev_intro2.png");*/
     background-position: center;
     background-size: contain;
-    filter: brightness(0.6); /* 0.5로 어둡게 조정 */
+    /*filter: brightness(0.6);*/
 }
 article#intro_bg {
+
 }
 article#intro_container {
     /*border: solid 1px red;*/
@@ -201,6 +237,27 @@ article#intro_container {
     margin: 0 auto;
     /*padding-top: 28vh;*/
 }
+.logo_container {
+    width: 700px;
+    height: 350px;
+    background-image: url("../sources/logomotion_white.png");
+    background-size: cover;
+
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    animation: logoMotion 3s steps(23) forwards;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+    filter: drop-shadow(2px 2px 25px rgba(0, 0, 0, .35));
+}
+@keyframes logoMotion {
+    100% { background-position: -16100px 0; }
+}
+
 
 
 
@@ -215,6 +272,7 @@ article#intro_container {
     /*border: solid 1px blue;*/
     width: 100%;
     height: 100%;
+    background: var(--bg);
     padding-bottom: 20rem;
 }
 section#sector1 {
