@@ -450,6 +450,11 @@ section#sector1 #flexbox2 {
     height: 100%;
     background: var(--bg);
     padding-bottom: 20rem;
+
+    background-image: url("../sources/bgSymbols.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
 }
 section#sector2 {
     /*border: solid 1px red;*/
@@ -488,8 +493,14 @@ article#sec2_flexbox {
     height: 100%;
     text-align: center;
 }
-.sec2Flex.active {
+.sec2Flex.one.active {
     animation: big-small .75s cubic-bezier(0.38, 0.08, 0.03, 0.88);
+}
+.sec2Flex.two.active {
+    animation: big-small .75s cubic-bezier(0.38, 0.08, 0.03, 0.88) .1s;
+}
+.sec2Flex.three.active {
+    animation: big-small .75s cubic-bezier(0.38, 0.08, 0.03, 0.88) .2s;
 }
 
 .sec2Flex.one {
