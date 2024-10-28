@@ -39,6 +39,14 @@
 
 
 
+/*@media screen and (max-width: 1024px) {*/
+/*    article#sec2_flexbox {*/
+/*        flex-direction: column;*/
+
+/*    }*/
+/*}*/
+
+
 
 
 * {
@@ -501,18 +509,18 @@ article#sec2_flexbox {
     width: 32%;
     height: 100%;
     text-align: center;
-    /*opacity: 0;*/
+    opacity: 0;
 
     transform-style: preserve-3d;
 }
 .sec2Flex.one.active {
-    animation: big-small .75s cubic-bezier(0.38, 0.08, 0.03, 0.88);
+    animation: big-small .75s cubic-bezier(0.38, 0.08, 0.03, 0.88) both;
 }
 .sec2Flex.two.active {
-    animation: big-small .75s cubic-bezier(0.38, 0.08, 0.03, 0.88) .1s;
+    animation: big-small .75s cubic-bezier(0.38, 0.08, 0.03, 0.88) .1s both;
 }
 .sec2Flex.three.active {
-    animation: big-small .75s cubic-bezier(0.38, 0.08, 0.03, 0.88) .2s;
+    animation: big-small .75s cubic-bezier(0.38, 0.08, 0.03, 0.88) .2s both;
 }
 
 .sec2Flex.one {
@@ -592,6 +600,60 @@ article#sec2_flexbox {
     font-weight: 600;
     font-size: 3vmin;
 }
+
+article#sec2_result .plus_icon {
+    /*border: solid 1px red;*/
+    text-align: center;
+    margin: 7rem 0 7rem 0;
+}
+article#sec2_result .plus_icon img.active {
+    animation: rotate 1s ease 0s 1 normal forwards;
+}
+@keyframes rotate {
+    0% {
+        opacity: 0;
+        transform: rotate(-540deg) scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(0) scale(1);
+    }
+}
+
+article#sec2_result p {
+    text-align: center;
+    font-size: var(--text-semi-medium);
+    font-weight: 300;
+    opacity: 0;
+}
+article#sec2_result p.active{
+    -webkit-animation: tracking-in-expand-fwd-top 0.8s .5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: tracking-in-expand-fwd-top 0.8s .5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@keyframes tracking-in-expand-fwd-top {
+    0% {
+        letter-spacing: -.5em;
+        -webkit-transform: translateZ(-700px) translateY(-300px);
+        transform: translateZ(-700px) translateY(-300px);
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.4;
+    }
+    100% {
+        -webkit-transform: translateZ(0) translateY(0);
+        transform: translateZ(0) translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+
 
 
 
