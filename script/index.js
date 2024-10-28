@@ -40,6 +40,8 @@ observer.observe(sec2Observer[8]);
 
 
 
+
+
 // SECTOR 01 Overview 타이핑 구현
 document.addEventListener('DOMContentLoaded', () => {
     let text = "일부 가정에게 치명적 스트레스가 되는<br>아이와의 식사전쟁,";
@@ -83,6 +85,14 @@ window.addEventListener('scroll', () => {
             item.style.color = 'rgba(255, 255, 255, .85)';
         })
     };
+
+    const mainImg = document.querySelector('.vidControl');
+    if(scrollTop > 1800) {
+        mainImg.style.display = 'none';
+    }
+    else if(scrollTop < 1100) {
+        mainImg.style.display = 'block';
+    }
 
 })
 

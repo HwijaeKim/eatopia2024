@@ -196,10 +196,10 @@ nav {
 .sectorTitle.active p {
     font-weight: 400;
 
-    animation: proj_bg .75s ease 0s 1 normal none;
+    animation: proj_bg .75s ease 0s 1 both;
 }
 .sectorTitle.active .subtitle {
-    animation: subtitle_bg 2.5s ease 0s 1 normal none;
+    animation: subtitle_bg 2.5s ease 0s 1 both;
 }
 
 
@@ -336,7 +336,7 @@ section#sector1 {
      margin-bottom: 10vh;
  }
  .overview_title.active p {
-     animation: proj_bg .75s ease 0s 1 normal none;
+     animation: proj_bg .75s ease 0s 1 both
  }
 
 
@@ -356,7 +356,7 @@ section#sector1 {
     line-height: var(--union-line-height);
 }
  .flex1.active {
-     animation: subtitle_bg .75s ease .15s forwards;
+     animation: subtitle_bg .75s ease .15s both;
  }
 
  .flex2 {
@@ -369,14 +369,17 @@ section#sector1 {
     animation: subtitle_bg .75s ease .2s forwards;
 }
  .subtitle.active p{
-     animation: subtitle_bg .75s ease 0s 1 normal none;
+     animation: subtitle_bg .75s ease 0s 1 both;
  }
-.flex2 .title {
+.flex2 .title p {
     font-weight: 600;
     font-size: var(--text-large);
     line-height: var(--union-line-height);
     margin-bottom: 1em;
-    /*opacity: 0;*/
+    opacity: 0;
+}
+.flex2 .title.active p{
+    animation: subtitle_bg .75s ease .2s forwards;
 }
 
  .purple {
@@ -495,6 +498,7 @@ section#sector2 #flexbox3 {
     font-weight: 500;
     color: var(--sectorTitleColor);
     margin-bottom: 10vmin;
+    opacity: 0;
 }
 article#sec2_flexbox {
     /*border: solid 1px red;*/
