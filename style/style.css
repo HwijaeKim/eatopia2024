@@ -166,6 +166,12 @@ nav {
     opacity: .5;
 }
 
+
+
+
+
+
+
 /*UNION*/
 .sectorTitle {
     margin-bottom: 2em;
@@ -179,6 +185,15 @@ nav {
     padding: 5px 20px;
     border-radius: 50px;
 }
+.sectorTitle.active p {
+    font-weight: 400;
+
+    animation: proj_bg .75s ease 0s 1 normal none;
+}
+.sectorTitle.active .subtitle {
+    animation: subtitle_bg 2.5s ease 0s 1 normal none;
+}
+
 
 .main_img {
     position: fixed;
@@ -210,6 +225,8 @@ nav {
     background: rgb(2,0,36);
     background: linear-gradient(0deg, rgba(2,0,36,0) 50%, rgba(0,0,0,0.6) 100%);
 }
+
+
 
 
 
@@ -298,16 +315,6 @@ section#sector1 {
     padding-top: 15rem;
 }
 
-
-.sectorTitle.active p {
-    font-weight: 400;
-
-    animation: proj_bg .75s ease 0s 1 normal none;
-}
-.sectorTitle.active .subtitle {
-    animation: subtitle_bg 2.5s ease 0s 1 normal none;
-}
-
  section#sector1 #flexbox {
      /*border: solid 1px blue;*/
      display: flex
@@ -332,6 +339,7 @@ section#sector1 {
 
     width: 50%;
     height: 40vh;
+    opacity: 0;
 }
 .flex1 p {
     font-weight: 600;
@@ -340,7 +348,7 @@ section#sector1 {
     line-height: var(--union-line-height);
 }
  .flex1.active {
-     animation: proj_bg .75s ease 0s 1 normal none;
+     animation: subtitle_bg .75s ease .15s forwards;
  }
 
  .flex2 {
@@ -350,7 +358,7 @@ section#sector1 {
 
  }
 .title.active p{
-    animation: subtitle_bg .75s ease 0s 1 normal none;
+    animation: subtitle_bg .75s ease .2s forwards;
 }
  .subtitle.active p{
      animation: subtitle_bg .75s ease 0s 1 normal none;
@@ -360,6 +368,7 @@ section#sector1 {
     font-size: var(--text-large);
     line-height: var(--union-line-height);
     margin-bottom: 1em;
+    /*opacity: 0;*/
 }
 
  .purple {
@@ -492,15 +501,16 @@ article#sec2_flexbox {
     width: 32%;
     height: 100%;
     text-align: center;
+    opacity: 0;
 }
 .sec2Flex.one.active {
-    animation: big-small .75s cubic-bezier(0.38, 0.08, 0.03, 0.88);
+    animation: big-small .75s cubic-bezier(0.38, 0.08, 0.03, 0.88) forwards;
 }
 .sec2Flex.two.active {
-    animation: big-small .75s cubic-bezier(0.38, 0.08, 0.03, 0.88) .1s;
+    animation: big-small .75s cubic-bezier(0.38, 0.08, 0.03, 0.88) .1s forwards;
 }
 .sec2Flex.three.active {
-    animation: big-small .75s cubic-bezier(0.38, 0.08, 0.03, 0.88) .2s;
+    animation: big-small .75s cubic-bezier(0.38, 0.08, 0.03, 0.88) .2s forwards;
 }
 
 .sec2Flex.one {
@@ -540,7 +550,24 @@ article#sec2_flexbox {
     0% {}
     100% {transform: rotate(-20deg);}
 }
+.leaf2 {
+    animation: leaf2Moving 1.5s infinite alternate;
+    transform-origin: 30px 60px;
 
+}
+@keyframes leaf2Moving {
+    0% {}
+    100% {transform: rotate(5deg) translateY(40px);}
+}
+
+
+/*.toy1 {*/
+/*    animation: toyMoving 1.5s infinite alternate ease-in-out;*/
+/*}*/
+/*@keyframes toyMoving {*/
+/*    0% {}*/
+/*    50% {transform: translateY(-20px)}*/
+/*}*/
 
 .text_bottom {
     /*border: solid 1px blue;*/

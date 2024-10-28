@@ -90,6 +90,6 @@ window.addEventListener('scroll', () => {
 VanillaTilt.init(document.querySelectorAll('.sec2Flex'), {
     max: 5,
     speed: 500,
-    scale: 1.05,
+    scale: 1.1,
     glare: true
 })
