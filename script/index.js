@@ -3,20 +3,22 @@
 // let element = document.getElementById("element");
 
 
-let observer = new IntersectionObserver((event) => {
-    event.forEach((ani) => {
-        if(ani.isIntersecting) {
-            ani.target.classList.add('active');
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active'); // 애니메이션 시작
+        } else {
+            entry.target.classList.remove('active'); // 애니메이션 제거로 깜빡임 방지
         }
-        else {
-            ani.target.classList.remove('active');
-        }
-    })
+    });
+}, {
+    // threshold: .5
 });
 
-let sectorTitle = document.querySelectorAll('.sectorTitle');
-let sec1Observer = document.querySelectorAll('.sec1_Observer');
-let sec2Observer = document.querySelectorAll('.sec2_Observer');
+const sectorTitle = document.querySelectorAll('.sectorTitle');
+const sec1Observer = document.querySelectorAll('.sec1_Observer');
+const sec2Observer = document.querySelectorAll('.sec2_Observer');
+const sec3Observer = document.querySelectorAll('.sec3_Observer');
 
 
 observer.observe(sectorTitle[0]);
@@ -24,6 +26,7 @@ observer.observe(sectorTitle[1]);
 
 observer.observe(sec1Observer[0]);
 observer.observe(sec1Observer[1]);
+observer.observe(sec1Observer[2]);
 
 observer.observe(sec2Observer[0]);
 observer.observe(sec2Observer[1]);
@@ -34,6 +37,12 @@ observer.observe(sec2Observer[5]);
 observer.observe(sec2Observer[6]);
 observer.observe(sec2Observer[7]);
 observer.observe(sec2Observer[8]);
+
+observer.observe(sec3Observer[0]);
+observer.observe(sec3Observer[1]);
+observer.observe(sec3Observer[2]);
+
+
 
 
 

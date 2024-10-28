@@ -19,7 +19,7 @@
 @keyframes subtitle_bg {
     0% {
         opacity: 0;
-        transform: translateX(100px);
+        transform: translateX(0);
     }
 
     100% {

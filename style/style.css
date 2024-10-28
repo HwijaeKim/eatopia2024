@@ -1,5 +1,5 @@
-/*index.html에 선언된 스타일시트*/
 @charset "UTF-8";
+/*index.html에 선언된 스타일시트*/
 
 :root {
     --ti-cursor-font-weight: 100;
@@ -182,21 +182,23 @@ nav {
 
 /*UNION*/
 .sectorTitle {
-    margin-bottom: 2em;
+    display: inline-block;
+    margin: 0 1rem 5em 0;
 }
 .sectorTitle p {
     display: inline-block;
-    font-weight: 700;
+    font-weight: 500;
     color: var(--sectorTitleColor);
     font-size: var(--text-small);
     background: var(--pinkL);
     padding: 5px 20px;
     border-radius: 50px;
 }
-.sectorTitle.active p {
-    font-weight: 400;
-
+.sectorTitle.active {
     animation: proj_bg .75s ease 0s 1 both;
+}
+.sectorTitle.sub.active {
+    animation: proj_bg .75s ease .1s 1 both;
 }
 .sectorTitle.active .subtitle {
     animation: subtitle_bg 2.5s ease 0s 1 both;
@@ -365,11 +367,12 @@ section#sector1 {
      /*border: solid 1px purple;*/
 
  }
+
 .title.active p{
     animation: subtitle_bg .75s ease .2s forwards;
 }
- .subtitle.active p{
-     animation: subtitle_bg .75s ease 0s 1 both;
+.subtitle.active p{
+     animation: subtitle_bg .75s ease .3s 1 forwards;
  }
 .flex2 .title p {
     font-weight: 600;
@@ -509,22 +512,23 @@ article#sec2_flexbox {
 }
 .sec2Flex {
     /*border: solid 1px blue;*/
-    /*flex: 1;*/
     width: 32%;
     height: 100%;
     text-align: center;
-    opacity: 0;
-
     transform-style: preserve-3d;
+
 }
 .sec2Flex.one.active {
-    animation: big-small .75s cubic-bezier(0.38, 0.08, 0.03, 0.88) both;
+    animation: big-small .75s cubic-bezier(0.38, 0.08, 0.03, 0.88);
+    /*opacity: 1;*/
 }
 .sec2Flex.two.active {
-    animation: big-small .75s cubic-bezier(0.38, 0.08, 0.03, 0.88) .1s both;
+    animation: big-small .75s cubic-bezier(0.38, 0.08, 0.03, 0.88) .2s;
+    /*opacity: 1;*/
 }
 .sec2Flex.three.active {
-    animation: big-small .75s cubic-bezier(0.38, 0.08, 0.03, 0.88) .2s both;
+    animation: big-small .75s cubic-bezier(0.38, 0.08, 0.03, 0.88) .4s;
+    /*opacity: 1;*/
 }
 
 .sec2Flex.one {
@@ -547,7 +551,7 @@ article#sec2_flexbox {
     align-items: center;
     height:70%;
     /*text-align: center;*/
-    transform: perspective(1000px) translateZ(40px);
+    transform: perspective(1000px) translateZ(50px);
 
 }
 .symbol_top svg {
@@ -656,6 +660,90 @@ article#sec2_result p.active{
 }
 
 
+
+
+
+
+
+
+/*SECTOR03*/
+#sec3_bg {
+    /*border: solid 1px blue;*/
+    width: 100%;
+    height: 100%;
+    background: var(--bg);
+    padding-bottom: 20rem;
+
+    background-image: url("../sources/bgSymbols.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+section#sector3 {
+    /*border: solid 1px red;*/
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 5rem;
+}
+
+article.background_bento {
+    /*border: solid 1px red;*/
+    width: 100%;
+    opacity: 0;
+    transform-style: preserve-3d;
+    padding-bottom: 10rem;
+}
+article.background_bento img {
+    width: 100%;
+}
+article.background_bento.active {
+    -webkit-animation: fade-in-bck 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in-bck 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;}
+@keyframes fade-in-bck {
+    0% {
+        -webkit-transform: translateZ(80px);
+        transform: translateZ(80px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        opacity: 1;
+    }
+}
+
+article#bg_circle {
+    /*border: solid 1px red;*/
+    width: 100%;
+    text-align: center;
+}
+article#bg_circle.active {
+
+}
+article#bg_circle svg {
+    width: 50%;
+    padding-bottom: 2rem;
+
+    stroke-dasharray: 3000; /* 원주의 길이 */
+    stroke-dashoffset: 10;
+    animation: draw 5s cubic-bezier(0.25, 0.08, 0.77, 0.97) infinite alternate;
+}
+@keyframes draw {
+    100% {
+        /*stroke-dasharray: 1000; !* 원주의 길이 *!*/
+        stroke-dashoffset: 6000;
+    }
+}
+
+.circle_title p {
+    font-size: var(--text-medium);
+    color: var(--sectorTitleColor);
+    font-weight: 700;
+}
+.pink {
+    color: var(--pinkL);
+}
 
 
 
@@ -810,108 +898,3 @@ footer #badge img {
 
 
 
-/*SECTOR03*/
-
-.bento-container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.background-title {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.background-button {
-    background-color: #f7c2dd;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 30px;
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-right: 20px;
-}
-
-.background-text {
-    font-size: 1.2em;
-    color: #a99f96;
-}
-
-.parent-child-box {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-/* 부모와 아이 공통 박스 스타일 */
-.parent-box, .child-box {
-    background-color: #f7f7f7;
-    border-radius: 15px;
-    padding: 20px;
-    position: relative;
-}
-
-.section-title {
-    position: absolute;
-    top: -20px;
-    left: 20px;
-    background-color: black;
-    color: white;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 1.2em;
-}
-
-.stress-box {
-    background-color: #f7c2dd;
-    padding: 20px;
-    border-radius: 15px;
-    margin-bottom: 20px;
-    position: relative;
-}
-
-.arrow {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    font-size: 2.5rem;
-    transform: translateY(-50%);
-}
-
-.explanation {
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 15px;
-    font-size: 1.1em;
-    line-height: 1.5em;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    margin-bottom: 10px;
-    font-size: 1.1em;
-}
-
-.image {
-    width: 100%;
-    height: auto;
-    margin-top: 20px;
-    border-radius: 15px;
-}
-
-/* 부모 박스에 있는 이미지 스타일 */
-.parent-box .image {
-    object-fit: cover;
-    max-height: 200px;
-}
-
-/* 아이 박스에 있는 이미지 스타일 */
-.child-box .image {
-    object-fit: cover;
-    max-height: 200px;
-}

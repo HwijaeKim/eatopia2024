@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<style>
+    svg {
+        width: 200px;
+        height: 200px;
+    }
+
+    circle:first-child {
+        stroke-dasharray: 251.2; /* 원주의 길이 */
+        stroke-dashoffset: 251.2;
+        animation: draw 2s forwards;
+    }
+
+    circle:last-child {
+        opacity: 0;
+        animation: fill 1s forwards 2s; /* 앞 애니메이션 후 채워지게 하기 위해 지연 추가 */
+    }
+
+    @keyframes draw {
+        to {
+            stroke-dashoffset: 0;
+        }
+    }
+
+    @keyframes fill {
+        to {
+            opacity: 1;
+        }
+    }
+</style>
+
+<body>
+<svg width="200" height="200" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="40" stroke="#3498db" stroke-width="3" fill="none" />
+    <circle cx="50" cy="50" r="40" stroke="#3498db" stroke-width="3" fill="#3498db" />
+</svg>
+</body>
+</html>
