@@ -501,16 +501,18 @@ article#sec2_flexbox {
     width: 32%;
     height: 100%;
     text-align: center;
-    opacity: 0;
+    /*opacity: 0;*/
+
+    transform-style: preserve-3d;
 }
 .sec2Flex.one.active {
-    animation: big-small .75s cubic-bezier(0.38, 0.08, 0.03, 0.88) forwards;
+    animation: big-small .75s cubic-bezier(0.38, 0.08, 0.03, 0.88);
 }
 .sec2Flex.two.active {
-    animation: big-small .75s cubic-bezier(0.38, 0.08, 0.03, 0.88) .1s forwards;
+    animation: big-small .75s cubic-bezier(0.38, 0.08, 0.03, 0.88) .1s;
 }
 .sec2Flex.three.active {
-    animation: big-small .75s cubic-bezier(0.38, 0.08, 0.03, 0.88) .2s forwards;
+    animation: big-small .75s cubic-bezier(0.38, 0.08, 0.03, 0.88) .2s;
 }
 
 .sec2Flex.one {
@@ -533,10 +535,12 @@ article#sec2_flexbox {
     align-items: center;
     height:70%;
     /*text-align: center;*/
+    transform: perspective(1000px) translateZ(40px);
+
 }
 .symbol_top svg {
-    width: 60%;
-    height: 60%;
+    width: 55%;
+    height: 55%;
     opacity: 0;
 }
 .symbol_top svg.active {
@@ -545,6 +549,7 @@ article#sec2_flexbox {
 .leaf {
     animation: leafMoving 1.5s infinite alternate;
     transform-origin: 60px 40px;
+
 }
 @keyframes leafMoving {
     0% {}
@@ -553,6 +558,7 @@ article#sec2_flexbox {
 .leaf2 {
     animation: leaf2Moving 1.5s infinite alternate;
     transform-origin: 30px 60px;
+    /*transform: perspective(1000px) translateZ(100px);*/
 
 }
 @keyframes leaf2Moving {
@@ -572,6 +578,8 @@ article#sec2_flexbox {
 .text_bottom {
     /*border: solid 1px blue;*/
     height: 30%;
+    transform: perspective(1000px) translateZ(20px);
+
 }
 .text_bottom p {
     color: rgba(255, 255, 255, .95);

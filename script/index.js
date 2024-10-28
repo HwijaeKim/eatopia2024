@@ -88,8 +88,9 @@ window.addEventListener('scroll', () => {
 
 // SECTOR 02 카드 구현
 VanillaTilt.init(document.querySelectorAll('.sec2Flex'), {
-    max: 5,
+    max: 6,
     speed: 500,
-    scale: 1.1,
-    glare: true
+    scale: 1.05,
+    transition: true
+    // glare: true
 })
