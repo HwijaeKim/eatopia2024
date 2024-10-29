@@ -10,9 +10,9 @@
     --union-line-height: 135%;
 
     /*컬러 관리*/
-    --bg: #FAF4E5;
-    --systemColor: #232323;
-    --sectorTitleColor: rgba(0, 0, 0, .7);
+    --bg: #111111;
+    --systemColor: #ffffff;
+    --sectorTitleColor: rgba(255, 255, 255, 0.7);
     --pinkL: #F4AFDD;
     --pinkD: #CF8AB8;
     --yellowL: #F7DC75;
@@ -67,9 +67,6 @@ body {
     -moz-user-select:none;
     -ms-user-select:none;
     user-select:none;
-
-
-    /*z-index: 10;*/
 }
 
 .clear {
@@ -188,7 +185,7 @@ nav {
 .sectorTitle p {
     display: inline-block;
     font-weight: 500;
-    color: var(--sectorTitleColor);
+    color: rgba(0, 0, 0, .7);
     font-size: var(--text-small);
     background: var(--pinkL);
     padding: 5px 20px;
@@ -312,7 +309,7 @@ article#intro_container {
     /*padding-bottom: 5rem;*/
 
     /*position: absolute;*/
-    background-image: url("../sources/bgSymbols.png");
+    /*background-image: url("../sources/bgSymbols.png");*/
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
@@ -474,7 +471,7 @@ section#sector1 #flexbox2 {
     background: var(--bg);
     padding-bottom: 20rem;
 
-    background-image: url("../sources/bgSymbols.png");
+    /*background-image: url("../sources/bgSymbols.png");*/
     background-size: contain;
     background-repeat: no-repeat;
     background-position: left;
@@ -665,7 +662,6 @@ article#sec2_result p.active{
 
 
 
-
 /*SECTOR03*/
 #sec3_bg {
     /*border: solid 1px blue;*/
@@ -674,7 +670,7 @@ article#sec2_result p.active{
     background: var(--bg);
     padding-bottom: 20rem;
 
-    background-image: url("../sources/bgSymbols.png");
+    /*background-image: url("../sources/bgSymbols.png");*/
     background-size: contain;
     background-repeat: no-repeat;
     background-position: left;
@@ -744,6 +740,121 @@ article#bg_circle svg {
 .pink {
     color: var(--pinkL);
 }
+
+
+
+
+/*SECTOR04*/
+#sec4_bg {
+    /*border: solid 1px blue;*/
+    width: 100%;
+    height: 100%;
+    background: var(--bg);
+    padding-bottom: 20rem;
+
+    /*background-image: url("../sources/bgSymbols.png");*/
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+section#sector4 {
+    /*border: solid 1px red;*/
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 5rem;
+}
+
+.sec4_flex.title p {
+    font-size: var(--text-large);
+    font-weight: 500;
+    color: var(--sectorTitleColor);
+    margin-bottom: 10vmin;
+    opacity: 0;
+}
+article#sec4_flexbox {
+    /*border: solid 1px red;*/
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 27vmax;
+}
+.sec4Flex {
+    /*border: solid 1px blue;*/
+    width: 32%;
+    height: 100%;
+    text-align: center;
+    transform-style: preserve-3d;
+
+}
+.sec4Flex.one.active {
+    animation: big-small .75s cubic-bezier(0.38, 0.08, 0.03, 0.88);
+    /*opacity: 1;*/
+}
+.sec4Flex.two.active {
+    animation: big-small .75s cubic-bezier(0.38, 0.08, 0.03, 0.88) .2s;
+    /*opacity: 1;*/
+}
+.sec4Flex.three.active {
+    animation: big-small .75s cubic-bezier(0.38, 0.08, 0.03, 0.88) .4s;
+    /*opacity: 1;*/
+}
+
+.sec4Flex.one {
+    background: #EDE7D9;
+    border-radius: 5rem;
+}
+.sec4Flex.two {
+    background: #EDE7D9;
+    border-radius: 5rem;
+}
+.sec4Flex.three {
+    background: #EDE7D9;
+    border-radius: 5rem;
+}
+
+.symbol_bottom {
+    /*border: solid 1px red;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:70%;
+    /*text-align: center;*/
+    transform: perspective(1000px) translateZ(50px);
+
+}
+.symbol_bottom svg {
+    width: 55%;
+    height: 55%;
+    opacity: 0;
+}
+.symbol_bottom svg.active {
+    animation: FadeInBottom .5s forwards .5s;
+}
+
+.text_top {
+    /*border: solid 1px blue;*/
+    height: 30%;
+    transform: perspective(1000px) translateZ(20px);
+
+}
+.text_top p {
+    color: rgba(0, 0, 0, .7);
+    font-weight: 400
+    font-size: 2vmin;
+    margin-bottom: 1vmax;
+}
+
+
+/*.text_top span {*/
+/*    color: rgba(0, 0, 0, .7);*/
+/*    font-weight: 600;*/
+/*    font-size: 3vmin;*/
+/*}*/
+
+
+
+
 
 
 
@@ -852,8 +963,7 @@ footer #info p {
 footer #download {
     position: absolute;
     left: 0;
-    /*top: 9vmin;*/
-    /*bottom: 9vmin;*/
+
 }
 footer #download button {
     border: none;
