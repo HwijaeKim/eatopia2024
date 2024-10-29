@@ -514,18 +514,18 @@ article#sec2_flexbox {
     height: 100%;
     text-align: center;
     transform-style: preserve-3d;
-
+    opacity: 0;
 }
 .sec2Flex.one.active {
-    animation: big-small .75s cubic-bezier(0.38, 0.08, 0.03, 0.88);
+    animation: big-small .75s cubic-bezier(0.38, 0.08, 0.03, 0.88) forwards;
     /*opacity: 1;*/
 }
 .sec2Flex.two.active {
-    animation: big-small .75s cubic-bezier(0.38, 0.08, 0.03, 0.88) .2s;
+    animation: big-small .75s cubic-bezier(0.38, 0.08, 0.03, 0.88) .2s forwards;
     /*opacity: 1;*/
 }
 .sec2Flex.three.active {
-    animation: big-small .75s cubic-bezier(0.38, 0.08, 0.03, 0.88) .4s;
+    animation: big-small .75s cubic-bezier(0.38, 0.08, 0.03, 0.88) .4s forwards;
     /*opacity: 1;*/
 }
 
@@ -611,6 +611,10 @@ article#sec2_result .plus_icon {
     /*border: solid 1px red;*/
     text-align: center;
     margin: 7rem 0 7rem 0;
+}
+article#sec2_result .plus_icon img {
+    opacity: 0;
+
 }
 article#sec2_result .plus_icon img.active {
     animation: rotate 1s ease 0s 1 normal forwards;
@@ -782,18 +786,18 @@ article#sec4_flexbox {
     height: 100%;
     text-align: center;
     transform-style: preserve-3d;
-
+    opacity: 0;
 }
 .sec4Flex.one.active {
-    animation: big-small .75s cubic-bezier(0.38, 0.08, 0.03, 0.88);
+    animation: big-small .75s cubic-bezier(0.38, 0.08, 0.03, 0.88) forwards;
     /*opacity: 1;*/
 }
 .sec4Flex.two.active {
-    animation: big-small .75s cubic-bezier(0.38, 0.08, 0.03, 0.88) .2s;
+    animation: big-small .75s cubic-bezier(0.38, 0.08, 0.03, 0.88) .2s forwards;
     /*opacity: 1;*/
 }
 .sec4Flex.three.active {
-    animation: big-small .75s cubic-bezier(0.38, 0.08, 0.03, 0.88) .4s;
+    animation: big-small .75s cubic-bezier(0.38, 0.08, 0.03, 0.88) .4s forwards;
     /*opacity: 1;*/
 }
 
@@ -821,8 +825,8 @@ article#sec4_flexbox {
 
 }
 .symbol_bottom svg {
-    width: 55%;
-    height: 55%;
+    width: 90%;
+    height: 90%;
     opacity: 0;
 }
 .symbol_bottom svg.active {
@@ -830,16 +834,20 @@ article#sec4_flexbox {
 }
 
 .text_top {
-    /*border: solid 1px blue;*/
+    /* border: solid 1px blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 30%;
     transform: perspective(1000px) translateZ(20px);
 
 }
 .text_top p {
     color: rgba(0, 0, 0, .7);
-    font-weight: 400;
-    font-size: 2vmin;
+    font-weight: 600;
+    font-size: 2.2vmin;
     margin-bottom: 1vmax;
+
 }
 
 
