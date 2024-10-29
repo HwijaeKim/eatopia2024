@@ -840,7 +840,7 @@ article#sec4_flexbox {
 }
 .text_top p {
     color: rgba(0, 0, 0, .7);
-    font-weight: 400
+    font-weight: 400;
     font-size: 2vmin;
     margin-bottom: 1vmax;
 }
