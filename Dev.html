@@ -1,44 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>텍스트 레이아웃</title>
 <style>
-    svg {
-        width: 200px;
-        height: 200px;
-    }
+  /* 컨테이너 스타일 */
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 300px;
+  }
 
-    circle:first-child {
-        stroke-dasharray: 251.2; /* 원주의 길이 */
-        stroke-dashoffset: 251.2;
-        animation: draw 2s forwards;
-    }
+  /* 태그(텍스트 블록) 스타일 */
+  .tag {
+    background-color: #e8c7e3;
+    color: black;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-    circle:last-child {
-        opacity: 0;
-        animation: fill 1s forwards 2s; /* 앞 애니메이션 후 채워지게 하기 위해 지연 추가 */
-    }
-
-    @keyframes draw {
-        to {
-            stroke-dashoffset: 0;
-        }
-    }
-
-    @keyframes fill {
-        to {
-            opacity: 1;
-        }
-    }
+  /* 아이콘 스타일 */
+  .icon {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+  }
 </style>
-
+</head>
 <body>
-<svg width="200" height="200" viewBox="0 0 100 100">
-    <circle cx="50" cy="50" r="40" stroke="#3498db" stroke-width="3" fill="none" />
-    <circle cx="50" cy="50" r="40" stroke="#3498db" stroke-width="3" fill="#3498db" />
-</svg>
+
+<div class="container">
+  <div class="tag"><strong>XR 글래스로</strong></div>
+  <div class="tag"><strong>만나는</strong></div>
+  <div class="tag"><strong>유아기</strong></div>
+  <div class="tag"><strong>아이들의</strong></div>
+  <div class="tag"><img src="star-icon.png" alt="별 아이콘" class="icon"></div> <!-- 아이콘 경로로 대체하세요 -->
+  <div class="tag"><strong>식습관</strong></div>
+  <div class="tag"><strong>개선</strong></div>
+  <div class="tag"><img src="planet-icon.png" alt="행성 아이콘" class="icon"></div> <!-- 아이콘 경로로 대체하세요 -->
+</div>
+
 </body>
 </html>

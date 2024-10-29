@@ -20,6 +20,7 @@ const sec1Observer = document.querySelectorAll('.sec1_Observer');
 const sec2Observer = document.querySelectorAll('.sec2_Observer');
 const sec3Observer = document.querySelectorAll('.sec3_Observer');
 const sec4Observer = document.querySelectorAll('.sec4_Observer');
+const sec5Observer = document.querySelectorAll('.sec5_Observer');
 
 
 observer.observe(sectorTitle[0]);
@@ -53,6 +54,20 @@ observer.observe(sec4Observer[5]);
 observer.observe(sec4Observer[6]);
 observer.observe(sec4Observer[7]);
 observer.observe(sec4Observer[8]);
+
+observer.observe(sec5Observer[0]);
+observer.observe(sec5Observer[1]);
+observer.observe(sec5Observer[2]);
+observer.observe(sec5Observer[3]);
+observer.observe(sec5Observer[4]);
+observer.observe(sec5Observer[5]);
+observer.observe(sec5Observer[6]);
+observer.observe(sec5Observer[7]);
+observer.observe(sec5Observer[8]);
+observer.observe(sec5Observer[9]);
+observer.observe(sec5Observer[10]);
+observer.observe(sec5Observer[11]);
+
 
 
 
