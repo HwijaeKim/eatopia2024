@@ -3,48 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>텍스트 레이아웃</title>
+<title>형광펜 애니메이션</title>
 <style>
-  /* 컨테이너 스타일 */
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    width: 300px;
-  }
-
-  /* 태그(텍스트 블록) 스타일 */
-  .tag {
-    background-color: #e8c7e3;
-    color: black;
-    font-size: 18px;
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-weight: bold;
+/* 컨테이너 설정 */
+.container {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+    gap: 20px; /* 좌우 여백 조정 */
+    background-color: #000; /* 배경색 설정 */
+    color: #fff; /* 텍스트 색상 설정 */
+    padding: 20px;
+}
 
-  /* 아이콘 스타일 */
-  .icon {
-    width: 30px;
-    height: 30px;
-    margin: 0 5px;
-  }
+/* 아이콘 그룹 설정 */
+.icon-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* 아이콘 간 간격 */
+}
+
+/* 텍스트 설정 */
+.text {
+    font-size: 24px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* 하이라이트 텍스트 스타일 */
+.highlight {
+    background-color: #e8c7e3; /* 형광펜 효과 */
+    color: black;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
 </style>
 </head>
 <body>
 
-<div class="container">
-  <div class="tag"><strong>XR 글래스로</strong></div>
-  <div class="tag"><strong>만나는</strong></div>
-  <div class="tag"><strong>유아기</strong></div>
-  <div class="tag"><strong>아이들의</strong></div>
-  <div class="tag"><img src="star-icon.png" alt="별 아이콘" class="icon"></div> <!-- 아이콘 경로로 대체하세요 -->
-  <div class="tag"><strong>식습관</strong></div>
-  <div class="tag"><strong>개선</strong></div>
-  <div class="tag"><img src="planet-icon.png" alt="행성 아이콘" class="icon"></div> <!-- 아이콘 경로로 대체하세요 -->
+  <div class="container">
+    <div class="icon-group left">
+        <span class="icon">🌙</span>
+        <span class="icon">➕</span>
+    </div>
+    <p class="text">
+        아이와 부모 모두가<br>
+        식사 시간을 <span class="highlight">긍정적인 경험</span>으로<br>
+        인식할 수 있도록 만든다.
+    </p>
+    <div class="icon-group right">
+        <span class="icon">❤️</span>
+        <span class="icon">⚡</span>
+    </div>
 </div>
 
 </body>

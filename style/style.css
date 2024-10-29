@@ -1019,13 +1019,14 @@ article#sec5_flexbox2 {
     /* border: solid 1px blue; */
     width: 100%;
     height: 100%;
-    background: var(--bg);
+    /* background: var(--bg); */
     padding-bottom: 20rem;
+    z-index: -2;
 
     /*background-image: url("../sources/bgSymbols.png");*/
-    background-size: contain;
+    /* background-size: contain;
     background-repeat: no-repeat;
-    background-position: left;
+    background-position: left; */
 }
 section#sector6 {
     /* border: solid 1px red; */
@@ -1035,7 +1036,63 @@ section#sector6 {
     padding-top: 5rem;
 }
 
+.servicegoal {
+    margin-top: 8rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* 좌우 여백 조정 */
+    color: #fff; /* 텍스트 색상 설정 */
+    padding: 20px;
+}
+.servicegoal p {
 
+    font-size: 9vmin;
+    font-weight: 500;
+}
+
+.highlight-animation {
+    position: relative;
+    display: inline-block;
+    font-size: 9vmin;
+    font-weight: 500;
+    color: white; /* 초기 텍스트 색상 */
+    transition: color 0.5s ease; /* 텍스트 색상 전환 */
+  }
+
+  /* 형광펜 효과 스타일 */
+  .highlight-animation::before {
+    content: '';
+    position: absolute;
+    left: -4%;
+    bottom: -4%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--yellowL); /* 형광펜 색상 */
+    border-radius: 100px;
+    padding: 5px 20px;
+    z-index: -1; /* 텍스트 뒤에 위치 */
+    transform: scaleX(0); /* 초기 상태: 숨김 */
+    transform-origin: left; /* 왼쪽에서 시작 */
+    transition: transform .75s ease; /* 애니메이션 설정 */
+  }
+
+  /* 호버 시 애니메이션 효과 */
+  .highlight-animation.active {
+    color: black; /* 텍스트 색상 변경 */
+  }
+
+  .highlight-animation.active::before {
+    transform: scaleX(1); /* 형광펜이 왼쪽에서 오른쪽으로 */
+  }
+
+
+.icon-group img {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* 아이콘 간 간격 */
+}
 
 
 
