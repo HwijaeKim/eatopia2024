@@ -23,6 +23,8 @@ const sec4Observer = document.querySelectorAll('.sec4_Observer');
 const sec5Observer = document.querySelectorAll('.sec5_Observer');
 const sec6Observer = document.querySelectorAll('.sec6_Observer');
 const sec8Observer = document.querySelectorAll('.sec8_Observer');
+const sec9Observer = document.querySelectorAll('.sec9_Observer');
+
 
 
 observer.observe(sectorTitle[0]);
@@ -79,6 +81,11 @@ observer.observe(sec6Observer[5]);
 observer.observe(sec6Observer[6]);
 
 observer.observe(sec8Observer[0]);
+observer.observe(sec8Observer[1]);
+observer.observe(sec8Observer[2]);
+
+observer.observe(sec9Observer[0]);
+
 
 
 
