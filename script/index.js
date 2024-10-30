@@ -1,3 +1,5 @@
+// 파기된 프로젝트
+
 //index.html에 선언된 스크립트
 
 // let element = document.getElementById("element");
