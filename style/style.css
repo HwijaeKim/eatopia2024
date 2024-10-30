@@ -13,7 +13,7 @@
     /*컬러 관리*/
     --bg: #000000;
     --systemColor: #ffffff;
-    --systemColorD: rgba(0, 0, 0, 0.9);
+    --systemColorD: rgba(0, 0, 0, 0.85);
     --sectorTitleColor: rgba(255, 255, 255, 0.8);
     --pinkL: #F4AFDD;
     --pinkD: #CF8AB8;
@@ -614,13 +614,13 @@ article#sec2_flexbox {
 
 }
 .text_bottom p {
-    color: rgba(255, 255, 255, .95);
+    color: var(--systemColorD);
     font-weight: 800;
     font-size: 4vmin;
     margin-bottom: 1vmax;
 }
 .text_bottom span {
-    color: rgba(255, 255, 255, .95);
+    color: var(--systemColorD);
     font-weight: 600;
     font-size: 3vmin;
 }
@@ -971,8 +971,8 @@ article#sec5_flexbox {
 
 .sec5Flex.two {
     background: white;
-    background-image: url("../sources/temp/insight_img.png");
-    background-size: contain;
+    background-image: url("../sources/service_concept_img.png");
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 55px;
@@ -1006,10 +1006,89 @@ article#sec5_flexbox2 {
     width: 49%;
 }
 
+.left_icon {
+    position: absolute;
+    z-index: -1;
+}
+.icon1 {
+    position: absolute;
+    width: 150px;
+    top: -240px;
+    left: -650px;
+    opacity: 0;
+    animation: updown 1.5s cubic-bezier(0.25, 0.03, 0.66, 0.93) infinite alternate;
+    ;
+}
+.icon2 {
+    position: absolute;
+    width: 320px;
+    top: -70px;
+    left: -850px;
+    opacity: 0;
+    animation: updownrotate 1.5s cubic-bezier(0.25, 0.03, 0.66, 0.93) infinite alternate;
 
+}
 
+.right_icon {
+    /* border: solid 1px red; */
+    position: absolute;
+    /* width: 100%; */
+}
+.icon3 {
+    position: absolute;
+    width: 170px;
+    top: -200px;
+    left: 520px;
+    opacity: 0;
+    animation: updown 1.5s cubic-bezier(0.25, 0.03, 0.66, 0.93) infinite alternate;
 
+}
+.icon4 {
+    position: absolute;
+    width: 250px;
+    top: -40px;
+    left: 570px;
+    opacity: 0;
+    animation: updown 1.5s cubic-bezier(0.25, 0.03, 0.66, 0.93) infinite alternate;
 
+}
+@keyframes updown {
+    0% {transform: translateY(0);}
+    100% {transform: translateY(12.5px);}
+}
+@keyframes updownrotate {
+    0% {transform: translateY(0) rotate(0);}
+    100% {transform: translateY(12.5px) rotate(7deg);}
+}
+
+.icon1.active {
+    animation: updown 1.5s cubic-bezier(0.25, 0.03, 0.66, 0.93) infinite alternate, icon1 1s ease forwards;
+}
+.icon2.active {
+    animation: updownrotate 1.5s .15s cubic-bezier(0.25, 0.03, 0.66, 0.93) infinite alternate, icon2 1s .1s ease forwards;
+}
+.icon3.active {
+    animation: updown 1.5s .3s cubic-bezier(0.25, 0.03, 0.66, 0.93) infinite alternate, icon3 1s .2s ease forwards;
+}
+.icon4.active {
+    animation: updown 1.5s .45s cubic-bezier(0.25, 0.03, 0.66, 0.93) infinite alternate, icon4 1s .3s ease forwards;
+}
+@keyframes icon1 {
+    0% {opacity: 0; top: 0; left: 0;}
+    100% {opacity: 1; top: -240px; left: -650px};
+}
+@keyframes icon2 {
+    0% {opacity: 0; top: 0; left: 0;}
+    100% {opacity: 1; top: -70px; left: -850px};
+}
+@keyframes icon3 {
+    0% {opacity: 0; top: 0; left: 0;}
+    100% {opacity: 1; top: -200px; left: 520px};
+}
+@keyframes icon4 {
+    0% {opacity: 0; top: 0; left: 0;}
+    100% {opacity: 1; top: -40px; left: 570px};
+}
 
 
 

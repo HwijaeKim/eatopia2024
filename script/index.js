@@ -71,7 +71,10 @@ observer.observe(sec5Observer[11]);
 
 observer.observe(sec6Observer[0]);
 observer.observe(sec6Observer[1]);
-
+observer.observe(sec6Observer[2]);
+observer.observe(sec6Observer[3]);
+observer.observe(sec6Observer[4]);
+observer.observe(sec6Observer[5]);
 
 
 
