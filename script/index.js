@@ -1,5 +1,3 @@
-// 파기된 프로젝트
-
 //index.html에 선언된 스크립트
 
 
@@ -16,7 +14,9 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 const sectorTitle = document.querySelectorAll('.sectorTitle');
-const sec1Observer = document.querySelectorAll('.sec1_Observer');
+// const sec1Observer = document.querySelectorAll('.sec1_Observer');
+// const sec2Observer = document.querySelectorAll('.sec2_Observer');
+const sec3Observer = document.querySelectorAll('.sec3_Observer');
 
 
 
@@ -24,6 +24,17 @@ const sec1Observer = document.querySelectorAll('.sec1_Observer');
 observer.observe(sectorTitle[0]);
 observer.observe(sectorTitle[1]);
 observer.observe(sectorTitle[2]);
+observer.observe(sectorTitle[3]);
+observer.observe(sectorTitle[4]);
+
+observer.observe(sec3Observer[0]);
+observer.observe(sec3Observer[1]);
+observer.observe(sec3Observer[2]);
+observer.observe(sec3Observer[3]);
+observer.observe(sec3Observer[4]);
+observer.observe(sec3Observer[5]);
+observer.observe(sec3Observer[6]);
+observer.observe(sec3Observer[7]);
 
 
 
@@ -34,25 +45,6 @@ observer.observe(sectorTitle[2]);
 
 
 
-// SECTOR 01 Overview 타이핑 구현
-document.addEventListener('DOMContentLoaded', () => {
-    let text = "일부 가정에게 치명적 스트레스가 되는<br>아이와의 식사전쟁,";
-    let typingContainer = document.querySelector('.flex1 p');
-    let index = 0;
-
-    function typing() {
-        if (index < text.length) {
-            typingContainer.innerHTML = text.slice(0, index + 1);
-            index++;
-            setTimeout(typing, 35);
-        }
-        else {
-            typingContainer.innerHTML = text;
-        }
-    }
-
-    typing();
-});
 
 
 
