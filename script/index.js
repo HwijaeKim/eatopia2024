@@ -162,3 +162,11 @@ VanillaTilt.init(document.querySelectorAll('.sec2Flex'), {
     transition: true
     // glare: true
 })
+
+VanillaTilt.init(document.querySelectorAll('.sec4Flex.one'), {
+    max: 6,
+    speed: 500,
+    scale: 1.05,
+    transition: true
+    // glare: true
+})
