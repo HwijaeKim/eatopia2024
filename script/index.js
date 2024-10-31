@@ -14,7 +14,7 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 const sectorTitle = document.querySelectorAll('.sectorTitle');
-// const sec1Observer = document.querySelectorAll('.sec1_Observer');
+const sec1Observer = document.querySelectorAll('.sec1_Observer');
 // const sec2Observer = document.querySelectorAll('.sec2_Observer');
 const sec3Observer = document.querySelectorAll('.sec3_Observer');
 
@@ -26,6 +26,13 @@ observer.observe(sectorTitle[1]);
 observer.observe(sectorTitle[2]);
 observer.observe(sectorTitle[3]);
 observer.observe(sectorTitle[4]);
+observer.observe(sectorTitle[5]);
+observer.observe(sectorTitle[6]);
+observer.observe(sectorTitle[7]);
+
+observer.observe(sec1Observer[0]);
+observer.observe(sec1Observer[1]);
+observer.observe(sec1Observer[2]);
 
 observer.observe(sec3Observer[0]);
 observer.observe(sec3Observer[1]);
@@ -35,6 +42,10 @@ observer.observe(sec3Observer[4]);
 observer.observe(sec3Observer[5]);
 observer.observe(sec3Observer[6]);
 observer.observe(sec3Observer[7]);
+observer.observe(sec3Observer[8]);
+observer.observe(sec3Observer[9]);
+observer.observe(sec3Observer[10]);
+observer.observe(sec3Observer[11]);
 
 
 
