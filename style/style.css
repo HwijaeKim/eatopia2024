@@ -723,6 +723,13 @@ section#sector4 {
     margin: 0 auto;
     padding-top: 20rem;
 }
+section#sector4 img {
+    margin-bottom: 8rem;
+    opacity: 0;
+}
+section#sector4 img.active {
+    animation: FadeInBottom .75s cubic-bezier(0, 0.03, 0.12, 1.01) forwards;
+}
 .result {
     margin: 7rem 0 10rem 0;
     font-weight: 800;

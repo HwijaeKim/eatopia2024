@@ -32,7 +32,7 @@
 @keyframes FadeInBottom {
     0% {
         opacity: 0;
-        transform: translateY(70px);
+        transform: translateY(100px);
     }
 
     100% {
