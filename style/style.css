@@ -19,9 +19,9 @@
 
 
 :root {
-    --ti-cursor-font-weight: 100;
+    --ti-cursor-font-weight: 500;
     --ti-cursor-transform: translateX(0);
-    --ti-cursor-color: rgba(255, 255, 255, .4);
+    --ti-cursor-color: rgba(0, 0, 0, .6);
 
     /*공통수치 통합관리*/
     --union-line-height: 1.35;
@@ -404,8 +404,8 @@ section#sector2 {
 }
 
 .sec2flexbox1 {
-    border: solid 1px red;
-    width: 75%;
+    /* border: solid 1px red; */
+    width: 70%;
     display: flex;
     justify-content: space-between;
     float: right;
@@ -419,11 +419,12 @@ section#sector2 {
     height: 350px;
 }
 .sec2FlexContainer .main {
-    display: flex;
-    border: solid 1px blue;
+    /* display: flex; */
+    /* border: solid 1px blue; */
     width: 90%;
     height: 73%;
     align-items: center;
+    padding-top: 2rem;
     margin: 0 auto;
     /* font-weight: 800; */
     color: var(--systemColorD);
@@ -435,6 +436,12 @@ section#sector2 {
     width: 90%;
     margin: 0 auto;
     font-size: var(--text-extra-small);
+}
+.sec2FlexContainer.one {
+    background: var(--blueL);
+}
+.sec2FlexContainer.three {
+    background: var(--greenL);
 }
 
 
@@ -453,6 +460,25 @@ section#sector2 {
     margin-top: auto; /* 위쪽 공간을 밀어내려 p 태그가 아래로 내려가도록 */
   }
 
+  .search_bar {
+    background: var(--blueL);
+    width: 70%;
+    height: 80px;
+    border-radius: 25px;
+    float: right;
+  }
+
+.search_bar p {
+    color: var(--systemColorD);
+    font-size: var(--text-medium);
+    height: 45px;
+    width: 90%;
+    margin: 16px 2rem;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+    border-left: solid 2px rgba(0, 0, 0, .4);
+}
 
 
 
@@ -483,8 +509,8 @@ article#sec2_flexbox {
     /*border: solid 1px red;*/
     display: flex;
     justify-content: space-between;
-    width: 75%;
-    height: 19vmax;
+    width: 70%;
+    height: 18vmax;
     float: right;
     margin-top: 5rem;
 }
@@ -605,7 +631,7 @@ article#sec2_flexbox {
 }
 article#sec2_result {
     display: block;
-    width: 75%;
+    width: 70%;
     float: right;
 }
 article#sec2_result .plus_icon {
@@ -694,8 +720,11 @@ article#summary .summary_flexbox {
 .imgFlex img {
     width: 100%;
 }
+.imgFlex2 {
+    width: 65%;
+}
 .imgFlex2 img {
-    width: 70%;
+    width: 73%;
 }
 
 
@@ -750,7 +779,7 @@ section#sector4 img.active {
     display: inline-block;
     width: 130px;
     height: 130px;
-    background-image: url("../sources/stepAni.png");
+    background-image: url("../sources/maru_fork.webp");
     background-size: cover;
 
     margin: -3rem 0 -1.5rem -.75rem;

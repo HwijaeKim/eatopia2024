@@ -100,6 +100,27 @@ window.addEventListener('scroll', () => {
 
 
 
+const observer2 = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            new TypeIt(".search_bar p", {
+                strings: "이제는 현실이 된 착용형 디바이스의 시대",
+                // ... other options
+              }).go();
+
+                    // 관찰 해제
+              observer.unobserve(entry.target);
+        } else {
+            entry.target.innerHTML = "";
+        }
+    });
+}, {
+    threshold: 1
+});
+
+observer2.observe(document.querySelector('.search_bar p'));
+
+
 
 
 // SECTOR 02 카드 구현
