@@ -93,6 +93,7 @@ observer.observe(sec6Observer[17]);
 
 
 
+
 window.addEventListener('scroll', () => {
     let scrollTop = window.scrollY;
     const header = document.querySelector('header');
