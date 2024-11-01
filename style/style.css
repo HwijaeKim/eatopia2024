@@ -73,11 +73,11 @@
     padding: 0;
 }
 
-#wrap {
+/* #wrap {
     max-width: 1920px;
     width: 100%;
     margin: 0 auto;
-}
+} */
 
 body {
     background: var(--background);
@@ -207,7 +207,8 @@ nav {
     opacity: 0;
 }
 .sectorTitle p {
-    font-family: "TmoneyRoundWindExtraBold", sans-serif;
+    font-family: "Pretendard", sans-serif;
+    font-weight: 600;
     display: inline-block;
     color: rgba(0, 0, 0, .7);
     font-size: var(--text-small);
@@ -820,6 +821,7 @@ section#sector4 img.active {
     background-position: right;
     margin-top: 13rem;
     padding-bottom: 10rem;
+    /* border-radius: 600px 600px 0 0; */
 }
 section#sector5 {
     /* border: solid 1px red; */
@@ -830,7 +832,7 @@ section#sector5 {
 }
 
 article.introduce {
-    border: solid 1px red;
+    /* border: solid 1px red; */
     width: 55%;
     margin: 0 auto;
     text-align: center;
@@ -842,13 +844,13 @@ article.introduce .chars_container {
     margin: 0 auto;
 }
 article.introduce img {
-    width: 40%;
+    width: 56%;
     margin: 4rem 0 0 0;
 }
 article.introduce p {
     font-family: "TmoneyRoundWindExtrabold", sans-serif;
     margin-top: 4rem;
-    font-size: var(--text-semi-medium);
+    font-size: var(--text-medium);
     color: var(--pinkL);
 }
 
@@ -912,6 +914,75 @@ article.service_goal {
 
 
 
+
+
+
+
+/* SECTOR 06 */
+#sec6_bg {
+    /* border: solid 1px blue; */
+    width: 100%;
+    height: 100%;
+    background: var(--background);
+    /*background-image: url("../sources/bgSymbols.png");*/
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+section#sector6 {
+    /* border: solid 1px red; */
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 30rem;
+}
+
+article.logo_box {
+    /* border: solid 1px red; */
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+article.logo_box p {
+    margin: 4rem 0  25rem 0;
+    font-size: var(--text-semi-medium);
+}
+
+article.sec6_flexbox {
+    /* border: solid 1px red; */
+    display: flex;
+    flex-direction: column; /* 세로로 배치 */
+    gap: 10px; /* 아이템 간의 간격 */
+    width: 100%; /* 컨테이너 너비 */
+  }
+  
+  .row {
+    display: flex;
+    gap: 10px; /* 각 행 내의 간격 */
+  }
+  
+  .sec6Flex {
+    /* border: solid 1px red; */
+    flex: 1; /* 각 아이템이 균등한 너비를 가짐 */
+    /* background-color: lightblue; */
+    /* display: flex; */
+    width: 30%;
+    /* align-items: center; */
+    /* justify-content: center; */
+    margin-bottom: 4rem;
+  }
+
+article.sec6_flexbox p {
+    font-family: "TmoneyRoundWindExtrabold", sans-serif;
+    font-size: var(--text-small);
+    margin-bottom: 2rem;
+}
+article.sec6_flexbox img.logo {
+    margin-right: 1.5rem;
+}
+article.sec6_flexbox img.color {
+    margin-right: .5rem;
+}
 
 
 
