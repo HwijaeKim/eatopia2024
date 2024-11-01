@@ -981,10 +981,19 @@ article.logo_box {
     color: #fff; /* 텍스트 색상 설정 */
     padding: 20px;
 }
+.biglogo {
+    opacity: 0;
+}
+.biglogo.active {
+    animation: big-small .5s ease forwards;
+}
 article.logo_box p {
     margin: 4rem 0  25rem 0;
     font-size: var(--text-semi-medium);
     opacity: 0;
+}
+article.logo_box p.active {
+    animation: FadeInBottom .75s ease forwards;
 }
 
 article.sec6_flexbox {
@@ -1047,16 +1056,16 @@ article.sec6_flexbox img.color {
 }
 
 .color.one.active {
-    animation: color1 .75s ease forwards;
+    animation: color1 .75s .6s ease forwards;
 }
 .color.two.active {
-    animation: color2 .75s .1s ease forwards;
+    animation: color2 .75s .7s ease forwards;
 }
 .color.three.active {
-    animation: color2 .75s .2s ease forwards;
+    animation: color2 .75s .8s ease forwards;
 }
 .color.four.active {
-    animation: color2 .75s .3s ease forwards;
+    animation: color2 .75s .9s ease forwards;
 }
 
 @keyframes color1 {
