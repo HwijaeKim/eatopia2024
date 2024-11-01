@@ -405,18 +405,18 @@ section#sector2 {
 
 .sec2flexbox1 {
     border: solid 1px red;
-    width: 60%;
+    width: 75%;
     display: flex;
     justify-content: space-between;
     float: right;
     margin: 4rem 0 2rem 0;
 }
 .sec2FlexContainer {
-    border: solid 10px #fff;
-    border-radius: 20px;
+    /* border: solid 10px #fff; */
+    border-radius: 40px;
     background: var(--pinkL);
-    width: 47%;
-    height: 220px;
+    width: 32.5%;
+    height: 350px;
 }
 .sec2FlexContainer .main {
     display: flex;
@@ -425,12 +425,12 @@ section#sector2 {
     height: 73%;
     align-items: center;
     margin: 0 auto;
-    font-weight: 800;
+    /* font-weight: 800; */
     color: var(--systemColorD);
-    font-size: var(--text-semi-medium);
+    font-size: var(--text-medium);
 }
 .sec2FlexContainer .sub {
-    text-align: right;
+    padding-top: 2rem;
     color: var(--systemColorD);
     width: 90%;
     margin: 0 auto;
