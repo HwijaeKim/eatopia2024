@@ -848,8 +848,8 @@ article.introduce img {
     margin: 4rem 0 0 0;
 }
 article.introduce p {
-    font-family: "TmoneyRoundWindExtrabold", sans-serif;
     margin-top: 4rem;
+    font-weight: 600;
     font-size: var(--text-medium);
     color: var(--pinkL);
 }
@@ -873,26 +873,55 @@ article.service_goal {
 }
 .sec5Flex p {
     position: absolute;
-    font-family: "TmoneyRoundWindExtrabold", sans-serif;
+    font-family: "TmoneyRoundWindRegular", sans-serif;
     /* border: solid 1px red; */
     font-size: var(--text-medium);
     margin: 2rem;
     bottom: 0;
-
-    
+}
+.tmoney {
+    font-family: "TmoneyRoundWindExtrabold", sans-serif;
 }
 .sec5Flex.one {
     background: url("../sources/service_goal_1.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    opacity: 0;
 }
 .sec5Flex.two {
     background: url("../sources/service_goal_2.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    opacity: 0;
 }
+
+.sec5Flex.one.active {
+    animation: scale-in-ver-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+.sec5Flex.two.active {
+    animation: scale-in-ver-bottom .5s .15s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@keyframes scale-in-ver-bottom {
+    0% {
+      -webkit-transform: scaleY(0);
+              transform: scaleY(0);
+      -webkit-transform-origin: 0% 100%;
+              transform-origin: 0% 100%;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+      -webkit-transform-origin: 0% 100%;
+              transform-origin: 0% 100%;
+      opacity: 1;
+    }
+  }
+  
+
+
 
 .about1 {
     font-size: var(--text-medium);
@@ -942,10 +971,20 @@ article.logo_box {
     width: 70%;
     margin: 0 auto;
     text-align: center;
+
+    margin-top: 8rem;
+    /* text-align: center; */
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* 좌우 여백 조정 */
+    color: #fff; /* 텍스트 색상 설정 */
+    padding: 20px;
 }
 article.logo_box p {
     margin: 4rem 0  25rem 0;
     font-size: var(--text-semi-medium);
+    opacity: 0;
 }
 
 article.sec6_flexbox {
@@ -976,13 +1015,154 @@ article.sec6_flexbox p {
     font-family: "TmoneyRoundWindExtrabold", sans-serif;
     font-size: var(--text-small);
     margin-bottom: 2rem;
+    opacity: 0;
 }
 article.sec6_flexbox img.logo {
     margin-right: 1.5rem;
+    opacity: 0;
 }
 article.sec6_flexbox img.color {
     margin-right: .5rem;
+    opacity: 0;
 }
+.rainbowlogo {
+    opacity: 0;
+}
+
+.sec6_flexbox p.active {
+    animation: scale-in-ver-bottom 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+.logo.one.active {
+    animation: slide_in_left .75s ease forwards;
+}
+.logo.two.active {
+    animation: slide_in_left .75s .1s ease forwards;
+}
+.rainbowlogo.active {
+    animation: slide_in_right .75s ease forwards;
+}
+
+.typeface.active {
+    animation: slide_in_left .75s ease forwards;
+}
+
+.color.one.active {
+    animation: color1 .75s ease forwards;
+}
+.color.two.active {
+    animation: color2 .75s .1s ease forwards;
+}
+.color.three.active {
+    animation: color2 .75s .2s ease forwards;
+}
+.color.four.active {
+    animation: color2 .75s .3s ease forwards;
+}
+
+@keyframes color1 {
+    0% {opacity: 0; transform: translateX(-100px);}
+    100% {opacity: 1; transform: translateX(0px);}
+}
+@keyframes color2 {
+    0% {opacity: 0; transform: translateX(-200px);}
+    100% {opacity: 1; transform: translateX(0px);}
+}
+
+
+
+
+
+
+
+.left_icon {
+    /* border: solid 1px blue; */
+    position: absolute;
+    /* top: 1000px; */
+    left: 900px;
+    /* z-index: -1; */
+}
+.icon1 {
+    position: absolute;
+    width: 150px;
+    top: -450px;
+    left: -700px;
+    opacity: 0;
+    animation: updown 1.5s cubic-bezier(0.25, 0.03, 0.66, 0.93) infinite alternate;
+;
+}
+.icon2 {
+    position: absolute;
+    width: 320px;
+    top: -100px;
+    left: -850px;
+    opacity: 0;
+    animation: updownrotate 1.5s cubic-bezier(0.25, 0.03, 0.66, 0.93) infinite alternate;
+
+}
+
+.right_icon {
+    /* border: solid 1px red; */
+    position: absolute;
+    left: 330px;
+    /* width: 100%; */
+}
+.icon3 {
+    position: absolute;
+    width: 220px;
+    top: -430px;
+    left: 1200px;
+    opacity: 0;
+    animation: updown 1.5s cubic-bezier(0.25, 0.03, 0.66, 0.93) infinite alternate;
+
+}
+.icon4 {
+    position: absolute;
+    width: 200px;
+    top: -40px;
+    left: 1120px;
+    opacity: 0;
+    animation: updown 1.5s cubic-bezier(0.25, 0.03, 0.66, 0.93) infinite alternate;
+
+}
+@keyframes updown {
+    0% {transform: translateY(0);}
+    100% {transform: translateY(12.5px);}
+}
+@keyframes updownrotate {
+    0% {transform: translateY(0) rotate(0);}
+    100% {transform: translateY(12.5px) rotate(7deg);}
+}
+
+.icon1.active {
+    animation: updown 1.5s cubic-bezier(0.25, 0.03, 0.66, 0.93) infinite alternate, icon1 1s ease forwards;
+}
+.icon2.active {
+    animation: updownrotate 1.5s .15s cubic-bezier(0.25, 0.03, 0.66, 0.93) infinite alternate, icon2 1s .1s ease forwards;
+}
+.icon3.active {
+    animation: updown 1.5s .3s cubic-bezier(0.25, 0.03, 0.66, 0.93) infinite alternate, icon3 1s .2s ease forwards;
+}
+.icon4.active {
+    animation: updown 1.5s .45s cubic-bezier(0.25, 0.03, 0.66, 0.93) infinite alternate, icon4 1s .3s ease forwards;
+}
+@keyframes icon1 {
+    0% {opacity: 0; top: 0; left: 0;}
+    100% {opacity: .75; top: -450px; left: -700px}
+}
+@keyframes icon2 {
+    0% {opacity: 0; top: 0; left: 0;}
+    100% {opacity: .75; top: -100px; left: -850px}
+}
+@keyframes icon3 {
+    0% {opacity: 0; top: 0; left: 0;}
+    100% {opacity: .75; top: -430px; left: 1200px}
+}
+@keyframes icon4 {
+    0% {opacity: 0; top: 0; left: 0;}
+    100% {opacity: .75; top: -40px; left: 1120px}
+}
+
+
 
 
 
@@ -1063,29 +1243,29 @@ footer #info p {
 }
 #person_box .teamperson {
     /*border: solid 1px blue;*/
-    width: 12em;
-    height: 7em;
-    margin-right: 2em;
+    width: 12rem;
+    height: 7rem;
+    margin-right: 2rem;
     border-right: solid .5px rgba(255, 255, 255, .5);
 }
 .part {
     color: #fff;
-    font-size: 1.25em;
+    font-size: 1.25rem;
     font-weight: 600;
 }
 .name {
     color: #fff;
-    font-size: 1em;
+    font-size: 1rem;
     font-weight: 300;
-    margin-top: .3em;
+    margin-top: .3rem;
 }
 .mail a {
     display: block;
     color: #aaa;
     text-decoration: none;
     font-weight: 100;
-    font-size: .75em;
-    padding-top: 2em;
+    font-size: .75rem;
+    padding-top: 2rem;
 }
 
 footer #download {
@@ -1095,15 +1275,16 @@ footer #download {
 }
 footer #download button {
     border: none;
-    background: #fff;
-    padding: .75vmin 1.5vmin;
-    margin-top: 2vmin;
+    background: white;
+    padding: .65rem 1.5rem;
+    margin-top: 2rem;
     /*border-radius: 2px;*/
 }
 footer #download button a {
     font-family: 'Pretendard', sans-serif;
     font-weight: 300;
-    font-size: 1.2vmin;
+    font-size: .7rem;
+    color: var(--systemColorD);
     text-decoration: none;
 }
 footer #download button:hover {
@@ -1117,7 +1298,7 @@ footer #badge {
     position: absolute;
     /*border: solid 1px red;*/
     width: 100%;
-    height: 2.8em;
+    height: 2.8rem;
     float: right;
     right: 0;
     bottom: 0;
