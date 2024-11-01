@@ -14,8 +14,9 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 const sectorTitle = document.querySelectorAll('.sectorTitle');
+const sectorTitleY = document.querySelectorAll('.sectorTitleYellow');
 const sec1Observer = document.querySelectorAll('.sec1_Observer');
-
+const sec2Observer = document.querySelectorAll('.sec2_Observer');
 const sec3Observer = document.querySelectorAll('.sec3_Observer');
 const sec4Observer = document.querySelectorAll('.sec4_Observer');
 const sec5Observer = document.querySelectorAll('.sec5_Observer');
@@ -32,11 +33,13 @@ observer.observe(sectorTitle[4]);
 observer.observe(sectorTitle[5]);
 observer.observe(sectorTitle[6]);
 observer.observe(sectorTitle[7]);
-observer.observe(sectorTitle[8]);
+
+observer.observe(sectorTitleY[0]);
 
 observer.observe(sec1Observer[0]);
 observer.observe(sec1Observer[1]);
 observer.observe(sec1Observer[2]);
+
 
 observer.observe(sec3Observer[0]);
 observer.observe(sec3Observer[1]);
@@ -128,25 +131,13 @@ window.addEventListener('scroll', () => {
 
 
 
-const observer2 = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            new TypeIt(".search_bar p", {
-                strings: "이제는 현실이 된 착용형 디바이스의 시대",
-                // ... other options
-              }).go();
+new TypeIt("#search_bar p", {
+    strings: "이제는 현실이 된 착용형 디바이스의 시대",
+    // ... other options
+  }).go();
 
-                    // 관찰 해제
-              observer.unobserve(entry.target);
-        } else {
-            entry.target.innerHTML = "";
-        }
-    });
-}, {
-    threshold: 1
-});
 
-observer2.observe(document.querySelector('.search_bar p'));
+
 
 
 

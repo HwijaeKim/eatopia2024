@@ -203,7 +203,12 @@ nav {
 
 .sectorTitle {
     display: inline-block;
-    margin: 0 1rem 5em 0;
+    margin: 0 1rem 2rem 0;
+    opacity: 0;
+}
+.sectorTitleYellow {
+    display: inline-block;
+    margin: 0 1rem 2rem 0;
     opacity: 0;
 }
 .sectorTitle p {
@@ -215,6 +220,19 @@ nav {
     background: var(--pinkL);
     padding: 5px 20px;
     border-radius: 50px;
+}
+.sectorTitleYellow p {
+    font-family: "Pretendard", sans-serif;
+    font-weight: 600;
+    display: inline-block;
+    color: rgba(0, 0, 0, .7);
+    font-size: var(--text-small);
+    background: var(--yellowL);
+    padding: 5px 20px;
+    border-radius: 50px;
+}
+.sectorTitleYellow.active {
+    animation: proj_bg .75s ease 0s 1 both;
 }
 .sectorTitle.active {
     animation: proj_bg .75s ease 0s 1 both;
@@ -466,31 +484,43 @@ section#sector2 {
     float: right;
     margin:0 15rem 3rem 0;
 }
-.sec2flexbox2 > span {
-    align-self: flex-end; /* p 태그를 아래에 배치 */
-    margin-top: auto; /* 위쪽 공간을 밀어내려 p 태그가 아래로 내려가도록 */
-  }
 
-  .search_bar {
-    background: var(--blueL);
-    width: 70%;
-    height: 80px;
-    border-radius: 25px;
-    float: right;
-  }
 
-.search_bar p {
-    color: var(--systemColorD);
-    font-size: var(--text-medium);
-    height: 45px;
-    width: 90%;
-    margin: 16px 2rem;
-    padding-left: 1rem;
-    display: flex;
-    align-items: center;
-    border-left: solid 2px rgba(0, 0, 0, .4);
+article#search_bar {
+    background: #fff;
+    width: 40rem;
+    height: 75px;
+    border-radius: 20px;
+    /* float: right; */
 }
 
+article#search_bar p {
+    border: solid 1px red;
+    color: var(--systemColorD);
+    font-size: var(--text-small);
+    /* height: 75px; */
+    width: 85%;
+    float: right;
+    /* align-items: center;
+}
+.search_bar span {
+    /* border: solid 1px red; */
+    font-size: var(--text-medium);
+    /* width:10%; */
+    height: 75px;
+    /* margin: .9rem 0 0 1.7rem; */
+    /* position: absolute; */
+}
+article#search_bar span {
+    font-size: var(--text-large);
+    margin: 3rem 0 0 1.4rem;
+}
+
+.news {
+    margin-top: 5rem;
+    transform: translateX(-390px);
+    width: 140%;
+}
 
 
 
@@ -548,18 +578,18 @@ article#sec2_flexbox {
 
 .sec2Flex.one {
     background: var(--blueL);
-    border-radius: 2rem;
-    border: solid 13px #fff
+    border-radius: 3rem;
+    border: solid 10px #fff
 }
 .sec2Flex.two {
     background: var(--yellowL);
-    border-radius: 2rem;
-    border: solid 13px #fff
+    border-radius: 3rem;
+    border: solid 10px #fff
 }
 .sec2Flex.three {
     background: var(--pinkL);
-    border-radius: 2rem;
-    border: solid 13px #fff
+    border-radius: 3rem;
+    border: solid 10px #fff
 }
 
 .symbol_top {
@@ -764,11 +794,8 @@ section#sector4 {
     margin: 0 auto;
     padding-top: 20rem;
 }
-section#sector4 img {
-    margin-bottom: 8rem;
-    opacity: 0;
-}
-section#sector4 img.active {
+
+article.survey.active {
     animation: FadeInBottom .75s cubic-bezier(0, 0.03, 0.12, 1.01) forwards;
 }
 .result {
@@ -784,6 +811,25 @@ section#sector4 img.active {
     display: inline-block;
     font-size: var(--text-large);
     font-weight: 900;
+}
+
+article.survey {
+    margin-bottom: 8rem;
+    opacity: 0;
+}
+.stepAni_inline {
+    /* border: solid 1px red; */
+    display: inline;
+    width: 130px;
+    height: 130px;
+    background-image: url("../sources/maru_fork.webp");
+    background-size: cover;
+
+    position: absolute;
+    left: 54.5%;
+    transform: translateY(90px);
+
+    animation: stepAni 1s steps(10) infinite alternate;
 }
 
 .stepAni {
