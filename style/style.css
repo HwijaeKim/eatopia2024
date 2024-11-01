@@ -734,7 +734,8 @@ article#summary .summary_flexbox {
     width: 65%;
 }
 .imgFlex2 img {
-    width: 73%;
+    width: 70%;
+    padding-left: .9rem;
 }
 
 
