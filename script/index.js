@@ -30,6 +30,7 @@ observer.observe(sectorTitle[4]);
 observer.observe(sectorTitle[5]);
 observer.observe(sectorTitle[6]);
 observer.observe(sectorTitle[7]);
+observer.observe(sectorTitle[8]);
 
 observer.observe(sec1Observer[0]);
 observer.observe(sec1Observer[1]);
