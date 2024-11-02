@@ -60,7 +60,7 @@
     --text-small: 2.4vmin;
     --text-extra-small: 1.7vmin; */
     /* rem 환산 */
-    --text-xlarge: 5.4rem;
+    --text-xlarge: 3.7rem;
     --text-large: 3.0375rem;
     --text-medium: 2.3rem;
     --text-regular: 2rem;
@@ -81,6 +81,7 @@
 
 body {
     background: var(--background);
+    /* font-family: "Pretendard", sans-serif; */
     font-family: "NanumSquareRound", sans-serif;
     /* font-family: "TmoneyRoundWindExtraBold", sans-serif; */
     overflow-x: hidden;
@@ -96,11 +97,11 @@ body {
 }
 
 
-/* #wrap {
+#wrap {
     max-width: 1920px;
     width: 100%;
     margin: 0 auto;
-} */
+}
 
 
 
@@ -299,12 +300,13 @@ nav {
 
 .main_title {
     font-family: "TmoneyRoundWindExtraBold", sans-serif;
+    font-weight: 800;;
     font-size: var(--text-large);
     opacity: 0;
 }
 .main_subtitle {
-    /*border: solid 1px red;*/
-    width: 60%;
+    /* border: solid 1px red; */
+    width: 55%;
     font-size: var(--text-semi-medium);
     opacity: 0;
 }
@@ -608,9 +610,10 @@ article#sec2_flexbox {
     margin-top: 5rem;
 }
 .sec2Flex {
-    /*border: solid 1px blue;*/
+    /* border: solid 1px blue; */
     width: 30%;
-    height: 100%;
+    /* gap: 10px; */
+
     text-align: center;
     transform-style: preserve-3d;
     opacity: 0;
@@ -631,17 +634,20 @@ article#sec2_flexbox {
 .sec2Flex.one {
     background: var(--blueL);
     border-radius: 3rem;
-    border: solid 10px #fff
+    border: solid 10px #fff;
+    aspect-ratio: 1 / 1;
 }
 .sec2Flex.two {
     background: var(--yellowL);
     border-radius: 3rem;
-    border: solid 10px #fff
+    border: solid 10px #fff;
+    aspect-ratio: 1 / 1;
 }
 .sec2Flex.three {
     background: var(--pinkL);
     border-radius: 3rem;
-    border: solid 10px #fff
+    border: solid 10px #fff;
+    aspect-ratio: 1 / 1;
 }
 
 .symbol_top {
@@ -833,7 +839,7 @@ article#summary .summary_flexbox {
     /* border: solid 1px blue; */
     width: 100%;
     height: 100%;
-    background: var(--background);
+    /* background: var(--background); */
     /*background-image: url("../sources/bgSymbols.png");*/
     background-size: contain;
     background-repeat: no-repeat;
@@ -851,18 +857,53 @@ article.survey.active {
     animation: FadeInBottom .75s cubic-bezier(0, 0.03, 0.12, 1.01) forwards;
 }
 .result {
-    margin: 7rem 0 10rem 0;
+    margin: 7rem 0 17rem 0;
     font-weight: 800;
     font-size: var(--text-semi-medium);
 }
 
 .result_box {
-    margin-top: -3rem;
+    margin: -7rem 0 20rem 0;
 }
 .result_box p {
     display: inline-block;
-    font-size: var(--text-large);
+    font-size: var(--text-xlarge);
     font-weight: 900;
+}
+
+.highlight-animation {
+    position: relative;
+    display: inline-block;
+    font-size: var(--text-xlarge);
+    /* font-weight: 500; */
+    color: var(--yellowL); /* 초기 텍스트 색상 */
+    transition: color 0.5s .5s ease; /* 텍스트 색상 전환 */
+}
+
+/* 형광펜 효과 스타일 */
+.highlight-animation::before {
+    content: '';
+    position: absolute;
+    left: -4%;
+    bottom: -4%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--yellowL); /* 형광펜 색상 */
+    border-radius: 100px;
+    padding: 5px 20px;
+    z-index: -1; /* 텍스트 뒤에 위치 */
+    transform: scaleX(0); /* 초기 상태: 숨김 */
+    transform-origin: left; /* 왼쪽에서 시작 */
+    transition: transform .75s .5s ease; /* 애니메이션 설정 */
+}
+
+/* 호버 시 애니메이션 효과 */
+.highlight-animation.active {
+    color: black; /* 텍스트 색상 변경 */
+}
+
+.highlight-animation.active::before {
+    transform: scaleX(1); /* 형광펜이 왼쪽에서 오른쪽으로 */
 }
 
 article.survey {
@@ -883,6 +924,19 @@ article.survey {
 
     animation: rami_step 1s steps(8) infinite alternate;
 }
+.stepAni2_inline {
+    display: inline;
+    width: 8rem;
+    aspect-ratio: 1 /1 ;
+    background: url('../sources//stepAni/poki_step.webp');
+    background-size: cover;
+
+    position: absolute;
+    transform: translate(-2rem, 6rem);
+    right: 0;
+
+    animation: poki_step 1.5s steps(12) infinite;
+}
 
 .stepAni {
     /* border: solid 1px red; */
@@ -892,7 +946,8 @@ article.survey {
     background-image: url("../sources/stepAni/maru_fork_step.webp");
     background-size: cover;
 
-    margin: -3rem -4rem -1.5rem -.75rem;
+    /* margin: -3rem -4rem -1.5rem -.75rem; */
+    transform: translate(-8rem, -3rem);
 
     animation: stepAni 1s steps(10) infinite alternate;
 }
@@ -904,7 +959,7 @@ article.survey {
     background-image: url("../sources/stepAni/rami_step.webp");
     background-size: cover;
 
-    margin: -3rem 0 -1.5rem -.75rem;
+    transform: translate(-20.5rem, -3rem);
 
     animation: rami_step 1s steps(8) infinite alternate;
 }
@@ -915,7 +970,55 @@ article.survey {
 @keyframes rami_step {
     100% { background-position: calc(8rem * 8) 0; }
 }
+@keyframes poki_step {
+    100% { background-position: calc(8rem * 12) 0; }
+}
 
+.planet {
+    position: absolute;
+    transform: translate(6rem, -17rem);
+    z-index: -3;
+    opacity: .5;
+}
+/* .planet {
+    display: inline-block;
+    width: 15rem;
+    aspect-ratio: 1 / 1;
+    background: url('../sources/stepAni/saturn.webp');
+    background-size: cover;
+
+    animation: planet 2s steps(15) infinite alternate;
+}
+@keyframes planet {
+    100% { background-position: calc(15rem * 15) 0;}
+} */
+.stars1 {
+    position: absolute;
+    transform: translate(0, -30.5rem);
+    z-index: -3;
+}
+.stars2 {
+    position: absolute;
+    transform: translate(37rem, -12rem);
+    z-index: -3;
+    scale: .75;
+}
+.stars3 {
+    position: absolute;
+    transform: translate(90rem, -1.5rem);
+    z-index: -3;
+    scale: .75;
+}
+
+.stars1.active {
+    animation: dissolve 1s ease forwards;
+}
+.stars2.active {
+    animation: dissolve 1s ease forwards;
+}
+.stars3.active {
+    animation: dissolve 1s ease forwards;
+}
 
 
 
