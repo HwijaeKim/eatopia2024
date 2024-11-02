@@ -40,6 +40,17 @@ observer.observe(sec1Observer[0]);
 observer.observe(sec1Observer[1]);
 observer.observe(sec1Observer[2]);
 
+observer.observe(sec2Observer[0]);
+observer.observe(sec2Observer[1]);
+observer.observe(sec2Observer[2]);
+observer.observe(sec2Observer[3]);
+observer.observe(sec2Observer[4]);
+observer.observe(sec2Observer[5]);
+observer.observe(sec2Observer[6]);
+observer.observe(sec2Observer[7]);
+observer.observe(sec2Observer[8]);
+observer.observe(sec2Observer[9]);
+
 
 observer.observe(sec3Observer[0]);
 observer.observe(sec3Observer[1]);
@@ -134,6 +145,8 @@ window.addEventListener('scroll', () => {
 new TypeIt("#search_bar p", {
     strings: "이제는 현실이 된 착용형 디바이스의 시대",
     // ... other options
+    cursor: false,
+    waitUntilVisible: true
   }).go();
 
 
