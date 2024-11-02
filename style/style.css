@@ -52,20 +52,21 @@
 
 
 /*    글꼴크기 관리*/
-    --text-xlarge: 8vmin;
+    /* --text-xlarge: 8vmin;
     --text-large: 4.65vmin;
     --text-medium: 3.5vmin;
     --text-regular: 3vmin;
     --text-semi-medium: 2.6vmin;
     --text-small: 2.4vmin;
-    --text-extra-small: 1.7vmin;
+    --text-extra-small: 1.7vmin; */
     /* rem 환산 */
-    /* --text-xlarge: 5.4rem;
+    --text-xlarge: 5.4rem;
     --text-large: 3.0375rem;
     --text-medium: 2.3rem;
+    --text-regular: 2rem;
     --text-semi-medium: 1.755rem;
     --text-small: 1.32rem ;
-    --text-extra-small: 1.1475rem; */
+    --text-extra-small: 1.1475rem;
    
 }
 
@@ -76,11 +77,11 @@
     padding: 0;
 }
 
-/* #wrap {
-    max-width: 1920px;
+#wrap {
+    max-width: 2560px;
     width: 100%;
     margin: 0 auto;
-} */
+}
 
 body {
     background: var(--background);
@@ -492,7 +493,7 @@ section#sector2 {
 
 article#search_bar {
     background: #fff;
-    width: 60vmin;
+    width: 40rem;
     aspect-ratio: 1 / .13;
     border-radius: 20px;
     /* float: right; */
@@ -501,7 +502,7 @@ article#search_bar {
 
 article#search_bar img {
     /* border: solid 1px blue; */
-    margin: 1.45rem 0 0 1.45rem;
+    margin: 1.6rem 0 0 1.45rem;
 }
 .search_bar_svg {
     margin-top: 3rem;
@@ -513,7 +514,7 @@ article#search_bar p {
     /* border: solid 1px red; */
     display: inline-block;
     color: var(--systemColorD);
-    font-size: var(--text-regular);
+    font-size: var(--text-semi-medium);
     margin-left: 1rem;
     transform: translateY(-.15rem);
     /* height: 100%;q */
@@ -869,32 +870,48 @@ article.survey {
 .stepAni_inline {
     /* border: solid 1px red; */
     display: inline;
-    width: 130px;
-    height: 130px;
-    background-image: url("../sources/maru_fork.webp");
+    width: 8rem;
+    aspect-ratio: 1 /1 ;
+    background-image: url("../sources/stepAni/rami_jump_step.webp");
     background-size: cover;
 
     position: absolute;
     left: 54.5%;
     transform: translateY(90px);
 
-    animation: stepAni 1s steps(10) infinite alternate;
+    animation: rami_step 1s steps(8) infinite alternate;
 }
 
 .stepAni {
     /* border: solid 1px red; */
     display: inline-block;
-    width: 130px;
-    height: 130px;
-    background-image: url("../sources/maru_fork.webp");
+    width: 8rem;
+    aspect-ratio: 1 / 1;
+    background-image: url("../sources/stepAni/maru_fork_step.webp");
+    background-size: cover;
+
+    margin: -3rem -4rem -1.5rem -.75rem;
+
+    animation: stepAni 1s steps(10) infinite alternate;
+}
+.stepAni2 {
+    /* border: solid 1px red; */
+    display: inline-block;
+    width: 8rem;
+    aspect-ratio: 1 / 1;
+    background-image: url("../sources/stepAni/rami_step.webp");
     background-size: cover;
 
     margin: -3rem 0 -1.5rem -.75rem;
 
-    animation: stepAni 1s steps(10) infinite alternate;
+    animation: rami_step 1s steps(8) infinite alternate;
 }
 @keyframes stepAni {
-    100% { background-position: -1300px 0; }
+    100% { background-position: calc(8rem * 10) 0; }
+}
+
+@keyframes rami_step {
+    100% { background-position: calc(8rem * 8) 0; }
 }
 
 

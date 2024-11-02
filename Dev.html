@@ -3,58 +3,97 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>형광펜 애니메이션</title>
+<title>스타일 카드</title>
 <style>
-/* 컨테이너 설정 */
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px; /* 좌우 여백 조정 */
-    background-color: #000; /* 배경색 설정 */
-    color: #fff; /* 텍스트 색상 설정 */
-    padding: 20px;
-}
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f8f8f8;
+        font-family: Arial, sans-serif;
+    }
+    .card {
+        width: 30rem;
+        /* overflow: hidden; */
+        /* overflow: visible; */
 
-/* 아이콘 그룹 설정 */
-.icon-group {
-    display: flex;
-    flex-direction: column;
-    gap: 10px; /* 아이콘 간 간격 */
-}
+    }
+    .card-top {
+        background-color: #fde4f4;
+        padding: 2rem;
+        border-radius: 1.5rem 1.5rem 0 0 ;
+        height: 11rem;
+        display: flex;
+        align-items: center;
+        position: relative;
+        
+    }
+    .char-img {
+        /* border: solid 1px red; */
+        position: absolute;
+        width: 27rem;
+        aspect-ratio: 1 / 1;
+        background: url("./sources//stepAni/bibi_helloCut_step.webp");
+        background-size: cover;
+        filter: brightness(1.2);
+        /* z-index: 0; */
+        /* right: 0; */
+        transform: translate(1.5rem, -6rem);
 
-/* 텍스트 설정 */
-.text {
-    font-size: 24px;
-    line-height: 1.5;
-    text-align: center;
+        animation: stepAni 1.5s steps(14) infinite alternate;
+    }
+    @keyframes stepAni {
+    100% { background-position: calc(27rem * 14) 0; }
 }
-
-/* 하이라이트 텍스트 스타일 */
-.highlight {
-    background-color: #e8c7e3; /* 형광펜 효과 */
-    color: black;
-    padding: 2px 4px;
-    border-radius: 4px;
-}
+    .card-title svg {
+        /* border: solid 1px red; */
+        width: 5rem;
+        margin-bottom: -4rem;
+        /* z-index: -4; */
+    }
+    .card-title span {
+        margin-left: 0.5rem;
+        color: #d889b6;
+    }
+    .card-bottom {
+        position: absolute;
+        width: 30rem;
+        background-color: #ffffff;
+        padding: 1.5rem;
+        /* text-align: center; */
+        border-radius: 0 0 1.5rem 1.5rem;
+    
+        z-index: 0;
+    }
+    .card-text {
+        font-size: 1.4rem;
+        color: #d889b6;
+    }
 </style>
 </head>
 <body>
 
-  <div class="container">
-    <div class="icon-group left">
-        <span class="icon">🌙</span>
-        <span class="icon">➕</span>
+<div class="card">
+    <div class="card-top">
+        <div class="card-title">
+            <svg viewBox="0 0 116 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.24 43.8H7.32C4.68 43.8 3.4 42.48 3.4 39.84V18.12C3.4 15.48 4.68 14.16 7.32 14.16H16.28C23 14.16 27.08 16.44 27.08 21.76C27.08 24.4 25.52 26.68 22.76 27.72V27.96C25.52 28.76 28.12 30.96 28.12 34.96C28.12 40.68 24.16 43.8 17.24 43.8ZM10.08 30.92V38.2H15.96C19.16 38.2 21.44 37.44 21.44 34.56C21.44 31.68 19.16 30.92 15.96 30.92H10.08ZM20.32 22.68C20.32 20.28 18.8 19.48 15.6 19.48H10.08V25.88H15.6C18.8 25.88 20.32 25.08 20.32 22.68ZM31.5572 41V26.92C31.5572 25.04 32.7572 23.84 34.6372 23.84C36.5172 23.84 37.6772 25.04 37.6772 26.92V41C37.6772 42.88 36.5172 44.04 34.6372 44.04C32.7572 44.04 31.5572 42.88 31.5572 41ZM38.1572 16.68C38.1572 18.64 36.5972 20.2 34.6372 20.2C32.6772 20.2 31.1172 18.64 31.1172 16.68C31.1172 14.72 32.6772 13.16 34.6372 13.16C36.5972 13.16 38.1572 14.72 38.1572 16.68ZM56.4041 43.8H46.4841C43.8441 43.8 42.5641 42.48 42.5641 39.84V18.12C42.5641 15.48 43.8441 14.16 46.4841 14.16H55.4441C62.1641 14.16 66.2441 16.44 66.2441 21.76C66.2441 24.4 64.6841 26.68 61.9241 27.72V27.96C64.6841 28.76 67.2841 30.96 67.2841 34.96C67.2841 40.68 63.3241 43.8 56.4041 43.8ZM49.2441 30.92V38.2H55.1241C58.3241 38.2 60.6041 37.44 60.6041 34.56C60.6041 31.68 58.3241 30.92 55.1241 30.92H49.2441ZM59.4841 22.68C59.4841 20.28 57.9641 19.48 54.7641 19.48H49.2441V25.88H54.7641C57.9641 25.88 59.4841 25.08 59.4841 22.68ZM70.7213 41V26.92C70.7213 25.04 71.9213 23.84 73.8013 23.84C75.6813 23.84 76.8413 25.04 76.8413 26.92V41C76.8413 42.88 75.6813 44.04 73.8013 44.04C71.9213 44.04 70.7213 42.88 70.7213 41ZM77.3213 16.68C77.3213 18.64 75.7613 20.2 73.8013 20.2C71.8413 20.2 70.2813 18.64 70.2813 16.68C70.2813 14.72 71.8413 13.16 73.8013 13.16C75.7613 13.16 77.3213 14.72 77.3213 16.68Z" fill="#E495CA"/>
+                <path d="M108.839 16C106.769 16 104.91 16.8987 103.605 18.3311C103.057 18.9327 101.942 18.9327 101.394 18.3313C100.09 16.8988 98.2312 16 96.1601 16C92.2051 16 89 19.2762 89 23.308C89 27.3398 91.4527 31.0359 94.6229 34.072C96.6439 36.0079 99.2899 37.885 100.942 38.9913C101.888 39.6246 103.109 39.6198 104.052 38.9815C105.674 37.8824 108.273 36.0255 110.377 34.072C113.921 30.7838 116 27.3524 116 23.308C116 19.2636 112.795 16 108.839 16Z" fill="#E495CA"/>
+                </svg>
+                
+        </div>
+        <div class="char-img"></div>
     </div>
-    <p class="text">
-        아이와 부모 모두가<br>
-        식사 시간을 <span class="highlight">긍정적인 경험</span>으로<br>
-        인식할 수 있도록 만든다.
-    </p>
-    <div class="icon-group right">
-        <span class="icon">❤️</span>
-        <span class="icon">⚡</span>
+    <div class="card-bottom">
+        <div class="card-text">사랑으로 식탁을 지휘하는 토끼</div>
     </div>
+    
 </div>
 
 </body>
