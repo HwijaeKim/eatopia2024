@@ -33,6 +33,7 @@ observer.observe(sectorTitle[4]);
 observer.observe(sectorTitle[5]);
 observer.observe(sectorTitle[6]);
 observer.observe(sectorTitle[7]);
+observer.observe(sectorTitle[8]);
 
 observer.observe(sectorTitleY[0]);
 
@@ -170,4 +171,25 @@ VanillaTilt.init(document.querySelectorAll('.sec4Flex.one'), {
     scale: 1.05,
     transition: true
     // glare: true
+})
+
+
+
+
+
+
+// 캐릭터 슬라이드
+const charSlide = document.querySelector('.scroll-container');
+let slideBtn = document.querySelectorAll('.btn_slide button');
+// let previousBtn = document.querySelector('.previousBtn');
+
+slideBtn.forEach(btn => {
+    btn.addEventListener('click', (event) => {
+        if(event.target.classList.contains('next')) {
+            charSlide.classList.add('active');
+        }
+        else if(event.target.classList.contains('previous')) {
+            charSlide.classList.remove('active');
+        }
+    })
 })

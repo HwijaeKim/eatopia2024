@@ -77,17 +77,13 @@
     padding: 0;
 }
 
-#wrap {
-    max-width: 2560px;
-    width: 100%;
-    margin: 0 auto;
-}
+
 
 body {
     background: var(--background);
     font-family: "NanumSquareRound", sans-serif;
     /* font-family: "TmoneyRoundWindExtraBold", sans-serif; */
-    overflow-x: hidden;  /*X축으로 오버돼서 표시되는 것을 방지*/
+    /* overflow-x: hidden; */
     word-break: keep-all;
     letter-spacing: -.05em;
     line-height: var(--union-line-height);
@@ -99,6 +95,12 @@ body {
     user-select:none;
 }
 
+
+/* #wrap {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+} */
 
 
 
@@ -1283,6 +1285,158 @@ article.sec6_flexbox img.color {
     0% {opacity: 0; top: 0; left: 0;}
     100% {opacity: .75; top: -40px; left: 1120px}
 }
+
+
+
+
+
+
+
+/* SECTOR 07 */
+#sec7_bg {
+    /* border: solid 1px blue; */
+    width: 100%;
+    height: 100%;
+    background: var(--background);
+    /*background-image: url("../sources/bgSymbols.png");*/
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+section#sector7 {
+    /* border: solid 1px red; */
+    display: block;
+    width: 90%;
+    height: 100vh;
+    margin: 0 auto;
+    padding-top: 8rem;
+}
+
+.scroll-container {
+    /* border: solid 1px red; */
+    width: 100%; /* div 전체 너비 설정 */
+
+
+
+
+    white-space: nowrap; /* 내부 요소가 가로로 나열되도록 설정 */
+
+    margin-top: 6rem;
+    transition: .5s ease-in-out;
+}
+.scroll-container.active {
+    transform: translateX(-35rem);}
+
+.scroll-content {
+    display: inline-flex; /* 가로로 나열하기 위해 flex 사용 */
+
+}
+
+
+
+.card {
+    display: inline-block;
+    width: 35rem;
+    margin-right: 1rem;
+    /* overflow: hidden; */
+    /* overflow: visible; */
+
+}
+.card-top-pink {
+    /* border: solid 1px red; */
+    background-color: #fde4f4;
+    padding: 2rem;
+    border-radius: 2.5rem 2.5rem 0 0 ;
+    height: 9rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.card-top-yellow {
+    /* border: solid 1px red; */
+    background-color: #FFF4C7;
+    padding: 2rem;
+    border-radius: 2.5rem 2.5rem 0 0 ;
+    height: 9rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.char-img-bibi {
+    /* display: flex; */
+    /* border: solid 1px red; */
+    position: absolute;
+    width: 27rem;
+    aspect-ratio: 1 / 1;
+    background: url("../sources/stepAni/bibi_helloCut_step.webp");
+    background-size: cover;
+    filter: brightness(1.2);
+    /* z-index: 0; */
+    right: 0;
+    transform: translate(1.5rem, -6rem);
+
+    animation: bibiHello 1.5s steps(14) infinite alternate;
+}
+@keyframes bibiHello {
+100% { background-position: calc(27rem * 14) 0; }
+}
+
+.char-img-rami {
+    /* display: flex; */
+    /* border: solid 1px red; */
+    position: absolute;
+    width: 27rem;
+    aspect-ratio: 1 / 1;
+    background: url("../sources/stepAni/rami_hello_step.webp");
+    background-size: cover;
+    filter: brightness(1.2);
+    /* z-index: 0; */
+    right: 0;
+    transform: translate(1.5rem, -5rem);
+
+    animation: ramiHello 1.5s steps(8) infinite alternate;
+}
+@keyframes ramiHello {
+    100% { background-position: calc(27rem * 8) 0; }
+    }
+
+
+
+.card-title svg {
+    /* border: solid 1px red; */
+    width: 6.3rem;
+    margin-bottom: -5.5em;
+    /* z-index: -4; */
+}
+.card-bottom {
+    position: absolute;
+    width: 32rem;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    /* text-align: center; */
+    border-radius: 0 0 2.5rem 2.5rem;
+
+    z-index: 0;
+}
+.card-text {
+    font-size: var(--text-extra-small);
+    font-weight: 700;
+    color: #d889b6;
+}
+
+
+article.btn_slide {
+    /* border: solid 1px red; */
+    margin-top: 8rem;
+    text-align: center;
+}
+
+article.btn_slide button {
+    background: none;
+    border: solid .5px rgba(255, 255, 255, .5);
+    padding: .5rem 2rem;
+}
+
 
 
 
