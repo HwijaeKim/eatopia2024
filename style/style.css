@@ -99,7 +99,7 @@ body {
     /* font-family: "Pretendard", sans-serif; */
     font-family: "NanumSquareRound", sans-serif;
     /* font-family: "TmoneyRoundWindExtraBold", sans-serif; */
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     word-break: keep-all;
     letter-spacing: -.05em;
     line-height: var(--union-line-height);
@@ -1662,6 +1662,31 @@ article.btn_slide button:active {
 
 
 
+/* SECTOR 7-2 */
+section#sector7-2 {
+    /* border: solid 1px red; */
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../sources/eatopia_bg.webp');
+    background-size: cover;
+    background-position: top;
+}
+section#sector7-2 p {
+    width: 100%;
+    text-align: center;
+    font-size: var(--text-semi-medium);
+    position: absolute;
+    bottom: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+
+
+
 
 /* SECTOR 08 */
 #sec8_bg {
@@ -1673,6 +1698,7 @@ article.btn_slide button:active {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
+    margin-top: 10rem;
 }
 section#sector8 {
     /* border: solid 1px red; */
@@ -1801,8 +1827,9 @@ section#sector10 {
 }
 
 article.center_box {
-    text-align: center;
-    align-items: center;
+    width: 100%;
+    /* text-align: center;
+    align-items: center; */
 }
 article.center_box .first_step {
     font-size: var(--text-medium);
@@ -1870,6 +1897,92 @@ article.sec10_uiContainer {
 	}
 }
 
+
+
+
+
+
+
+
+
+/* SECTOR 11 */
+#sec11_bg {
+    /* border: solid 1px blue; */
+    width: 100%;
+    height: 150vh;
+    background: var(--background);
+    
+}
+
+section#sector11 {
+    /* border: solid 1px red; */
+    display: block;
+    width: 90%;
+    /* height: 200vh; */
+    margin: 0 auto;
+    padding-top: 8rem;
+}
+
+article.center_box {
+    width: 100%;
+    /* text-align: center;
+    align-items: center; */
+}
+article.center_box .first_step {
+    font-size: var(--text-medium);
+    font-weight: 800;
+    margin-bottom: 2rem;
+    opacity: 0;
+}
+article.center_box span {
+    font-size: var(--text-small);
+    opacity: 0;
+}
+
+article.center_box .first_step.active {
+    animation: big-small .75s ease forwards;
+}
+article.center_box span.active {
+    animation: big-small .75s ease forwards;
+}
+
+
+
+article.sec11_uiContainer {
+    width: 100%;
+    /* border: solid 1px red; */
+    margin-top: -13rem;
+}
+article.sec11_uiContainer img {
+    width: 100%;
+}
+
+article.sec11_uiContainer img.active {
+    animation: centerSpread .75s ease 0s 1 normal forwards;
+}
+@keyframes centerSpread {
+	0% {
+		transform: scaleX(0);
+	}
+
+	100% {
+		transform: scaleX(1);
+	}
+}
+
+
+.sec11_bottom {
+    float: right;
+    margin-top: -14rem;
+    margin-right: 3rem;
+    font-size: var(--text-small);
+}
+.second_step {
+    font-size: var(--text-medium);
+    font-weight: 800;
+    margin-bottom: 2rem;
+    /* opacity: 0; */
+}
 
 
 
