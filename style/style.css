@@ -1672,13 +1672,19 @@ section#sector8 {
     /* border: solid 1px red; */
     display: block;
     width: 90%;
-    height: 100vh;
+    /* height: 100vh; */
     margin: 0 auto;
     padding-top: 8rem;
 }
 .subtitle {
     /* border: solid 1px red; */
     margin-bottom: 10rem;
+}
+.subtitle img {
+    opacity: 0;
+}
+.subtitle.active img {
+    animation: big-small .75s ease forwards;
 }
 
 .subtitle video {
@@ -1702,11 +1708,27 @@ section#sector8 {
     margin-bottom: 1rem;
     font-size: var(--text-semi-medium);
     font-weight: 800;
+    opacity: 0;
+}
+.viewing_box span {
+    opacity: 0;
 }
 .viewing_box img {
     width: 90%;
     margin-top: 3rem;
+    opacity: 0;
 }
+
+.viewing_box p.active {
+    animation: slide_in_left .75s ease forwards;
+}
+.viewing_box span.active {
+    animation: slide_in_left .75s ease forwards;
+}
+.viewing_box img.active {
+    animation: big-small .75s ease forwards;
+}
+
 
 .feature_vid {
     margin-top: 17rem;
@@ -1780,10 +1802,21 @@ article.center_box .first_step {
     font-size: var(--text-medium);
     font-weight: 800;
     margin-bottom: 2rem;
+    opacity: 0;
 }
 article.center_box span {
     font-size: var(--text-small);
+    opacity: 0;
 }
+
+article.center_box .first_step.active {
+    animation: big-small .75s ease forwards;
+}
+article.center_box span.active {
+    animation: big-small .75s ease forwards;
+}
+
+
 
 article.sec10_uiContainer {
     /* border: solid 1px red; */
@@ -1793,22 +1826,43 @@ article.sec10_uiContainer {
 .sec10Flexbox {
     display: flex;
     /* border: solid 1px blue; */
+    /* gap: 10px; */
     height: 50rem;
+    justify-content: space-between;
     align-items: center;
 }
 .sec10Flexbox.one {
     width: 40%;
+    opacity: 0;
 }
 .sec10Flexbox.two {
-    width: 60%;
+    width: 55%;
+    opacity: 0;
 }
 .sec10Flexbox img {
     height: 100%;
 
 }
 
+.sec10Flexbox.one.active {
+    animation: slide_in_left .75s ease forwards;
+}
+.sec10Flexbox.two.active {
+    animation: horizontalL 1s .2s ease normal forwards;
+}
+@keyframes horizontalL {
+	0% {
+        opacity: 0;
+		transform: scaleX(0);
+		transform-origin: 0% 0%;
+	}
 
-
+	100% {
+        opacity: 1;
+		transform: scaleX(1);
+		transform-origin: 0% 0%;
+	}
+}
 
 
 
