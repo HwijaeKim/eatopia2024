@@ -1991,6 +1991,52 @@ article.sec11_uiContainer img.active {
 
 
 
+/* SECTOR 12 */
+#sec12_bg {
+    /* border: solid 1px blue; */
+    width: 100%;
+    height: 350vh;
+    background: url('../sources/sec12_bg.webp');
+    background-size: cover;
+    background-position: top;
+    
+}
+
+section#sector12 {
+    /* border: solid 1px red; */
+    display: block;
+    width: 100%;
+    /* height: 200vh; */
+    margin: 0 auto;
+}
+section#sector12 img {
+    margin-top: 50rem;
+    width: 100%;
+    /* opacity: 0; */
+}
+/* section#sector12 img.active {
+    animation: tppSpread .75s ease 0s 1 normal forwards;
+} */
+@keyframes tppSpread {
+	0% {
+        opacity: 0;
+		transform: scaleY(0);
+		transform-origin: 100% 0%;
+	}
+
+	100% {
+        opacity: 1;
+		transform: scaleY(1);
+		transform-origin: 100% 0%;
+	}
+}
+
+
+
+
+
+
+
 
 
 
