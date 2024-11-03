@@ -99,7 +99,7 @@ body {
     /* font-family: "Pretendard", sans-serif; */
     font-family: "NanumSquareRound", sans-serif;
     /* font-family: "TmoneyRoundWindExtraBold", sans-serif; */
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
     word-break: keep-all;
     letter-spacing: -.05em;
     line-height: var(--union-line-height);
@@ -1244,11 +1244,17 @@ article.logo_box {
     padding: 20px;
 }
 .biglogo {
-    opacity: 0;
+    animation: fly 2s ease-in-out infinite;
+
 }
-.biglogo.active {
-    animation: big-small .5s ease forwards;
+@keyframes fly {
+    0% {transform: translateY(0);}
+    50% {transform: translateY(35px);}
+    100% {transform: translateY(0);}
 }
+/* .biglogo.active {
+    animation: fly 1s infinite alternate forwards, big-small .5s ease forwards;
+} */
 article.logo_box p {
     margin: 4rem 0  25rem 0;
     font-size: var(--text-semi-medium);
