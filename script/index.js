@@ -22,7 +22,11 @@ const classesToObserve = [
     '.sec3_Observer',
     '.sec4_Observer',
     '.sec5_Observer',
-    '.sec6_Observer'
+    '.sec6_Observer',
+    '.sec7_Observer',
+    '.sec8_Observer',
+    '.sec9_Observer',
+    '.sec10_Observer'
 ];
 
 classesToObserve.forEach(selector => {
@@ -49,20 +53,20 @@ window.addEventListener('scroll', () => {
     const navMenu = document.querySelectorAll('.nav_menu button');
     console.log(scrollTop); //Dev Only
 
-    if(scrollTop > 10) {
-        header.classList.add('active');
-        navLogo.innerHTML = '<a href="./index.html\"><img src="./sources/nav_logo.png" alt="nav_logo" height="35"></a>';
-        navMenu.forEach((item) => {
-            item.style.color = 'rgba(0, 0, 0, .7)';
-        })
-    }
-    else if (scrollTop < 10) {
-        header.classList.remove('active');
-        navLogo.innerHTML = '<a href="./index.html\"><img src="./sources/nav_logo_white.png" alt="nav_logo" height="35"></a>';
-        navMenu.forEach((item) => {
-            item.style.color = 'rgba(255, 255, 255, .85)';
-        })
-    };
+    // if(scrollTop > 10) {
+    //     header.classList.add('active');
+    //     navLogo.innerHTML = '<a href="./index.html\"><img src="./sources/nav_logo.png" alt="nav_logo" height="35"></a>';
+    //     navMenu.forEach((item) => {
+    //         item.style.color = 'rgba(0, 0, 0, .7)';
+    //     })
+    // }
+    // else if (scrollTop < 10) {
+    //     header.classList.remove('active');
+    //     navLogo.innerHTML = '<a href="./index.html\"><img src="./sources/nav_logo_white.png" alt="nav_logo" height="35"></a>';
+    //     navMenu.forEach((item) => {
+    //         item.style.color = 'rgba(255, 255, 255, .85)';
+    //     })
+    // };
 
     const mainImg = document.querySelector('.vidControl');
     if(scrollTop > 1800) {
