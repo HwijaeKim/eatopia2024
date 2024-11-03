@@ -71,6 +71,21 @@
 }
 
 
+@media screen and (max-width: 1526px) {
+    :root {
+        --text-xlarge: 3rem;
+        --text-large: 2.6rem;
+        --text-medium: 2rem;
+        --text-regular: 1.5rem;
+        --text-semi-medium: 1.1rem;
+        --text-small: .9rem ;
+        --text-extra-small: .7rem;
+    }
+}
+
+
+
+
 * {
     color: var(--systemColor);
     margin: 0;
@@ -98,6 +113,7 @@ body {
 
 
 #wrap {
+    /* border: solid 5px red; */
     max-width: 1920px;
     width: 100%;
     margin: 0 auto;
@@ -729,8 +745,10 @@ article#sec2_flexbox {
     font-size: var(--text-small);
 }
 article#sec2_result {
+    /* border: solid 1px red; */
     display: block;
     width: 70%;
+    aspect-ratio: 1 / .5;
     float: right;
 }
 article#sec2_result .plus_icon {
@@ -1171,13 +1189,10 @@ article.service_goal {
     height: 100%;
     background: var(--background);
     /*background-image: url("../sources/bgSymbols.png");*/
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right;
 }
 section#sector6 {
     /* border: solid 1px red; */
-    display: block;
+    /* display: block; */
     width: 90%;
     margin: 0 auto;
     padding-top: 30rem;
@@ -1185,15 +1200,14 @@ section#sector6 {
 
 article.logo_box {
     /* border: solid 1px red; */
-    width: 70%;
+    /* position: absolute; */
+    /* width: 70%; */
     margin: 0 auto;
     text-align: center;
 
     margin-top: 8rem;
-    /* text-align: center; */
-    /* display: flex; */
-    align-items: center;
-    justify-content: center;
+
+
     gap: 20px; /* 좌우 여백 조정 */
     color: #fff; /* 텍스트 색상 설정 */
     padding: 20px;
@@ -1301,12 +1315,14 @@ article.sec6_flexbox img.color {
 
 
 
-.left_icon {
+.union_icon {
     /* border: solid 1px blue; */
     position: absolute;
+    margin: 0 auto;
     /* top: 1000px; */
-    left: 900px;
+    right: 50vw;
     /* z-index: -1; */
+    /* transform-origin: 50%, 50%; */
 }
 .icon1 {
     position: absolute;
@@ -1327,17 +1343,18 @@ article.sec6_flexbox img.color {
 
 }
 
-.right_icon {
-    /* border: solid 1px red; */
+/* .right_icon {
+    border: solid 1px red;
     position: absolute;
+    margin: 0 auto;
     left: 330px;
-    /* width: 100%; */
-}
+    /* width: 100%;
+} */
 .icon3 {
     position: absolute;
     width: 220px;
     top: -430px;
-    left: 1200px;
+    left: 600px;
     opacity: 0;
     animation: updown 1.5s cubic-bezier(0.25, 0.03, 0.66, 0.93) infinite alternate;
 
@@ -1346,7 +1363,7 @@ article.sec6_flexbox img.color {
     position: absolute;
     width: 200px;
     top: -40px;
-    left: 1120px;
+    left: 620px;
     opacity: 0;
     animation: updown 1.5s cubic-bezier(0.25, 0.03, 0.66, 0.93) infinite alternate;
 
@@ -1382,11 +1399,11 @@ article.sec6_flexbox img.color {
 }
 @keyframes icon3 {
     0% {opacity: 0; top: 0; left: 0;}
-    100% {opacity: .75; top: -430px; left: 1200px}
+    100% {opacity: .75; top: -430px; left: 600px}
 }
 @keyframes icon4 {
     0% {opacity: 0; top: 0; left: 0;}
-    100% {opacity: .75; top: -40px; left: 1120px}
+    100% {opacity: .75; top: -40px; left: 620px}
 }
 
 

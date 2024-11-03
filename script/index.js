@@ -13,91 +13,21 @@ const observer = new IntersectionObserver((entries) => {
     // threshold: .5
 });
 
-const sectorTitle = document.querySelectorAll('.sectorTitle');
-const sectorTitleY = document.querySelectorAll('.sectorTitleYellow');
-const sec1Observer = document.querySelectorAll('.sec1_Observer');
-const sec2Observer = document.querySelectorAll('.sec2_Observer');
-const sec3Observer = document.querySelectorAll('.sec3_Observer');
-const sec4Observer = document.querySelectorAll('.sec4_Observer');
-const sec5Observer = document.querySelectorAll('.sec5_Observer');
-const sec6Observer = document.querySelectorAll('.sec6_Observer');
+// 여러 클래스들을 한 번에 모아서 처리
+const classesToObserve = [
+    '.sectorTitle',
+    '.sectorTitleYellow',
+    '.sec1_Observer',
+    '.sec2_Observer',
+    '.sec3_Observer',
+    '.sec4_Observer',
+    '.sec5_Observer',
+    '.sec6_Observer'
+];
 
-
-
-
-observer.observe(sectorTitle[0]);
-observer.observe(sectorTitle[1]);
-observer.observe(sectorTitle[2]);
-observer.observe(sectorTitle[3]);
-observer.observe(sectorTitle[4]);
-observer.observe(sectorTitle[5]);
-observer.observe(sectorTitle[6]);
-observer.observe(sectorTitle[7]);
-observer.observe(sectorTitle[8]);
-
-observer.observe(sectorTitleY[0]);
-
-observer.observe(sec1Observer[0]);
-observer.observe(sec1Observer[1]);
-observer.observe(sec1Observer[2]);
-
-observer.observe(sec2Observer[0]);
-observer.observe(sec2Observer[1]);
-observer.observe(sec2Observer[2]);
-observer.observe(sec2Observer[3]);
-observer.observe(sec2Observer[4]);
-observer.observe(sec2Observer[5]);
-observer.observe(sec2Observer[6]);
-observer.observe(sec2Observer[7]);
-observer.observe(sec2Observer[8]);
-observer.observe(sec2Observer[9]);
-
-
-observer.observe(sec3Observer[0]);
-observer.observe(sec3Observer[1]);
-observer.observe(sec3Observer[2]);
-observer.observe(sec3Observer[3]);
-observer.observe(sec3Observer[4]);
-observer.observe(sec3Observer[5]);
-observer.observe(sec3Observer[6]);
-observer.observe(sec3Observer[7]);
-observer.observe(sec3Observer[8]);
-observer.observe(sec3Observer[9]);
-observer.observe(sec3Observer[10]);
-observer.observe(sec3Observer[11]);
-
-observer.observe(sec4Observer[0]);
-observer.observe(sec4Observer[1]);
-observer.observe(sec4Observer[2]);
-observer.observe(sec4Observer[3]);
-observer.observe(sec4Observer[4]);
-observer.observe(sec4Observer[5]);
-observer.observe(sec4Observer[6]);
-
-
-observer.observe(sec5Observer[0]);
-observer.observe(sec5Observer[1]);
-observer.observe(sec5Observer[2]);
-observer.observe(sec5Observer[3]);
-
-observer.observe(sec6Observer[0]);
-observer.observe(sec6Observer[1]);
-observer.observe(sec6Observer[2]);
-observer.observe(sec6Observer[3]);
-observer.observe(sec6Observer[4]);
-observer.observe(sec6Observer[5]);
-observer.observe(sec6Observer[6]);
-observer.observe(sec6Observer[7]);
-observer.observe(sec6Observer[8]);
-observer.observe(sec6Observer[9]);
-observer.observe(sec6Observer[10]);
-observer.observe(sec6Observer[11]);
-observer.observe(sec6Observer[12]);
-observer.observe(sec6Observer[13]);
-observer.observe(sec6Observer[14]);
-observer.observe(sec6Observer[15]);
-observer.observe(sec6Observer[16]);
-observer.observe(sec6Observer[17]);
+classesToObserve.forEach(selector => {
+    document.querySelectorAll(selector).forEach(element => observer.observe(element));
+});
 
 
 
