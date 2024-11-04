@@ -1502,7 +1502,7 @@ section#sector7 {
     /* border: solid 1px red; */
     display: block;
     width: 90%;
-    height: 100vh;
+    height: 110%;
     margin: 0 auto;
     padding-top: 8rem;
 }
@@ -1687,7 +1687,7 @@ article.btn_slide {
     /* border: solid 1px red; */
     /*margin-top: 8rem;*/
     text-align: center;
-    opacity: .4;
+    opacity: .2;
 }
 
 article.btn_slide button {
