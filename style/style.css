@@ -132,7 +132,7 @@ header {
     border-radius: 50px;
     width: 680px;
     color: #1f1f1f;
-    z-index: 1;
+    z-index: 5;
     transition: ease 0.25s;
 }
 header.active {
@@ -167,6 +167,7 @@ nav {
     /*border: solid 1px green;*/
     height: 50px;
     margin-top: 3px;
+    margin-right: 1.1rem;
     opacity: .8;
 }
 
@@ -2045,10 +2046,26 @@ article.sec11_uiContainer img.active {
 	}
 }
 
+.sec11-ui1-1 {
+    margin-top: 25rem;
+}
+.sec11-ui1-2 {
+    width: 27%;
+    display: inline-block;
+    position: absolute;
+    z-index: 1;
+    border-radius: 4rem;
+    border: solid 15px #fff;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
 
 .sec11_bottom {
     float: right;
-    margin-top: -14rem;
     margin-right: 3rem;
     font-size: var(--text-small);
 }
@@ -2058,6 +2075,16 @@ article.sec11_uiContainer img.active {
     margin-bottom: 2rem;
     /* opacity: 0; */
 }
+
+.sec11_bottom2 {
+    /*float: right;*/
+    margin-right: 3rem;
+    font-size: var(--text-small);
+}
+
+
+
+
 
 
 
@@ -2083,12 +2110,57 @@ section#sector12 {
     width: 100%;
     /* height: 200vh; */
     margin: 0 auto;
+    position: relative;
+    padding-top: 50rem;
 }
-section#sector12 img {
-    margin-top: 50rem;
+
+.sec12_ui1 {
+    position: absolute;
     width: 100%;
-    /* opacity: 0; */
+    margin: 0 auto;
+    align-items: center;
+    vertical-align: center;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 7rem;
+
 }
+
+
+
+section#sector12 p.active {
+    animation: slide_in_right .75s ease forwards;
+}
+
+.eatopia {
+    font-size: var(--text-large);
+
+    font-weight: 800;
+}
+
+
+article.sec12_container1 {
+    border: solid 1px red;
+    position: absolute;
+    right: 18%;
+    margin-top: 10rem;
+    /*float: right;*/
+}
+
+article.vid_flex{
+    display: flex;
+    justify-content: space-between;
+}
+.vidFlex {
+    border: solid 1px red;
+    width: 50%;
+}
+
+
+
+
+
 /* section#sector12 img.active {
     animation: tppSpread .75s ease 0s 1 normal forwards;
 } */
@@ -2504,6 +2576,19 @@ article.text_flexbox {
 
 
 
+section#sector_end {
+    margin-top: 20rem;
+    width: 100%;
+    height: 70rem;
+    background: url("../sources/footer_img.webp");
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+
 
 
 
@@ -2521,7 +2606,7 @@ footer {
     background: var(--background);
     color: #fff;
     font-weight: 300;
-    margin-top: 50rem;
+    margin-top: 30rem;
 
 
 
