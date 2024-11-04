@@ -130,7 +130,7 @@ header {
     transform: translateX(-50%);
     /* border: solid 1px red; */
     border-radius: 50px;
-    width: 40%;
+    width: 47rem;
     color: #1f1f1f;
     z-index: 1;
     transition: ease 0.25s;
@@ -148,7 +148,7 @@ header.active {
 nav {
     /* border: solid 1px blue; */
     width: 90%;
-    height: 100%;
+    /* height: 100%; */
     margin: 0 auto;
     /* padding-top: 10px; */
 }
@@ -433,7 +433,7 @@ article#intro_container {
 #sec1_bg {
     /* border: solid 1px blue; */
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background: var(--background);
     /*background-image: url("../sources/bgSymbols.png");*/
     background-size: contain;
@@ -852,18 +852,20 @@ article#summary .summary_flexbox {
     display: flex;
     width: 100%;
     margin-bottom: 8rem;
-    opacity: 0;
+    opacity: 1;
 }
 .summary_flexbox.active {
     animation: slide_in_left .75s cubic-bezier(0, 0.03, 0.12, 1.01) forwards; 
 }
 
 .textFlex {
-    /* border: solid 1px blue; */
+    border: solid 1px blue;
     width: 35%;
+    /* opacity: 0; */
 }
 .textFlex p {
     font-size: var(--text-semi-medium);
+
 }
 .textFlex .sub {
     margin-bottom: .5rem;
@@ -1051,18 +1053,18 @@ article.survey {
 } */
 .stars1 {
     position: absolute;
-    transform: translate(0, -30.5rem);
+    transform: translate(0, -37.5rem);
     z-index: -3;
 }
 .stars2 {
     position: absolute;
-    transform: translate(37rem, -12rem);
-    z-index: -3;
+    transform: translate(17rem, -12rem);
+    z-index: 0;
     scale: .75;
 }
 .stars3 {
     position: absolute;
-    transform: translate(90rem, -1.5rem);
+    transform: translate(82rem, -1.5rem);
     z-index: -3;
     scale: .75;
 }
@@ -1480,10 +1482,12 @@ section#sector7 {
 .scroll-container {
     /* border: solid 1px red; */
     width: 100%; /* div 전체 너비 설정 */
+    height: 20remrem;
 
 
 
 
+    /* overflow-x: scroll; */
     white-space: nowrap; /* 내부 요소가 가로로 나열되도록 설정 */
 
     margin-top: 6rem;
@@ -2365,7 +2369,7 @@ article.text_flexbox {
     height: 100%;
     z-index: 1;
     opacity: .35;
-    margin-top: 23rem;
+    margin-top: 8rem;
     opacity: 0;
 }
 

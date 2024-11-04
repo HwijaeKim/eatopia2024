@@ -60,14 +60,14 @@ window.addEventListener('scroll', () => {
 
     if(scrollTop > 10) {
         header.classList.add('active');
-        navLogo.innerHTML = '<a href="./index.html\"><img src="./sources/nav_logo2.svg" alt="nav_logo" height="35"></a>';
+        navLogo.innerHTML = '<a href="./index.html\"><img src="./sources/nav_logo2.svg" alt="nav_logo" height="30"></a>';
         navMenu.forEach((item) => {
             item.style.color = 'rgba(0, 0, 0, .7)';
         })
     }
     else if (scrollTop < 10) {
         header.classList.remove('active');
-        navLogo.innerHTML = '<a href="./index.html\"><img src="./sources/nav_logo2_white.svg" alt="nav_logo" height="35"></a>';
+        navLogo.innerHTML = '<a href="./index.html\"><img src="./sources/nav_logo2_white.svg" alt="nav_logo" height="30"></a>';
         navMenu.forEach((item) => {
             item.style.color = 'rgba(255, 255, 255, .85)';
         })
