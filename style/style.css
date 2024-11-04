@@ -977,7 +977,6 @@ article.survey {
 
     position: absolute;
     left: 54.5%;
-    transform: translateY(90px);
 
     animation: rami_step 1s steps(8) infinite alternate;
 }
