@@ -42,7 +42,21 @@ classesToObserve.forEach(selector => {
 
 
 
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', function(event) {
+        event.preventDefault(); // 기본 링크 이동을 막습니다.
 
+        const targetId = this.getAttribute('href'); // href 속성에서 ID를 가져옵니다.
+        const targetSection = document.querySelector(targetId); // 해당 섹션을 선택합니다.
+
+        if (targetSection) {
+            targetSection.scrollIntoView({
+                behavior: 'smooth', // 부드럽게 스크롤합니다.
+                block: 'start' // 섹션의 상단으로 스크롤합니다.
+            });
+        }
+    });
+});
 
 
 
@@ -55,7 +69,7 @@ window.addEventListener('scroll', () => {
     let scrollTop = window.scrollY;
     const header = document.querySelector('header');
     const navLogo = document.getElementById('nav_logo_white');
-    const navMenu = document.querySelectorAll('.nav_menu button');
+    const navMenu = document.querySelectorAll('.nav_menu a');
     console.log(scrollTop); //Dev Only
 
     if(scrollTop > 10) {

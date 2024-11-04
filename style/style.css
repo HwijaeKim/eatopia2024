@@ -147,7 +147,7 @@ header.active {
 }
 nav {
     /* border: solid 1px blue; */
-    width: 90%;
+    width: 95%;
     /* height: 100%; */
     margin: 0 auto;
     /* padding-top: 10px; */
@@ -170,37 +170,43 @@ nav {
 }
 
 .nav_menu {
-    display: inline-block;
+    /*border: solid 1px red;*/
+    /*display: inline-block;*/
     list-style-type: none;
-    margin-right: 1rem;
-    line-height: 60px;
+    /*margin-right: 1rem;*/
+    line-height: 58px;
+    display: flex;
+    margin-top: 5px;
 }
 .nav_menu li {
-    margin-left: 50px;
+    /*margin-left: 50px;*/
     display: inline-block;
     vertical-align: center;
+    margin: 0 auto;
+    justify-content: space-between;
 }
 
-.nav_menu button {
-    font-family: "TmoneyRoundWindExtraBold", sans-serif;
-
-    width: 120%;
-    height: 20px;
+.nav_menu a {
+    font-family: "TmoneyRoundWindRegular", sans-serif;
+    text-decoration: none;
     color: #fff;
     font-size: 1em;
     font-weight: 500;
-    position: relative; /* absolute 위치 설정을 위한 상대적 위치 설정 */
+    position: relative;
     border: none;
     background: none;
+
+    /* 기본 패딩과 배경, border-radius 설정 */
+    padding: 20px 30px;
+    border-radius: 50px;
+    transition: background .1s, color .1s; /* 색상 변경 애니메이션 추가 */
 }
-.nav_menu button:hover {
-    font-weight: 700;
-    color: var(--blueD);
-    /*background: #2b2b2b;*/
-    /*padding: 5px 10px;*/
-    /*border-radius: 50px;*/
+
+.nav_menu a:hover {
+    color: var(--systemColor);
+    background: var(--blueD);
 }
-.nav_menu button:active {
+.nav_menu a:active {
     opacity: .5;
 }
 
@@ -397,7 +403,7 @@ article#intro_container {
 .logo_container {
     width: 700px;
     height: 350px;
-    background-image: url("../sources/logomotion_white.png");
+    /*background-image: url("../sources/logomotion_white.png");*/
     background-size: cover;
 
     position: absolute;
@@ -855,16 +861,16 @@ article#summary .summary_flexbox {
     opacity: 1;
 }
 .summary_flexbox.active {
-    animation: slide_in_left .75s cubic-bezier(0, 0.03, 0.12, 1.01) forwards; 
+    animation: slide_in_left .75s cubic-bezier(0, 0.03, 0.12, 1.01) forwards;
 }
 
 .textFlex {
-    border: solid 1px blue;
+    /*border: solid 1px blue;*/
     width: 35%;
-    /* opacity: 0; */
 }
 .textFlex p {
     font-size: var(--text-semi-medium);
+    color: #fff;
 
 }
 .textFlex .sub {
@@ -872,7 +878,7 @@ article#summary .summary_flexbox {
 }
 
 .imgFlex {
-    /* border: solid 1px blue; */
+     /*border: solid 1px blue;*/
     width: 65%;
 }
 .imgFlex img {
@@ -986,7 +992,7 @@ article.survey {
     display: inline;
     width: 8rem;
     aspect-ratio: 1 /1 ;
-    background: url('../sources//stepAni/poki_step.webp');
+    background: url('../sources/stepAni/poki_step.webp');
     background-size: cover;
 
     position: absolute;
@@ -1089,13 +1095,12 @@ article.survey {
 #sec5_bg {
     /* border: solid 1px blue; */
     width: 100%;
-    height: 100%;
     background: #EEF6FF;
     /*background-image: url("../sources/bgSymbols.png");*/
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
-    margin-top: 13rem;
+    margin-top: 20rem;
     padding-bottom: 10rem;
     /* border-radius: 600px 600px 0 0; */
 }
@@ -1104,7 +1109,7 @@ section#sector5 {
     display: block;
     width: 90%;
     margin: 0 auto;
-    padding-top: 20rem;
+    padding-top: 10rem;
 }
 
 article.introduce {
@@ -1482,7 +1487,7 @@ section#sector7 {
 .scroll-container {
     /* border: solid 1px red; */
     width: 100%; /* div 전체 너비 설정 */
-    height: 20remrem;
+    height: 20rem;
 
 
 
@@ -1775,8 +1780,9 @@ section#sector8 {
 }
 
 
-.feature_vid {
-    margin-top: 17rem;
+article.feature_vid {
+    display: block;
+    margin-top: 53rem;
 
     width: 100%;
 }
@@ -2348,10 +2354,7 @@ article.text_flexbox {
     align-items: center;
     z-index: 2;
 }
-.textFlex {
-    /* border: solid 1px blue; */
-    opacity: 0;
-}
+
 .textFlex.one p {
     text-align: right;
     font-size: var(--text-large);
@@ -2445,16 +2448,15 @@ article.text_flexbox {
 /*FOOTER*/
 footer {
     /*border: solid 1px red;*/
-    /*top: 50%;*/
     position: absolute;
-    /*display: block;*/
+
     width: 100%;
-    height: 30em;
-    background: #1f1f1f;
+    height: 40rem;
+    background: var(--background);
     color: #fff;
     font-weight: 300;
     margin-top: 50rem;
-    /*z-index: -1;*/
+
 
 
 }
@@ -2463,13 +2465,11 @@ footer #footer_container {
 
     /*border: solid 1px red;*/
     width: 90%;
-    height: 23.5em;
+    height: 32rem;
     margin: 0 auto;
     padding: 2em 0;
 }
 footer #logo {
-    /*position: fixed;*/
-    /*display: block;*/
 
     width: 100%;
     height: 2.5em;
@@ -2498,51 +2498,57 @@ footer #team .title {
 }
 
 footer #info {
-    /*border: solid 1px red;*/
+    /*border: solid 1px ;*/
     position: absolute;
     bottom: 0;
-    left: 0;
+    right: 0;
 }
 footer #info p {
+    /*border: solid 1px red;*/
     color: #fff;
     font-weight: 100;
-    font-size: .8em;
+    font-size: .9rem;
+    text-align: right;
 }
 
-#person_box {
+article#team {
+    /* border: solid 1px red; */
+    width: 85%;
+    aspect-ratio: 1 /.18;
+    margin: 0 auto;
     display: flex;
-    margin-top: 1.5vh;
+    gap: 2rem;
 }
-#person_box .teamperson {
-    /*border: solid 1px blue;*/
-    width: 12rem;
-    height: 7rem;
-    margin-right: 2rem;
-    border-right: solid .5px rgba(255, 255, 255, .5);
+.person {
+    /* border: solid 1px blue; */
+    width: 100%;
+    text-align: center;
+    margin-top: 4rem;
 }
-.part {
-    color: #fff;
-    font-size: 1.25rem;
-    font-weight: 600;
+.person img {
+   width: 80%;
+   margin: 0 auto;
+   text-align: center;
+   margin-bottom: .5rem;
 }
 .name {
-    color: #fff;
-    font-size: 1rem;
-    font-weight: 300;
-    margin-top: .3rem;
+    font-size: var(--text-semi-medium);
+    color: var(--pinkL);
+    font-weight: 700;
 }
-.mail a {
-    display: block;
-    color: #aaa;
-    text-decoration: none;
+.person small {
     font-weight: 100;
-    font-size: .75rem;
-    padding-top: 2rem;
+    font-size: var(--text-small);
 }
+.email {
+    font-size: .9rem;
+}
+
 
 footer #download {
     position: absolute;
     left: 0;
+    bottom: 0;
 
 }
 footer #download button {
@@ -2550,12 +2556,12 @@ footer #download button {
     background: white;
     padding: .65rem 1.5rem;
     margin-top: 2rem;
-    /*border-radius: 2px;*/
+    border-radius: 10rem;
 }
 footer #download button a {
-    font-family: 'Pretendard', sans-serif;
-    font-weight: 300;
-    font-size: .7rem;
+    font-family: 'NanumSquareRound', sans-serif;
+    font-weight: 700;
+    font-size: .9rem;
     color: var(--systemColorD);
     text-decoration: none;
 }
@@ -2565,6 +2571,19 @@ footer #download button:hover {
 footer #download button:active {
     opacity: .5;
 }
+
+
+article#footer_logo {
+    /*border: solid 1px red;*/
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+
 
 footer #badge {
     position: absolute;
