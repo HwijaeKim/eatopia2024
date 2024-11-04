@@ -1293,10 +1293,10 @@ article.logo_box {
     animation: fly 1s infinite alternate forwards, big-small .5s ease forwards;
 } */
 article.logo_box p {
-    margin: 4rem 0  25rem 0;
+    margin: 8rem 0  25rem 0;
     font-size: var(--text-semi-medium);
     opacity: 0;
-    line-height: 2.5;
+    line-height: 1.5;
 }
 article.logo_box p.active {
     animation: FadeInBottom .75s ease forwards;
