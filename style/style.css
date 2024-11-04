@@ -2038,23 +2038,28 @@ section#sector12 img {
     
 }
 #sec13_bg img {
-    position: absolute;
+    /* position: absolute; */
     display: inline-block;
     /* top: 1rem; */
-    margin-top: -6rem;
+    margin-top: -15rem;
 }
 
 section#sector13 {
-    border: solid 1px red;
+    /* border: solid 1px red; */
     display: block;
     width: 90%;
     /* height: 200vh; */
     margin: 0 auto;
 }
-section#sector13 img {
-    border: solid 1px red;
-    width: 60%;
+.rightbox {
+    /* width: 100%; */
     float: right;
+    width: 70%;
+}
+.rightbox img {
+    /* border: solid 1px red; */
+    /* margin-right: 3 3rem; */
+    width: 100%;
 }
 
 
