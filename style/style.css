@@ -231,6 +231,11 @@ nav {
     margin: 0 1rem 2rem 0;
     opacity: 0;
 }
+.sectorTitleGreen {
+    display: inline-block;
+    margin: 0 1rem 2rem 0;
+    opacity: 0;
+}
 .sectorTitle p {
     font-family: "Pretendard", sans-serif;
     font-weight: 600;
@@ -264,6 +269,19 @@ nav {
     background: var(--blueL);
     padding: 5px 20px;
     border-radius: 50px;
+}
+.sectorTitleGreen p {
+    font-family: "Pretendard", sans-serif;
+    font-weight: 600;
+    display: inline-block;
+    color: rgba(0, 0, 0, .7);
+    font-size: var(--text-small);
+    background: var(--greenL);
+    padding: 5px 20px;
+    border-radius: 50px;
+}
+.sectorTitleGreen.active {
+    animation: proj_bg .75s ease 0s 1 both;
 }
 .sectorTitleBlue.active {
     animation: proj_bg .75s ease 0s 1 both;
@@ -2031,14 +2049,15 @@ section#sector12 img {
 #sec13_bg {
     /* border: solid 1px blue; */
     width: 100%;
-    height: 350vh;
-    /* background: url('../sources/sec12_bg.webp'); */
+    height: 100vh;
+    background: url('../sources/sec13_bg.svg');
     background-size: cover;
-    background-position: top;
+    background-repeat: no-repeat;
+    background-position: center;
     
 }
 #sec13_bg img {
-    /* position: absolute; */
+    position: relative;
     display: inline-block;
     /* top: 1rem; */
     margin-top: -15rem;
@@ -2061,6 +2080,141 @@ section#sector13 {
     /* margin-right: 3 3rem; */
     width: 100%;
 }
+
+
+
+
+
+
+
+/* SECTOR 14 */
+#sec14_bg {
+    /* border: solid 1px blue; */
+    width: 100%;
+    height: 100%;
+    background: var(--background);
+    /*background-image: url("../sources/bgSymbols.png");*/
+}
+section#sector14 {
+    border: solid 1px red;
+    /* display: block; */
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 30rem;
+}
+
+article.sec14_flexbox {
+    border: solid 1px red;
+    width: 100%;
+    height: 53rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sec14Flex {
+    border: solid 1px blue;
+    height: 100%;
+}
+.sec14Flex img {
+    width: 100%;
+    height: 100%;
+}
+
+.sec14Flex .one {
+    width: 30%;
+}
+.sec14Flex .two {
+    width: 70%;
+}
+
+
+/* 컨테이너 설정 */
+.container {
+    display: flex;
+    height: 132.2rem;
+    margin-top: 10rem;
+  }
+  
+  /* 왼쪽 영역 */
+  .left {
+    flex: 0.3; /* 왼쪽 영역을 좁게 설정 */
+    border: solid 1px red;
+  }
+  
+  /* 오른쪽 영역 */
+  .right {
+    display: flex;
+    flex: 0.7;
+  }
+  
+  /* 오른쪽 첫 번째(좁은) 열 */
+  .narrow-column {
+    flex: 0.4; /* 첫 번째 열을 좁게 설정 */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .narrow-column .top-item {
+    flex: 1;
+    border: solid 1px red;
+  }
+  
+  .narrow-column .bottom-item {
+    flex: 1;
+    border: solid 1px red;
+  }
+  
+  /* 오른쪽 두 번째(넓은) 열 */
+  .wide-column {
+    flex: 0.6; /* 두 번째 열을 넓게 설정 */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .wide-column .top-item {
+    flex: 1;
+    border: solid 1px red;
+  }
+  
+  .wide-column .bottom-item {
+    flex: 1;
+    border: solid 1px red;
+  }
+
+
+.sectorSubtitle {
+    font-size: var(--text-medium);
+    font-weight: 800;
+}
+.sectorDes {
+    font-size: var(--text-small);
+    margin-top: 1.5rem;
+}
+
+.sec14ui4-1 {
+    display: inline-block;
+    margin-top: 4rem;
+    width: 48%;
+}
+.sec14ui4-2 {
+    margin-top: 4rem;
+    width: 45%;
+    float: right;
+    border-radius: 3rem;
+    border: solid 10px #fff;
+}
+
+.sec14ui5-1 {
+    margin-top: 4rem;
+    width: 80%;
+}
+
+.bottomBox {
+    border: solid 1px blue;
+    position: absolute;
+    bottom: 0;
+}
+
 
 
 
