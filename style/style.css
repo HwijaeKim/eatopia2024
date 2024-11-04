@@ -2241,8 +2241,15 @@ section#sector13 {
 .rightbox img {
     /* border: solid 1px red; */
     /* margin-right: 3 3rem; */
-    width: 100%;
+    width: 60%;
     opacity: 0;
+    margin-right: 1.5rem;
+}
+.rightbox video {
+    border-radius: 5rem;
+    border: solid 15px var(--blueUD);
+    /*height: 20%;*/
+    margin-top: -17rem;
 }
 .rightbox img.active {
     animation: slide_in_right .75s ease forwards;
