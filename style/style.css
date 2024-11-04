@@ -99,7 +99,7 @@ body {
     /* font-family: "Pretendard", sans-serif; */
     font-family: "NanumSquareRound", sans-serif;
     /* font-family: "TmoneyRoundWindExtraBold", sans-serif; */
-    /* overflow-x: hidden; */
+     overflow-x: hidden;
     word-break: keep-all;
     letter-spacing: -.05em;
     line-height: var(--union-line-height);
