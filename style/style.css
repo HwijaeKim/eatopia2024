@@ -1928,13 +1928,13 @@ article.center_box span.active {
 
 
 article.sec10_uiContainer {
-    /* border: solid 1px red; */
+     /*border: solid 1px red;*/
     margin-top: 3rem;
     display: flex;
 }
 .sec10Flexbox {
     display: flex;
-    /* border: solid 1px blue; */
+     /*border: solid 1px blue;*/
     /* gap: 10px; */
     height: 50rem;
     justify-content: space-between;
@@ -1945,19 +1945,43 @@ article.sec10_uiContainer {
     opacity: 0;
 }
 .sec10Flexbox.two {
-    width: 55%;
+    width: 15%;
+    opacity: 0;
+}
+.sec10Flexbox.three {
+    width: 15%;
+    opacity: 0;
+}
+.sec10Flexbox.four {
+    width: 15%;
+    opacity: 0;
+}
+.sec10Flexbox.five {
+    width: 15%;
     opacity: 0;
 }
 .sec10Flexbox img {
     height: 100%;
-
+}
+.sec10Flexbox video {
+    width: 98%;
+    border-radius: 2rem;
 }
 
 .sec10Flexbox.one.active {
     animation: slide_in_left .75s ease forwards;
 }
 .sec10Flexbox.two.active {
-    animation: horizontalL 1s .2s ease normal forwards;
+    animation: slide_in_left 1s .2s ease normal forwards;
+}
+.sec10Flexbox.three.active {
+    animation: slide_in_left 1s .3s ease normal forwards;
+}
+.sec10Flexbox.four.active {
+    animation: slide_in_left 1s .4s ease normal forwards;
+}
+.sec10Flexbox.five.active {
+    animation: slide_in_left 1s .5s ease normal forwards;
 }
 @keyframes horizontalL {
 	0% {
