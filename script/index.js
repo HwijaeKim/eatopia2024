@@ -30,7 +30,8 @@ const classesToObserve = [
     '.sec11_Observer',
     '.sec12_Observer',
     '.sec13_Observer',
-    '.sec14_Observer'
+    '.sec14_Observer',
+    '.sec15_Observer'
 ];
 
 classesToObserve.forEach(selector => {
