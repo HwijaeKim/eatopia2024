@@ -72,20 +72,20 @@ window.addEventListener('scroll', () => {
     const navMenu = document.querySelectorAll('.nav_menu a');
     console.log(scrollTop); //Dev Only
 
-    if(scrollTop > 10) {
-        header.classList.add('active');
-        // navLogo.innerHTML = '<a href="./index.html\"><img src="./sources/nav_logo2.svg" alt="nav_logo" height="30"></a>';
-        navMenu.forEach((item) => {
-            // item.style.color = 'rgba(0, 0, 0, .7)';
-        })
-    }
-    else if (scrollTop < 10) {
-        header.classList.remove('active');
-        // navLogo.innerHTML = '<a href="./index.html\"><img src="./sources/nav_logo2_white.svg" alt="nav_logo" height="30"></a>';
-        navMenu.forEach((item) => {
-            // item.style.color = 'rgba(255, 255, 255, .85)';
-        })
-    };
+    // if(scrollTop > 10) {
+    //     header.classList.add('active');
+    //     // navLogo.innerHTML = '<a href="./index.html\"><img src="./sources/nav_logo2.svg" alt="nav_logo" height="30"></a>';
+    //     navMenu.forEach((item) => {
+    //         // item.style.color = 'rgba(0, 0, 0, .7)';
+    //     })
+    // }
+    // else if (scrollTop < 10) {
+    //     header.classList.remove('active');
+    //     // navLogo.innerHTML = '<a href="./index.html\"><img src="./sources/nav_logo2_white.svg" alt="nav_logo" height="30"></a>';
+    //     navMenu.forEach((item) => {
+    //         // item.style.color = 'rgba(255, 255, 255, .85)';
+    //     })
+    // };
 
     const mainImg = document.querySelector('.vidControl');
     if(scrollTop > 1800) {
@@ -149,3 +149,31 @@ slideBtn.forEach(btn => {
         }
     })
 })
+
+
+
+const slider = document.getElementById('sector7');
+let isMouseDown = false;
+let startX, scrollLeft;
+
+slider.addEventListener('mousedown', (e) => {
+    isMouseDown = true;
+    scrollLeft = slider.scrollLeft;
+    startX = e.pageX - slider.offsetLeft;
+});
+
+slider.addEventListener('mouseleave', () => {
+    isMouseDown = false;
+});
+
+slider.addEventListener('mouseup', () => {
+    isMouseDown = false;
+});
+
+slider.addEventListener('mousemove', (e) => {
+    if (!isMouseDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 1;
+    slider.scrollLeft = scrollLeft - walk;
+});
