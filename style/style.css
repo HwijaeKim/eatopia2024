@@ -2344,8 +2344,8 @@ article.sec14_flexbox {
     height: 100%;
 }
 .sec14Flex img {
-    width: 100%;
-    height: 100%;
+    width: auto;
+    height: 45vw;
 }
 
 .sec14Flex .one {
@@ -2368,21 +2368,19 @@ article.sec14_flexbox {
 /* 컨테이너 설정 */
 .container {
     display: flex;
-    /*height: 132.2vw;*/
     margin-top: 20vw;
-    /*height: 70vh;*/
   }
   
   /* 왼쪽 영역 */
   .left {
-    flex: 0.3; /* 왼쪽 영역을 좁게 설정 */
+    flex: 0.25; /* 왼쪽 영역을 좁게 설정 */
      /*border: solid 1px red;*/
   }
   
   /* 오른쪽 영역 */
   .right {
     display: flex;
-    flex: 0.7;
+    flex: 0.8;
   }
   
   /* 오른쪽 첫 번째(좁은) 열 */
@@ -2394,29 +2392,29 @@ article.sec14_flexbox {
   
   .narrow-column .top-item {
     flex: 1;
-    /* border: solid 1px red; */
+     /*border: solid 1px red;*/
   }
   
   .narrow-column .bottom-item {
     flex: 1;
-    /* border: solid 1px red; */
+     /*border: solid 1px red;*/
   }
   
   /* 오른쪽 두 번째(넓은) 열 */
   .wide-column {
-    flex: 0.6; /* 두 번째 열을 넓게 설정 */
+    flex: 1; /* 두 번째 열을 넓게 설정 */
     display: flex;
     flex-direction: column;
   }
   
   .wide-column .top-item {
     flex: 1;
-    /* border: solid 1px red; */
+     /*border: solid 1px red;*/
   }
   
   .wide-column .bottom-item {
     flex: 1;
-    /* border: solid 1px red; */
+     /*border: solid 1px red;*/
   }
 
 
@@ -2440,19 +2438,20 @@ article.sec14_flexbox {
 
 .sec14ui4-1 {
     display: inline-block;
-    margin-top: 4rem;
+    /*margin-top: 4rem;*/
     width: 48%;
     opacity: 0;
+    margin-right: .7vw;
 }
 .sec14ui4-1.active {
     animation: slide_in_right .75s ease forwards;
 }
 .sec14ui4-2 {
-    margin-top: 4rem;
+    /*margin-top: 4rem;*/
     width: 45%;
-    float: right;
-    border-radius: 3rem;
-    border: solid 10px #fff;
+    /*float: right;*/
+    border-radius: 4.5rem;
+    border: solid .8vw #fff;
     opacity: 0;
 }
 .sec14ui4-2.active {
@@ -2461,7 +2460,7 @@ article.sec14_flexbox {
 
 .sec14ui5-1 {
     margin-top: 4rem;
-    width: 80%;
+    width: 30vw;
     opacity: 0;
 }
 .sec14ui5-1.active {
@@ -2815,11 +2814,14 @@ footer #download button:active {
 
 article#footer_logo {
     /*border: solid 1px red;*/
-    width: 100%;
+    /*width: 100%;*/
+    display: inline;
     position: absolute;
+    left: 50%;
     bottom: 0;
     margin: 0 auto;
     text-align: center;
+    transform: translate(-50%, 0);
 }
 
 
@@ -2835,12 +2837,7 @@ footer #badge {
     bottom: 0;
     /*vertical-align: bottom;*/
 }
-footer #badge img {
-    height: 100%;
-    object-fit: cover;
-    float: right;
-    margin-left: 15px;
-}
+
 
 
 
