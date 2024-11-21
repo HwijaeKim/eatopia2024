@@ -1018,7 +1018,7 @@ article.survey.active {
     position: absolute;
     left: -2%;
     /*bottom: -4%;*/
-    width: 100%;
+    width: 102%;
     height: 100%;
     background-color: var(--yellowL); /* 형광펜 색상 */
     border-radius: 100px;
@@ -1920,7 +1920,7 @@ article.feature_vid {
     width: 100%;
     height: 150vh;
     background: var(--background);
-    background-image: url("../sources/service_splash.webp");
+    /*background-image: url("../sources/service_splash.webp");*/
     background-size: contain;
     background-repeat: no-repeat;
     background-position: top;
@@ -1936,7 +1936,30 @@ section#sector9 {
     margin: 0 auto;
     padding-top: 8rem;
 }
+section#sector9 img {
+    /*border: solid 1px red;*/
+    display: block;
+    width: 75%;
+    margin: 0 auto;
+    animation: updown2 1.5s ease-in-out infinite alternate;
+}
+@keyframes updown2 {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-30px);
+    }
 
+}
+
+
+section#sector9 p {
+    font-size: var(--text-large);
+    text-align: center;
+    font-weight: 900;
+    transform: translateY(-5vw);
+}
 
 
 
@@ -1998,7 +2021,7 @@ article.sec10_uiContainer {
     display: flex;
      /*border: solid 1px blue;*/
      gap: 4vw;
-    height: 65vh;
+    height: 36vw;
     justify-content: space-between;
     align-items: center;
 }
@@ -2563,7 +2586,8 @@ article.sec15_flexbox {
     width: 18.75%;
 }
 .sec15Flex .five {
-    width: 18.75%;
+    border: solid 1px red;
+    width: 18%;
 }
 
 .transp img {

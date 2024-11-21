@@ -134,49 +134,9 @@ VanillaTilt.init(document.querySelectorAll('.sec4Flex.one'), {
 
 
 
-// 캐릭터 슬라이드
-const charSlide = document.querySelector('.scroll-container');
-let slideBtn = document.querySelectorAll('.btn_slide button');
-// let previousBtn = document.querySelector('.previousBtn');
-
-slideBtn.forEach(btn => {
-    btn.addEventListener('click', (event) => {
-        if(event.target.classList.contains('next')) {
-            charSlide.classList.add('active');
-        }
-        else if(event.target.classList.contains('previous')) {
-            charSlide.classList.remove('active');
-        }
-    })
-})
 
 
 
-const slider = document.getElementById('sector7');
-let isMouseDown = false;
-let startX, scrollLeft;
-
-slider.addEventListener('mousedown', (e) => {
-    isMouseDown = true;
-    scrollLeft = slider.scrollLeft;
-    startX = e.pageX - slider.offsetLeft;
-});
-
-slider.addEventListener('mouseleave', () => {
-    isMouseDown = false;
-});
-
-slider.addEventListener('mouseup', () => {
-    isMouseDown = false;
-});
-
-slider.addEventListener('mousemove', (e) => {
-    if (!isMouseDown) return;
-    e.preventDefault();
-    const x = e.pageX - slider.offsetLeft;
-    const walk = (x - startX) * 1;
-    slider.scrollLeft = scrollLeft - walk;
-});
 
 
 
