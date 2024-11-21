@@ -596,9 +596,9 @@ article#search_bar {
     margin-top: 4rem;
 }
 
-article#search_bar img {
+article#search_bar .search_img {
      /*border: solid 1px blue;*/
-    margin: .5vmax 0 0 1.45vmax;
+    margin: 2vh 0 0 1.45vw;
 
 }
 .search_bar_svg {
@@ -608,12 +608,12 @@ article#search_bar img {
     transform: translateX(-17%);
 }
 article#search_bar p {
-     /*border: solid 1px red;*/
+    /*border: solid 1px red;*/
     display: inline-block;
     color: var(--systemColorD);
     font-size: var(--text-semi-medium);
+    /*height: 100%;*/
     padding: 0 0 0 1vmax;
-    /*transform: translateY(-.01vmax);*/
 }
 .search_bar span {
     /* border: solid 1px red; */

@@ -177,3 +177,28 @@ slider.addEventListener('mousemove', (e) => {
     const walk = (x - startX) * 1;
     slider.scrollLeft = scrollLeft - walk;
 });
+
+
+
+
+
+
+
+const scrollContainer = document.getElementById('sector7');
+
+scrollContainer.addEventListener('wheel', (event) => {
+    // 현재 스크롤 위치와 한계 계산
+    const maxScrollLeft = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+    const atBeginning = scrollContainer.scrollLeft <= 0 && event.deltaY < 0;
+    const atEnd = scrollContainer.scrollLeft >= maxScrollLeft && event.deltaY > 0;
+
+    // 스크롤 한계에 도달하면 기본 동작 허용
+    if (atBeginning || atEnd) {
+        return; // 세로 스크롤 활성화
+    }
+
+    // 기본 동작 차단하고 가로 스크롤 처리
+    event.preventDefault();
+    scrollContainer.scrollLeft += event.deltaY;
+});
+
