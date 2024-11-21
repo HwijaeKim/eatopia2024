@@ -183,7 +183,7 @@ slider.addEventListener('mousemove', (e) => {
 
 
 
-
+// chatGPT 가로스크롤 마우스 휠 구현
 const scrollContainer = document.getElementById('sector7');
 
 scrollContainer.addEventListener('wheel', (event) => {
@@ -191,6 +191,7 @@ scrollContainer.addEventListener('wheel', (event) => {
     const maxScrollLeft = scrollContainer.scrollWidth - scrollContainer.clientWidth;
     const atBeginning = scrollContainer.scrollLeft <= 0 && event.deltaY < 0;
     const atEnd = scrollContainer.scrollLeft >= maxScrollLeft && event.deltaY > 0;
+
 
     // 스크롤 한계에 도달하면 기본 동작 허용
     if (atBeginning || atEnd) {
@@ -201,4 +202,7 @@ scrollContainer.addEventListener('wheel', (event) => {
     event.preventDefault();
     scrollContainer.scrollLeft += event.deltaY;
 });
+
+
+
 

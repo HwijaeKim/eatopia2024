@@ -109,18 +109,6 @@
 }
 
 
-/* 슬라이더 (Thumb) */
-::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 6px;
-}
-
-/* 슬라이더 호버 상태 */
-::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
-
-
 
 *,
 *::before,
@@ -1574,9 +1562,7 @@ section#sector7 {
     white-space: nowrap;
 
     overflow-x: auto; /* 가로 스크롤 활성화 */
-    overflow-y: hidden; /* 세로 스크롤 숨김 */
-    -ms-overflow-style: none; /* IE 및 Edge용 */
-    scrollbar-width: none; /* Firefox용 */
+
 }
 
 
@@ -1696,19 +1682,19 @@ section#sector7 {
     /* display: flex; */
     /* border: solid 1px red; */
     position: absolute;
-    width: 27rem;
+    width: 30rem;
     aspect-ratio: 1 / 1;
     background: url("../sources/stepAni/poki_hello_step.webp");
     background-size: cover;
     filter: brightness(1.2);
     /* z-index: 0; */
     right: 0;
-    transform: translate(1.5rem, -5rem);
+    transform: translate(1.5rem, -5.5rem);
 
     animation: pokiHello 2s steps(13)  reverse infinite;
 }
 @keyframes pokiHello {
-    100% { background-position: calc(27rem * 13) 0; }
+    100% { background-position: calc(30rem * 13) 0; }
 }
 
 .char-img-maru {
