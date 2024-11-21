@@ -102,6 +102,26 @@
 
 
 
+/* 공통 스타일 (가로/세로 스크롤바에 적용) */
+::-webkit-scrollbar {
+    width: 1px; /* 세로 스크롤바 너비 */
+    height: 1px; /* 가로 스크롤바 높이 */
+}
+
+
+/* 슬라이더 (Thumb) */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 6px;
+}
+
+/* 슬라이더 호버 상태 */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+
 *,
 *::before,
 *::after {
@@ -129,6 +149,10 @@ body {
     -moz-user-select:none;
     -ms-user-select:none;
     user-select:none;
+
+    overflow-y: auto;
+    -ms-overflow-style: none; /* IE 및 Edge용 */
+    scrollbar-width: none; /* Firefox용 */
 }
 
 
@@ -1545,11 +1569,16 @@ section#sector7 {
     margin: 0 auto;
     padding-top: 8rem;
 
-    scrollbar-width: thin;
-    overflow-x: scroll;
+
     flex-wrap: nowrap;
     white-space: nowrap;
+
+    overflow-x: auto; /* 가로 스크롤 활성화 */
+    overflow-y: hidden; /* 세로 스크롤 숨김 */
+    -ms-overflow-style: none; /* IE 및 Edge용 */
+    scrollbar-width: none; /* Firefox용 */
 }
+
 
 .scroll-container {
      /*border: solid 1px red;*/
