@@ -2586,8 +2586,7 @@ article.sec15_flexbox {
     width: 18.75%;
 }
 .sec15Flex .five {
-    border: solid 1px red;
-    width: 18%;
+    width: 18.75%;
 }
 
 .transp img {
@@ -2726,7 +2725,7 @@ footer {
     position: relative;
 
     width: 90%;
-    margin: 3vh auto;
+    margin: 3vw auto;
     align-content: center;
     height: 60vh;
     background: var(--background);
@@ -2742,14 +2741,14 @@ footer #footer_container {
 
     /*border: solid 1px red;*/
     width: 90%;
-    height: 32vh;
+    height: 32vw;
     margin: 0 auto;
-    padding: 2em 0;
+    padding: 2vw 0;
 }
 footer #logo {
 
     width: 100%;
-    height: 2.5vh;
+    height: 2.5vw;
 }
 footer #logo img {
     height: 100%;
@@ -2818,7 +2817,7 @@ article#team {
     font-size: var(--text-small);
 }
 .email {
-    font-size: .9rem;
+    font-size: .85vw;
 }
 
 
@@ -2832,14 +2831,14 @@ footer #download {
 footer #download button {
     border: none;
     background: white;
-    padding: .65rem 1.5rem;
-    margin-top: 2rem;
-    border-radius: 10rem;
+    padding: .65vw 1.5vw;
+    margin-top: 2vw;
+    border-radius: 50px;
 }
 footer #download button a {
     font-family: 'NanumSquareRound', sans-serif;
     font-weight: 700;
-    font-size: .7vw;
+    font-size: .9vw;
     color: var(--systemColorD);
     text-decoration: none;
 }
@@ -2853,7 +2852,7 @@ footer #download button:active {
 
 article#footer_logo {
     /*border: solid 1px red;*/
-    /*width: 100%;*/
+    width: 100%;
     display: inline;
     position: absolute;
     left: 50%;
@@ -2864,18 +2863,6 @@ article#footer_logo {
 }
 
 
-
-
-footer #badge {
-    position: absolute;
-    /*border: solid 1px red;*/
-    width: 100%;
-    height: 2.8rem;
-    float: right;
-    right: 0;
-    bottom: 0;
-    /*vertical-align: bottom;*/
-}
 
 
 
